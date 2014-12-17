@@ -29,3 +29,12 @@ Role can change anytime.
 - Homepage (@lqez)
 - Tutorial (@scari)
 - Communicate officially (@darjeeling)
+- Design
+- Goods (@miyunim)
+
+Tools
+=========
+- Slack (https://pyconkr.slack.com)
+- Mail (pyconkr@googlegroups.com, pycon@pycon.kr)
+- Code (https://github.com/pythonkr)
+- Google Drive (linked by pyconkr@googlegroups.com)
