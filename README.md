@@ -12,10 +12,10 @@ Member
 - @darjeeling https://github.com/darjeeling
 - @lexifdev https://github.com/lexifdev
 - @lqez https://github.com/lqez
+- @miyunim https://github.com/miyunim
 - @OuO https://github.com/OuO
 - @scari https://github.com/scari
 - @tebica https://github.com/tebica
-- @miyunim https://github.com/miyunim
 
 Role
 ========
