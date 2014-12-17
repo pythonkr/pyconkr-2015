@@ -8,13 +8,14 @@ Function
 
 Member
 ========
-- @bloodevil
-- @darjeeling
-- @lexifdev
-- @lqez
-- @OuO
-- @scari
-- @tebica
+- @bloodevil https://github.com/Bloodevil
+- @darjeeling https://github.com/darjeeling
+- @lexifdev https://github.com/lexifdev
+- @lqez https://github.com/lqez
+- @OuO https://github.com/OuO
+- @scari https://github.com/scari
+- @tebica https://github.com/tebica
+- @miyunim https://github.com/miyunim
 
 Role
 ========
