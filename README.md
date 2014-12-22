@@ -32,6 +32,15 @@ Role can change anytime.
 - Communicate officially (@darjeeling)
 - Design
 - Goods (@miyunim)
+ 
+Authentification
+==============
+- slack : @scari @darjeeling @lquz
+- mail(pyconkr@googlegroups.com) (?)
+- mail(pycon@pycon.kr) : @scari @darjeeling
+- AWS : @darjeeling
+- Google Drive : pyconkr@googlegroups.com
+- github : https://github.com/orgs/pythonkr/people
 
 Tools
 =========
