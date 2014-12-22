@@ -39,3 +39,4 @@ Tools
 - Mail (pyconkr@googlegroups.com, pycon@pycon.kr)
 - Code (https://github.com/pythonkr)
 - Google Drive (linked by pyconkr@googlegroups.com)
+- AWS (amazone web service @darjeeling have permission)
