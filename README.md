@@ -14,7 +14,6 @@ Member
 - @lqez https://github.com/lqez
 - @miyunim https://github.com/miyunim
 - @OuO https://github.com/OuO
-- @scari https://github.com/scari
 - @tebica https://github.com/tebica
 
 Role
@@ -28,7 +27,7 @@ Role can change anytime.
 - Sprint (@lexifdev)
 - Budget (@bloodevil)
 - Homepage (@lqez)
-- Tutorial (@scari)
+- Tutorial
 - Communicate officially (@darjeeling)
 - Design
 - Goods (@miyunim)
@@ -37,7 +36,7 @@ Authentification
 ==============
 - slack : @scari @darjeeling @lquz
 - mail(pyconkr@googlegroups.com) (?)
-- mail(pycon@pycon.kr) : @scari @darjeeling @lqez
+- mail(pycon@pycon.kr) : @scari @darjeeling @lqez @bloodevil
 - AWS : @darjeeling
 - Google Drive : pyconkr@googlegroups.com
 - github : https://github.com/orgs/pythonkr/people
