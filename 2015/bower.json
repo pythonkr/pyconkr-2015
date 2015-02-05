@@ -1,6 +1,7 @@
 {
   "name": "paperjstest",
   "dependencies": {
-    "paper": "= 0.9.20"
+    "paper": "= 0.9.20",
+    "jquery": "< 2.0"
   }
 }

@@ -1,119 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="bower_components/paper/dist/paper-full.js"></script>
-<script type="text/paperscript" canvas="canvas-1" data-paper-ignore="true">
-var values = {
-  friction: 0.1,
-  timeStep: 0.01,
-  amount: 6
-};
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.85">
 
-var path;
-var sinPath;
+    <script type="text/javascript" src="bower_components/paper/dist/paper-full.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/paperscript" src="static/js/flood.js" canvas="canvas-flood"></script>
 
-function createPath(strength) {
-  var sinPath = new Path();
-  var boxPath = new Path([
-    new Point(-0.1, 0.5) * size,
-    new Point(-0.1, 1.0) * size,
-    new Point(+1.1, 1.0) * size,
-    new Point(+1.1, 0.5) * size
-  ]);
-
-  for (var i = 0; i <= values.amount; i++) {
-    var segment = sinPath.add(
-      new Point(i / values.amount * 1.2 - 0.1, 0.5) * size
-    );
-    var point = segment.point;
-    point.fixed = i < 1 || i > values.amount - 1;
-    point.vy = 0;
-    point.ty = (Math.sin(i*Math.PI/values.amount*2)*0.15+0.5) * size.height;
-  }
-
-  var path = new CompoundPath({
-    children: [
-      sinPath,
-      boxPath,
-    ],
-    fillColor: {
-      gradient: {
-        stops: [
-          '#ffe873',
-          '#ffd43b'
-        ]
-      },
-      origin: boxPath.bounds.topLeft,
-      destination: boxPath.bounds.bottomRight
-    }
-  });
-
-  return path;
-}
-
-function onResize() {
-  if (path)
-    path.remove();
-
-  size = view.bounds.size;
-  path = createPath(0.1);
-  sinPath = path.children[0];
-}
-
-function onFrame(event) {
-  updateWave(sinPath);
-}
-
-function updateWave(path) {
-  var force = (1 - values.friction) * values.timeStep;
-
-  for (var i = 1, l = path.segments.length - 1; i < l; i++) {
-    var point = path.segments[i].point;
-    point.vy += (point.ty - point.y) * force;
-    point.vy *= 0.98;
-
-    var previous_point = path.segments[i - 1].point;
-    point.vy -= previous_point.vy * 0.1;
-
-    var next_point = path.segments[i + 1].point;
-    point.vy += next_point.vy * 0.1;
-
-    point.y = Math.max(point.y + point.vy, 0);
-  }
-  path.smooth();
-}
-
-function onMouseMove(event) {
-  var location = sinPath.getNearestLocation(event.point);
-  var segment = location.segment;
-  var point = segment.point;
-
-  if (!point.fixed && location.distance < size.height / 4) {
-    var y = event.point.y;
-    point.vy += (y - point.y) / 6 * values.friction;
-    if (segment.previous && !segment.previous.point.fixed) {
-      var previous = segment.previous.point;
-      previous.vy += (y - previous.y) / 24 * values.friction;
-    }
-    if (segment.next && !segment.next.point.fixed) {
-      var next = segment.next.point;
-      next.vy += (y - next.y) / 24 * values.friction;
-    }
-  }
-}
-</script>
-<style>
-body {
-  background: white;
-  margin: 0;
-}
-canvas {
-  background: #306998;
-  background: linear-gradient(135deg, #5a9fd4, #205988);
-}
-</style>
+    <link href="static/css/default.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <canvas hidpi="off" id="canvas-1" resize="" style="width: 100%; height: 480px; -webkit-user-select: none; touch-action: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" width="960" height="985" data-paper-scope="1"></canvas>
+    <div class="title">
+        <div class="headline">
+            <h1>Canvas Test</h1>
+        </div>
+        <canvas hidpi="off" id="canvas-flood" resize="true" ></canvas>
+    </div>
 </body>
 </html>
