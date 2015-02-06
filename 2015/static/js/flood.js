@@ -5,7 +5,11 @@ var values = {
 };
 
 var path;
+
 var sinPath;
+var boxPath;
+var mask;
+
 var tilt = 0;
 var iOS = false;
 
@@ -14,30 +18,35 @@ function isiOS()
     return (navigator.userAgent.match(/(iPad|iPhone|iPod)/i) != null);
 }
 
-function createPath(strength) {
-    var sinPath = new Path();
-    var boxPath = new Path([
-        new Point(-0.1, 0.5) * size,
-        new Point(-0.1, 1.0) * size,
-        new Point(+1.1, 1.0) * size,
-        new Point(+1.1, 0.5) * size
+function createPath() {
+    if (sinPath) sinPath.remove();
+    if (boxPath) boxPath.remove();
+    if (mask) mask.remove();
+    if (path) path.remove();
+
+    sinPath = new Path();
+    boxPath = new Path([
+        new Point(0.0, 0.5) * size,
+        new Point(0.0, 1.0) * size,
+        new Point(1.0, 1.0) * size,
+        new Point(1.0, 0.5) * size
     ]);
 
     for (var i = 0; i <= values.amount; i++) {
         var segment = sinPath.add(
-            new Point(i / values.amount * 1.2 - 0.1, 0.5) * size
+            new Point(i / values.amount, 0.5) * size
         );
         var point = segment.point;
         point.fixed = i < 1 || i > values.amount - 1;
         point.i = i;
         point.vy = 0;
-        point.ty = (Math.sin(i*Math.PI/values.amount*2)*0.15+0.5) * size.height;
+        point.ty = 0.5;
     }
 
-    var path = new CompoundPath({
+    path = new CompoundPath({
         children: [
-        sinPath,
-        boxPath,
+            sinPath,
+            boxPath
         ],
         fillColor: {
             gradient: {
@@ -50,16 +59,20 @@ function createPath(strength) {
             destination: boxPath.bounds.bottomRight
         }
     });
-    return path;
+
+    mask = new CompoundPath({
+        children: [
+            new Path.Circle(new Point(0.5, 0.5) * size, size.width * 0.45),
+            new Path.Rectangle(new Point(0,0), new Point(1,1) * size)
+        ],
+        fillColor: '#ffffff'
+    });
 }
 
 function onResize() {
-    if (path)
-        path.remove();
-
-    size = view.bounds.size;
-    path = createPath(0.1);
-    sinPath = path.children[0];
+    size =  new Size(640, 640);
+    view.viewSize = size;
+    createPath();
 }
 
 function onFrame(event) {
