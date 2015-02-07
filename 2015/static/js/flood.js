@@ -48,16 +48,7 @@ function createPath() {
             sinPath,
             boxPath
         ],
-        fillColor: {
-            gradient: {
-                stops: [
-                    '#ffe873',
-                    '#ffd43b'
-                ]
-            },
-            origin: boxPath.bounds.topLeft,
-            destination: boxPath.bounds.bottomRight
-        }
+        fillColor: '#211657',
     });
 
     mask = new CompoundPath({
@@ -67,10 +58,14 @@ function createPath() {
         ],
         fillColor: '#ffffff'
     });
+
+    var raster = new Raster("python-white");
+    raster.position = view.center;
+    raster.scale(0.26);
 }
 
 function onResize() {
-    size =  new Size(640, 640);
+    size =  new Size(480, 480);
     view.viewSize = size;
     createPath();
 }
@@ -81,7 +76,7 @@ function onFrame(event) {
     var t = tilt / 35.0;
     for (var i = 0; i <= values.amount; i++) {
         var point = sinPath.segments[i].point;
-        point.ty = (Math.sin(point.i*Math.PI/values.amount*2)*0.15+0.5+(t * (values.amount/2-point.i))) * size.height;
+        point.ty = (Math.sin(point.i*Math.PI/values.amount*2)*0.17+0.5+(t * (values.amount/2-point.i))) * size.height;
     }
 }
 

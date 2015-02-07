@@ -27,12 +27,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #canvas-flood {
-    background: #306998;
-    background: linear-gradient(135deg, #5a9fd4, #205988);
+    background: #c70a0d;
 
-    width: 100%;
-    max-width: 640px;
-    max-height: 640px;
+    margin: 20px 0;
+    width: 90%;
+    max-width: 480px;
+    max-height: 480px;
 
     -webkit-user-select: none;
     touch-action: none;
