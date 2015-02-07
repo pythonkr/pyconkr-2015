@@ -59,7 +59,7 @@ function createPath() {
         fillColor: '#ffffff'
     });
 
-    var raster = new Raster("python-white");
+    var raster = new Raster("static/image/python-white.png");
     raster.position = view.center;
     raster.scale(0.26);
 }
