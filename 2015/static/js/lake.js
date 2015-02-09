@@ -117,7 +117,9 @@
             if (!settings.image) {
                 c.height = c.height/2;
                 c.canvas.height = c.canvas.height/2;
+                c.putImageData(frames[frame], 0, 0);
             } else {
+                c.putImageData(frames[frame], 0, h/2);
             }
         };
 
