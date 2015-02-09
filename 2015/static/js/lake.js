@@ -117,6 +117,7 @@
             if (!settings.image) {
                 c.height = c.height/2;
                 c.canvas.height = c.canvas.height/2;
+            } else {
             }
         };
 

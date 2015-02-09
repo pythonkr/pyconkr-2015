@@ -104,6 +104,14 @@ hr {
     font-size: 0;
 }
 
+.hoodie-sample {
+    border-radius: 200px;
+    width: 200px;
+    height: auto;
+    float: right;
+    padding: 10px;
+}
+
 .photoalbum li {
     margin: 0;
     padding: 0;
@@ -166,6 +174,10 @@ hr {
 }
 
 @media (max-width: 640px) {
+    .hoodie-sample {
+        width: 96px;
+    }
+
     .content p,
     .content li {
         font-size: 0.95em;
