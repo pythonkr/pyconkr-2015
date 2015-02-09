@@ -94,21 +94,24 @@ function updateWave(path) {
     path.smooth();
 }
 
-function onMouseMove(event) {
-    var location = sinPath.getNearestLocation(event.point);
-    var segment = location.segment;
-    var point = segment.point;
+$.support.touch = 'ontouchstart' in window;
+if( !$.support.touch ) {
+    onMouseMove = function(event) {
+        var location = sinPath.getNearestLocation(event.point);
+        var segment = location.segment;
+        var point = segment.point;
 
-    if (!point.fixed && location.distance < size.height / 4) {
-        var y = event.point.y;
-        point.vy += (y - point.y) / 6 * values.friction;
-        if (segment.previous && !segment.previous.point.fixed) {
-            var previous = segment.previous.point;
-            previous.vy += (y - previous.y) / 24 * values.friction;
-        }
-        if (segment.next && !segment.next.point.fixed) {
-            var next = segment.next.point;
-            next.vy += (y - next.y) / 24 * values.friction;
+        if (!point.fixed && location.distance < size.height / 4) {
+            var y = event.point.y;
+            point.vy += (y - point.y) / 6 * values.friction;
+            if (segment.previous && !segment.previous.point.fixed) {
+                var previous = segment.previous.point;
+                previous.vy += (y - previous.y) / 24 * values.friction;
+            }
+            if (segment.next && !segment.next.point.fixed) {
+                var next = segment.next.point;
+                next.vy += (y - next.y) / 24 * values.friction;
+            }
         }
     }
 }
