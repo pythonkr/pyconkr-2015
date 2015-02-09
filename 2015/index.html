@@ -14,6 +14,8 @@
     <script type="text/javascript" src="bower_components/paper/dist/paper-full.js"></script>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <script type="text/javascript" src="static/js/lake.js"></script>
+    <script type="text/javascript" src="static/js/jquery.inview.js"></script>
     <script type="text/paperscript" src="static/js/flood.js" canvas="canvas-flood"></script>
 
     <link rel="shortcut icon" href="static/image/favicon.ico" type="image/x-icon">
@@ -22,6 +24,25 @@
     <link href="static/css/default.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <script>
+    $(function() {
+        var lake = $('#hanriver-lower').lake({
+            'speed': 2,
+            'scale': 0.5,
+            'waves': 6,
+            'image': false
+        });
+        lake.stop();
+
+        $('#hanriver-lower-lake').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+          if (isInView) {
+              lake.start();
+          } else {
+              lake.stop();
+          }
+        });
+    });
+</script>
 </head>
 <body>
     <table class="seoul-color" cellpadding="0" cellspacing="0">
@@ -181,6 +202,10 @@
                 <span>
                     Image courtesy of Seok Woojing and Park Hyunwoo
                 </span>
+            </div>
+            <div class="hanriver">
+                <img id="hanriver-upper" src="static/image/hanriver-upper.png">
+                <img id="hanriver-lower" src="static/image/hanriver-lower.jpg" style="display:none">
             </div>
         </div>
     </div>
