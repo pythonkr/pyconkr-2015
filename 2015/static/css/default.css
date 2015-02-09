@@ -111,16 +111,22 @@ hr {
     box-sizing: border-box;
 }
 
-.photoalbum .p100 {
+.photoalbum .photo-lg {
     width: 100%;
     height: auto;
     border: 5px solid white;
 }
 
-.photoalbum .p30 {
+.photoalbum .photo-sm {
     width: 33.33%;
     height: auto;
     border: 5px solid white;
+}
+
+@media (max-width: 640px) {
+    .photoalbum .photo-sm {
+        width: 50%;
+    }
 }
 
 .footer {
