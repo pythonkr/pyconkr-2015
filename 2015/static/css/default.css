@@ -6,6 +6,7 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
+    background: #ffffff;
 }
 
 .title {
@@ -28,16 +29,9 @@ html, body{
 }
 
 .content {
-    background-color: #8795AD;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#FFFFFF),to(#8795AD));
-    background-image: -webkit-linear-gradient(top,#FFFFFF 0,#8795AD 100%);
-    background-image: -o-linear-gradient(top,#FFFFFF 0,#8795AD 100%);
-    background-image: linear-gradient(to bottom,#FFFFFF 0,#8795AD 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#8795AD', GradientType=0);
-    background-repeat: repeat-x;
 }
 
-.content .wrap {
+.wrap {
     width: 92%;
     max-width: 960px;
     margin: auto;
@@ -62,7 +56,11 @@ html, body{
 
 .footer {
     text-align: center;
-    padding: 50px 0;
+    padding: 20% 0 20%;
+    background-image: url("../image/hanriver.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
 .footer .badge {
@@ -71,8 +69,6 @@ html, body{
 }
 
 #canvas-flood {
-    background: #c70a0d;
-
     margin-top: 20px;
     width: 90%;
     max-width: 480px;

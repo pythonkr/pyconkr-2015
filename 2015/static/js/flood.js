@@ -5,10 +5,7 @@ var values = {
 };
 
 var path;
-
 var sinPath;
-var boxPath;
-var mask;
 
 var tilt = 0;
 var iOS = false;
@@ -19,13 +16,11 @@ function isiOS()
 }
 
 function createPath() {
-    if (sinPath) sinPath.remove();
-    if (boxPath) boxPath.remove();
-    if (mask) mask.remove();
-    if (path) path.remove();
+    var bg = new Path.Circle(new Point(0.5, 0.5) * size, size.width * 0.45);
+    bg.fillColor = '#c70a0d';
 
     sinPath = new Path();
-    boxPath = new Path([
+    var boxPath = new Path([
         new Point(0.0, 0.5) * size,
         new Point(0.0, 1.0) * size,
         new Point(1.0, 1.0) * size,
@@ -51,7 +46,7 @@ function createPath() {
         fillColor: '#211657',
     });
 
-    mask = new CompoundPath({
+    var mask = new CompoundPath({
         children: [
             new Path.Circle(new Point(0.5, 0.5) * size, size.width * 0.45),
             new Path.Rectangle(new Point(0,0), new Point(1,1) * size)
