@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 * {
-    font-family: "Lato", "Nanum Gothic", "Helvetica Neue", "Arial", sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
 }
 
 html, body{
@@ -9,6 +9,10 @@ html, body{
     margin: 0;
     padding: 0;
     background: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
 }
 
 .seoul-color {
@@ -66,6 +70,7 @@ hr {
 .content h3 {
     border-left: 7px solid #3570a1;
     padding-left: 16px;
+    padding-bottom: 2px;
     font-size: 1.5em;
     margin: 40px 0 10px;
 }
@@ -73,12 +78,12 @@ hr {
 .content p,
 .content li {
     font-size: 1.05em;
-    line-height: 160%;
+    line-height: 172%;
 }
 
 .content a {
     border-radius: 10px;
-    padding: 6px 16px;
+    padding: 6px 16px 7px;
     border: 3px solid #333;
     line-height: 300%;
     text-decoration: none;
@@ -123,15 +128,9 @@ hr {
     border: 5px solid white;
 }
 
-@media (max-width: 640px) {
-    .photoalbum .photo-sm {
-        width: 50%;
-    }
-}
-
 .footer {
     text-align: center;
-    padding: 10% 0 20%;
+    padding: 10% 0 30%;
     background-image: url("../image/hanriver.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -155,4 +154,16 @@ hr {
     max-height: 480px;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 640px) {
+    .content p,
+    .content li {
+        font-size: 0.95em;
+        line-height: 172%;
+    }
+
+    .photoalbum .photo-sm {
+        width: 50%;
+    }
 }
