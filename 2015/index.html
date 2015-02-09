@@ -14,31 +14,53 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <table class="seoul-color" cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr>
+            <td style="background:#594743">SC0916</td>
+            <td style="background:#A4A199">SC2920</td>
+            <td style="background:#504E49">SC2940</td>
+            <td style="background:#D8CCAD">SC1941</td>
+            <td style="background:#DFDFDD">SCN902</td>
+        </tr>
+        </tbody>
+    </table>
     <div class="title">
         <canvas hidpi="off" id="canvas-flood"></canvas>
         <div class="headline">
             <h1 class="headline">
                 PyCon Korea 2015
             </h1>
+            <h2>
+                 2015/06/27 ~ 28
+            </h2>
         </div>
     </div>
+    <hr/>
     <div class="content">
         <article class="wrap">
             <h2>Call For Proposals</h2>
+            <section id="overview">
+                <h3>행사개요</h3>
+                <p>
+                    파이콘은 세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스입니다.
+                </p>
+                <p>
+                    2014년, 한국에서 처음으로 개최한 파이콘 한국 2014를 시작으로 파이콘 한국 준비위원회는 건강한 국내 파이썬 생태계에 지속적인 보탬이 되고자, 커뮤니티 멤버들의 자발적인 봉사로 운영되고 있습니다.
+                    작년보다 성숙된, 보다 알찬 모습으로 열릴 ‘파이콘 한국 2015’를 통해 새로운 기술과 정보를 공유하고 참석자들이 서로 교류할 수 있는 행사가 되기를 희망합니다.
+                </p>
+                <ul>
+                    <li>일정 : 2015년 6월 27일(토) ~ 28일(일)</li>
+                    <li>장소 : 서울 OO 대학교 OO 강당</li>
+                    <li>인원 : 약 800명 예상</li>
+                    <li>주최 : 파이콘 한국 준비 위원회</li>
+                    <li>대상 : 국내 파이썬 개발자 / 관계자</li>
+                </ul>
+            </section>
             <section id="apply">
                 <h3>발표자 지원</h3>
                 <ul>
-                    <li><a href="http://goo.gl/LLbmH0">발표자 지원 서식 작성</a></li>
-                </ul>
-            </section>
-            <section id="overview">
-                <h3>행사개요</h3>
-                <ul>
-                    <li>일정 : 2015년 6월 27일(토) ~ 27일(일)</li>
-                    <li>장소 : 서울 OO 대학교 OO 강당</li>
-                    <li>참석인원 : 약 800명 예상</li>
-                    <li>주최 : PyCon Korea 준비 위원회</li>
-                    <li>대상 : 국내 Python 개발자 / 관계자</li>
+                    <li><a class="button" href="http://goo.gl/LLbmH0">발표자 지원 서식 작성</a></li>
                 </ul>
             </section>
             <section id="program">
@@ -50,15 +72,16 @@
                 <ul>
                     <li>파이썬 활용
                         <ul>
-                            <li>Web Programming (Django, Flask, Pyramid 등)</li>
+                            <li>Web Programming (e.g. Django, Flask, Pyramid)</li>
                             <li>Cloud Computing / Network Programming</li>
                             <li>System Administration and Security</li>
-                            <li>Multimedia, Animation, and Graphics</li>
+                            <li>Multimedia, Animation and Computer Graphics</li>
                             <li>Game / GUI Programming</li>
                             <li>Hardware / Embedded System Design</li>
-                            <li>SciPy 와 Numpy 활용</li>
+                            <li>SciPy and Numpy</li>
                             <li>Big Data / PyData, Data Mining, Machine Learning</li>
                             <li>Bioinformatics</li>
+                            <li>Deploying Applications</li>
                         </ul>
                     </li>
                     <li>파이썬 언어
@@ -67,7 +90,6 @@
                             <li>Programming Tools</li>
                             <li>Python Libraries and Extensions</li>
                             <li>Python Implementations: IronPython, Jython, PyPy and Stackless</li>
-                            <li>Deploying Python Applications</li>
                         </ul>
                     </li>
                     <li>파이썬과 비지니스
@@ -76,7 +98,7 @@
                             <li>Startups, Business, and Education</li>
                         </ul>
                     </li>
-                    <li>입문자를 위한 다양한 Python 소개 세션</li>
+                    <li>입문자를 위한 다양한 파이썬 소개 세션</li>
                 </ul>
             </section>
             <section id="schedule">
@@ -99,7 +121,7 @@
             <section id="information">
                 <h3>안내</h3>
                 <ul>
-                    <li>PyCon Korea는 한국의 파이썬 개발자들이 지식을 공유하고 만남을 갖기 위한 공유의 장 입니다</li>
+                    <li>PyCon Korea는 한국의 파이썬 개발자들이 지식을 공유하고 만남을 갖기 위한 공유의 장입니다.</li>
                     <li>발표내용은 PyCon Korea의 품질을 유지하기 위하여 심사되고 보완될 수 있습니다. </li>
                     <li>발표자에 한해 주차 지원이 가능합니다.</li>
                     <li>각 세션의 발표시간은 50분 입니다. 발표 시간은 조정될 수 있습니다.</li>
@@ -116,17 +138,20 @@
                 <ul>
                     <li><a href="http://www.pycon.kr/2014/">PyCon Korea 2014 홈페이지</a></li>
                     <li><a href="https://www.facebook.com/groups/pythonkorea/">파이썬 한국 사용자 모임 (페이스북)</a></li>
-                    <li><a href="http://goo.gl/LLbmH0">발표자 지원 서식 작성</a></li>
+                    <li><a class="button" href="http://goo.gl/LLbmH0">발표자 지원 서식 작성</a></li>
                 </ul>
             </section>
         </article>
         <div class="footer">
-          <div class="wrap">
-            <img class="badge" src="static/image/pyconkr-badge.png" alt="Badge of PyCon Korea">
-            <p>
-            PyCon Korea 2015 / 파이콘 한국 2015 는 파이콘 한국 준비위원회가 만들고 있습니다.
-            </p>
-          </div>
+            <div class="wrap">
+                <img class="badge" src="static/image/pyconkr-badge.png" alt="Badge of PyCon Korea">
+                <p>
+                    PyCon Korea 2015는 파이콘 한국 준비위원회가 만들고 있습니다.
+                </p>
+                <span>
+                    Image courtesy of Park Hyunwoo, 2015
+                </span>
+            </div>
         </div>
     </div>
 </body>

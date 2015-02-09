@@ -1,5 +1,7 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 * {
-    font-family: "Lato", "Helvetica Neue", "Arial", sans-serif;
+    font-family: "Lato", "Nanum Gothic", "Helvetica Neue", "Arial", sans-serif;
 }
 
 html, body{
@@ -7,6 +9,16 @@ html, body{
     margin: 0;
     padding: 0;
     background: #ffffff;
+}
+
+.seoul-color {
+    width: 100%;
+}
+
+.seoul-color td {
+    color: rgba(0, 0, 0, 0);
+    font-size: 0;
+    line-height: 8px;
 }
 
 .title {
@@ -38,25 +50,50 @@ html, body{
 
 }
 
+hr {
+    width: 80%;
+    max-width: 480px;
+    border: 2px solid black;
+    margin: 60px auto;
+}
+
 .content h2 {
     font-size: 2.5em;
-    text-align: center;
     font-weight: 700;
-    margin: 10px 0 30px;
+    margin: 10px 0 50px;
 }
 
 .content h3 {
+    border-left: 7px solid #3570a1;
+    padding-left: 16px;
     font-size: 1.5em;
-    margin: 25px 0 10px;
+    margin: 40px 0 10px;
 }
 
+.content p,
 .content li {
-    line-height: 155%;
+    font-size: 1.05em;
+    line-height: 160%;
+}
+
+.content a {
+    border-radius: 10px;
+    padding: 6px 16px;
+    border: 3px solid #333;
+    line-height: 300%;
+    text-decoration: none;
+    color: black;
+    background-color: #fedc77;
+    font-weight: 700;
+}
+
+.content a:hover {
+    background-color: #ffec82;
 }
 
 .footer {
     text-align: center;
-    padding: 20% 0 20%;
+    padding: 10% 0 20%;
     background-image: url("../image/hanriver.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -64,8 +101,13 @@ html, body{
 }
 
 .footer .badge {
-    width: 128px;
+    width: 64px;
     height: auto;
+}
+
+.footer span {
+    color: #999;
+    font-size: 0.7em;
 }
 
 #canvas-flood {
@@ -74,6 +116,5 @@ html, body{
     max-width: 480px;
     max-height: 480px;
 
-    -webkit-user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
