@@ -141,6 +141,10 @@ hr {
     padding: 10% 0 0;
 }
 
+.footer p {
+    font-size: 0.9em;
+}
+
 .footer .badge {
     width: 64px;
     height: auto;
@@ -182,6 +186,10 @@ hr {
     .content li {
         font-size: 0.95em;
         line-height: 172%;
+    }
+
+    .footer p {
+        font-size: 0.8em;
     }
 
     .content ul {
