@@ -163,6 +163,10 @@ hr {
         line-height: 172%;
     }
 
+    .content ul {
+        padding-left: 20px;
+    }
+
     .photoalbum .photo-sm {
         width: 50%;
     }
