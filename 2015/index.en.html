@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PyCon Korea 2015</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.85">
+
+    <meta property="og:site_name" content="PyCon Korea 2015">
+    <meta property="og:title" content="PyCon Korea 2015">
+    <meta property="og:image" content="http://www.pycon.kr/2015/static/image/pyconkr-badge.png">
+    <meta property="og:url" content="http://www.pycon.kr/2015/">
+    <meta property="og:description" content="PyCon Korea is an annual convention for the discussion and promotion of the Python programming language helds in Korea.">
+
+    <script type="text/javascript" src="bower_components/paper/dist/paper-full.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <script type="text/javascript" src="static/js/lake.js"></script>
+    <script type="text/javascript" src="static/js/jquery.inview.js"></script>
+    <script type="text/paperscript" src="static/js/flood.js" canvas="canvas-flood"></script>
+
+    <link rel="shortcut icon" href="static/image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/image/favicon.ico" type="image/x-icon">
+
+    <link href="static/css/default.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <script>
+    $(function() {
+        var lake = $('#hanriver-lower').lake({
+            'speed': 2,
+            'scale': 0.5,
+            'waves': 6,
+            'image': false
+        });
+        lake.stop();
+
+        $('#hanriver-lower-lake').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+          if (isInView) {
+              lake.start();
+          } else {
+              lake.stop();
+          }
+        });
+    });
+</script>
+</head>
+<body>
+    <table class="seoul-color" cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr>
+            <td style="background:#594743">SC0916</td>
+            <td style="background:#A4A199">SC2920</td>
+            <td style="background:#504E49">SC2940</td>
+            <td style="background:#D8CCAD">SC1941</td>
+            <td style="background:#DFDFDD">SCN902</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="title">
+        <canvas hidpi="off" id="canvas-flood"></canvas>
+        <div class="headline">
+            <h1 class="headline">
+                PyCon Korea 2015
+            </h1>
+            <h2>
+                 2015/06/27 ~ 28
+            </h2>
+        </div>
+    </div>
+    <hr/>
+    <div class="content">
+        <article class="wrap">
+            <a class="nav" href="index.html">&gt; in Korean</a>
+            <h2>Call For Proposals</h2>
+            <section id="overview">
+                <h3>Overview</h3>
+                <p>
+                    Pycon is a non-commercial conference held by Python programming communities over the world.
+                </p>
+                <p>
+                    Starting from first Pycon in Korea in 2014, Pycon Korea is ran by Pycon Korea preparation organizers who volunteers to support Korea’s Python communities.
+                    Please join Pyon Korea 2015 with full of various talk sessions, networking opportunities and Python knowledge sharings.
+                </p>
+                <ul>
+                    <li>Date : June 27th(Sat) ~ 28th(Sun), 2015</li>
+                    <li>Venue : Seoul OO University OO Hall</li>
+                    <li>Attendees: about 800 people</li>
+                    <li>Talk sessions : 50 mins long for each sessions (can be changed)</li>
+                </ul>
+            </section>
+            <section id="apply">
+                <h3>Make a proposal</h3>
+                <ul>
+                    <li><a class="button" href="http://goo.gl/LLbmH0">Submit Proposal (Google Forms)</a></li>
+                </ul>
+            </section>
+            <section id="program">
+                <h3>Topics</h3>
+                <p>
+                We accept a broad range of python related proposals, from reports on academic and commercial projects and case studies.
+                Suitable topics include, but not limited to:
+                </p>
+                <ul>
+                    <li>Python Projects
+                        <ul>
+                            <li>Web Programming (e.g. Django, Flask, Pyramid)</li>
+                            <li>Cloud Computing / Network Programming</li>
+                            <li>System Administration and Security</li>
+                            <li>Multimedia, Animation and Computer Graphics</li>
+                            <li>Game / GUI Programming</li>
+                            <li>Hardware / Embedded System Design</li>
+                            <li>SciPy and Numpy</li>
+                            <li>Big Data / PyData, Data Mining, Machine Learning</li>
+                            <li>Bioinformatics</li>
+                            <li>Deploying Applications</li>
+                        </ul>
+                    </li>
+                    <li>Python Language
+                        <ul>
+                            <li>Packaging Issues</li>
+                            <li>Programming Tools</li>
+                            <li>Python Libraries and Extensions</li>
+                            <li>Python Implementations: IronPython, Jython, PyPy and Stackless</li>
+                        </ul>
+                    </li>
+                    <li>Python and Business
+                        <ul>
+                            <li>Agile Development and Project Best Practices</li>
+                            <li>Startups, Business, and Education</li>
+                        </ul>
+                    </li>
+                    <li>Python for Beginners</li>
+                </ul>
+            </section>
+            <section id="schedule">
+                <h3>Important Dates</h3>
+                <ul>
+                    <li>Feb 10th, 2015 : Opening of Call For Proposals</li>
+                    <li>Apr 1st, 2015 : Proposals Closes</li>
+                    <li>May 2nd, 2015 :  Notification of Proposal Acceptance</li>
+                </ul>
+            </section>
+            <section id="voucher">
+                <h3>Speaker Benefits</h3>
+                <ul>
+                    <li>2 Pycon Korea tickets (for 2 full days)</li>
+                    <li>Lunch and Speaker gift</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li>E-Mail : proposal at pycon dot kr</li>
+                </ul>
+            </section>
+            <hr/>
+            <h2>And,</h2>
+            <section id="pyconkr-2014">
+                <h3>PyCon Korea 2014</h3>
+                <p>
+                    PyCon Korea 2014 was held in Aug 30, 2014. It was a great event with 450 attendees, 20 sessions and 17 speakers.
+                    And also with 20 volunteers and 11 staffs were involved to make successful the first PyCon Korea. Thank you.
+                </p>
+                <ul>
+                    <li><a href="http://www.pycon.kr/2014/">PyCon Korea 2014</a></li>
+                    <li><a href="https://www.flickr.com/photos/126829363@N08/sets/72157647241831642/">Photos of PyCon Korea 2014 (flickr)</a></li>
+                </ul>
+                <ul class="photoalbum">
+                    <li><img class="photo-lg" src="static/image/2014/01.jpg"></li>
+                    <li><img class="photo-sm" src="static/image/2014/02.jpg"></li>
+                    <li><img class="photo-sm" src="static/image/2014/03.jpg"></li>
+                    <li><img class="photo-sm" src="static/image/2014/04.jpg"></li>
+                    <li><img class="photo-sm" src="static/image/2014/05.jpg"></li>
+                    <li><img class="photo-sm" src="static/image/2014/06.jpg"></li>
+                    <li><img class="photo-sm" src="static/image/2014/07.jpg"></li>
+                </ul>
+            </section>
+            <section id="reference">
+                <h3>Reference</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/groups/pythonkorea/">Python Korea Usergroup (Facebook)</a></li>
+                    <li><a class="button" href="http://goo.gl/LLbmH0">Submit Proposal (Google Forms)</a></li>
+                </ul>
+            </section>
+        </article>
+        <div class="footer">
+            <div class="wrap">
+                <img class="badge" src="static/image/pyconkr-badge.png" alt="Badge of PyCon Korea">
+                <p>
+                    PyCon Korea 2015 is a production of the PyCon Korea Organizing Team
+                </p>
+                <span>
+                    Image courtesy of Seok Woojing and Park Hyunwoo
+                </span>
+            </div>
+            <div class="hanriver">
+                <img id="hanriver-upper" src="static/image/hanriver-upper.png">
+                <img id="hanriver-lower" src="static/image/hanriver-lower.jpg" style="display:none">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-53680093-1', 'pycon.kr');
+  ga('send', 'pageview');
+</script>
+</html>

@@ -96,6 +96,16 @@ hr {
     background-color: #ffec82;
 }
 
+.content .nav {
+    line-height: 150%;
+    background-color: #fff;
+    float: right;
+}
+
+.content .nav:hover {
+    background-color: #ddd;
+}
+
 .photoalbum {
     margin: 0;
     padding: 0;
