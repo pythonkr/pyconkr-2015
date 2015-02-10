@@ -75,10 +75,19 @@ hr {
     margin: 40px 0 10px;
 }
 
+.content h4 {
+    font-size: 1.15em;
+    margin: 0;
+}
+
 .content p,
 .content li {
     font-size: 1.05em;
     line-height: 172%;
+}
+
+.content p {
+    margin-top: 3px;
 }
 
 .content a {
