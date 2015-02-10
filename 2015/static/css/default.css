@@ -196,6 +196,21 @@ hr {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.side-by-side {
+    width: 100%;
+    background: #eee;
+}
+
+.side-by-side td,
+.side-by-side th {
+    font-size: 1em;
+}
+
+.side-by-side td {
+    background: #fff;
+    text-align: center;
+}
+
 @media (max-width: 640px) {
     .hoodie-sample {
         width: 96px;
@@ -208,7 +223,7 @@ hr {
     }
 
     .footer p {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     .content ul {
@@ -217,5 +232,10 @@ hr {
 
     .photoalbum .photo-sm {
         width: 50%;
+    }
+
+    .side-by-side td,
+    .side-by-side th {
+        font-size: 0.7em;
     }
 }
