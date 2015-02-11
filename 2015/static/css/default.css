@@ -77,7 +77,8 @@ hr {
 
 .content h4 {
     font-size: 1.15em;
-    margin: 0;
+    margin-top: 14px;
+    margin-bottom: 0;
 }
 
 .content p,
