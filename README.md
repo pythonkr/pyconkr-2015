@@ -30,7 +30,7 @@ Roles
 - Venue (@bloodevil)
 - Budget (@bloodevil)
 - Homepage (@lqez)
-- Design
+- Design (@lqez)
 - Goods (@miyunim, @corazzon)
  
 Tools
