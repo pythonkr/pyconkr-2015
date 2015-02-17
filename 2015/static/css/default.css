@@ -212,6 +212,10 @@ hr {
     text-align: center;
 }
 
+.outdated {
+    color: #ccc;
+}
+
 @media (max-width: 640px) {
     .hoodie-sample {
         width: 96px;
