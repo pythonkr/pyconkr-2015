@@ -106,13 +106,19 @@ hr {
     background-color: #ffec82;
 }
 
-.content .nav {
-    line-height: 150%;
-    background-color: #fff;
+.content .linkset {
+    display: inline-block;
     float: right;
+    padding-top: 10px;
 }
 
-.content .nav:hover {
+.content .link {
+    line-height: 150%;
+    background-color: #fff;
+    margin-right: 5px;
+}
+
+.content .link:hover {
     background-color: #ddd;
 }
 
@@ -217,6 +223,14 @@ hr {
 }
 
 @media (max-width: 640px) {
+    .content .linkset {
+        text-align: center;
+        margin-top: -45px;
+        margin-bottom: 45px;
+        display: block;
+        float: none;
+    }
+
     .hoodie-sample {
         width: 96px;
     }
