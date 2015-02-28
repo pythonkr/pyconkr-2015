@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+{% for announcement in object_list %}
+<dl class="announcements">
+<dt>
+  <h4>
+    <a href="{% url "announcement" announcement.id %}">{{ announcement }}</a>
+    <span class="datetime">{{ announcement.created|date:"Y-m-d" }}</span>
+  </h4>
+</dt>
+<dd>
+  {{ announcement.desc|striptags|truncatechars:300|safe }}
+  <a href="{% url "announcement" announcement.id %}">
+    <span class="continue">{% trans "Read more" %}</span>
+  </a>
+</dd>
+</dl>
+{% endfor %}
+{% endblock %}

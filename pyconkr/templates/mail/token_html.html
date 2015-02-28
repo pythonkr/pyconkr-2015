@@ -1,0 +1,8 @@
+{% load i18n %}
+<h1>{% trans "PyCon Korea" %}</h1>
+<p>{% trans "You can login to PyCon Korea homepage via below url." %}</p>
+<p>{% trans "Link" %}:
+    <a href="http://{{ request.get_host }}{% url "login_req" token.token %}">
+        http://{{ request.get_host }}{% url "login_req" token.token %}
+    </a>
+</p>

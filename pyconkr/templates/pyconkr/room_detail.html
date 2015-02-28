@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block titlebar %}
+{% include "titlebar.html" with title=object.name %}
+{% endblock %}
+
+{% block content %}
+{{ object }}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load staticfiles %}
+{% load i18n %}
+{% if title %}
+{% include "seoul-color.html" %}
+<div class="titlebar">
+  <img class="building" src="{% static "image/bg-building-tiny.png" %}">
+  <div class="background">
+    <img class="mountain" src="{% static "image/bg-mountain.png" %}">  
+    <img class="tower-1" src="{% static "image/bg-ntower.png" %}">
+    <img class="tower-2" src="{% static "image/bg-tower.png" %}">
+    <img class="tower-3" src="{% static "image/bg-tower.png" %}">
+  </div>
+  <div class="container">
+    <h1>
+      {{ title }}
+    </h1>
+  </div>
+</div>
+{% endif %}

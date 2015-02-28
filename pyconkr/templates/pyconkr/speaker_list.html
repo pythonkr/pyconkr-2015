@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<ul class="speakers media-list">
+{% for speaker in object_list %}
+  <li class="media">
+    <a class="pull-left" href="{{ speaker.get_absolute_url }}">
+      <img class="media-speakerect" src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.name }}">
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">
+        <a href="{{ speaker.get_absolute_url }}">{{ speaker.name }} / {{ speaker.slug }}</a>
+        <span class="badges hidden-xs">{{ speaker.get_badges_xs|safe }}</span>
+      </h4>
+      <!--{{ speaker.desc|striptags|truncatechars:200|safe }}-->
+      {% for program in speaker.program_set.all %}
+      <a href="{{ program.get_absolute_url }}">{{ program.name }}</a>
+      {% endfor %}
+    </div>
+  </li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} {{ flatpage.title }}{% endblock %}
+
+{% block titlebar %}
+{% include "titlebar.html" with title=flatpage.title %}
+{% endblock %}
+
+{% block content %}
+{{ flatpage.content }}
+{% endblock %}

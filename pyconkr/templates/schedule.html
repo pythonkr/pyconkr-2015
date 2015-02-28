@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block wrap %}
+<div class="content">
+<!--
+<div class="alert alert-info" role="alert">
+    {% trans "Schedule may be subject to change." %}
+</div>
+-->
+  {% for d, d_ in narrow.items %}
+  <div class="timetable timetable-narrow visible-xs">
+    <h2>{{ d }}</h2>
+    <table class="table">
+      <tbody>
+      {% for t, t_ in d_.items %}
+      <tr>
+        <th nowrap rowspan="{{ t_.items|length }}">{{ t.begin|date:"H:i" }}</th>
+        {% for r, s in t_.items|slice:"1" %}
+        <td nowrap>{{ s.room }}</td>
+        <td>
+            <a href="{{ s.get_absolute_url }}">{{ s }}</a>
+            {% if s.slide_url %}
+            <small><a href="{{ s.slide_url }}"><span class="label label-primary">{% trans "Slides link" %}</span></a></small>
+            {% endif %}
+            {% if s.video_url %}
+            <small><a href="{{ s.video_url }}"><span class="label label-info">{% trans "Video link" %}</span></a></small>
+            {% endif %}
+            {% if s.pdf_url %}
+            <small><a href="{{ s.pdf_url }}"><span class="label label-danger">{% trans "PDF link" %}</span></a></small>
+            {% endif %}
+        </td>
+        {% endfor %}
+      </tr>
+      {% for r, s in t_.items|slice:"1:" %}
+      <tr>
+        <td nowrap>{{ s.room }}</td>
+        <td>
+            <a href="{{ s.get_absolute_url }}">{{ s }}</a>
+            {% if s.slide_url %}
+            <small><a href="{{ s.slide_url }}"><span class="label label-primary">{% trans "Slides link" %}</span></a></small>
+            {% endif %}
+            {% if s.video_url %}
+            <small><a href="{{ s.video_url }}"><span class="label label-info">{% trans "Video link" %}</span></a></small>
+            {% endif %}
+            {% if s.pdf_url %}
+            <small><a href="{{ s.pdf_url }}"><span class="label label-danger">{% trans "PDF link" %}</span></a></small>
+            {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+  {% for d, d_ in wide.items %}
+  <div class="timetable timetable-wide hidden-xs">
+    <h2>{{ d }}</h2>
+    <table class="table table-striped table-bordered">
+      <colgroup>
+        <col width="*">
+        {% for r in rooms %}
+        <col width="33%">
+        {% endfor %}
+      </colgroup>
+      <thead>
+        <th></th>
+        {% for r in rooms %}
+        <th>{{ r.name }}</th>
+        {% endfor %}
+      </thead>
+      <tbody>
+      {% for t, t_ in d_.items %}
+      <tr>
+        <th nowrap>{{ t.begin|date:"H:i" }}</th>
+        {% for r, s in t_.items %}
+        {% if s %}
+        <td class="cell"
+          colspan="{{ s.rooms.all|length }}"
+          rowspan="{{ s.times.all|length }}">
+          <div class="program">
+            <a href="{{ s.get_absolute_url }}" class="title">
+              <div>
+                {{ s.name }}
+                {% if not s.is_recordable %}
+                  &nbsp;<span class="glyphicon glyphicon-eye-close"></span>
+                {% endif %}
+              </div>
+            </a>
+            {% if s.slide_url %}
+            <small><a href="{{ s.slide_url }}"><span class="label label-primary">{% trans "Slides link" %}</span></a></small>
+            {% endif %}
+            {% if s.video_url %}
+            <small><a href="{{ s.video_url }}"><span class="label label-info">{% trans "Video link" %}</span></a></small>
+            {% endif %}
+            {% if s.pdf_url %}
+            <small><a href="{{ s.pdf_url }}"><span class="label label-danger">{% trans "PDF link" %}</span></a></small>
+            {% endif %}
+          </div>
+          {% if s.speakers %}
+          <div class="speaker">
+            {% for speaker in s.speakers.all %}
+            <a href="{{ speaker.get_absolute_url }}">
+              <img src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.slug }}">
+              {{ speaker.name }}
+            </a>
+            {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+        </td>
+        {% else %}
+        <td></td>
+        {% endif %}
+        {% endfor %}
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

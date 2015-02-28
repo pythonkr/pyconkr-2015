@@ -1,0 +1,462 @@
+* {
+    font-family: 'Open Sans', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+body, html {
+    margin: 0;
+    font-size: 15px;
+    color: #666;
+}
+
+h1, h2, h3, h4, h5, h6, th, .title {
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
+    color: #333;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+    font-weight: 700;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-weight: 700;
+}
+
+small a:hover {
+    text-decoration: none;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.navbar {
+    padding: 10px 0;
+    margin-bottom: 0px !important;
+}
+
+.navbar-brand {
+    float: none;
+    padding: 5px 25px 5px 15px;
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 50px;
+}
+
+.navbar-default {
+    background: none;
+    border: 0;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-nav>li>a, .dropdown-menu>li>a {
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
+    color: #333;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: 0;
+}
+
+.navbar-default .glyphicon {
+    margin-right: 3px;
+    top: 2px;
+}
+
+.navbar-default .glyphicon-python {
+    width: 16px;
+    height: 16px;
+    background: url("../image/python-black.png");
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+.wrap {
+}
+
+.content {
+    padding-bottom: 100px;
+}
+
+.content > p:first-child,
+.content > div:first-child {
+    margin-top: 15px;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+.content .map {
+    max-width: 100%;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+}
+
+.titlebar {
+    position: relative;
+    background-color: #FAFAFA;
+    padding: 12px 0 20px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E7E7E7;
+    overflow: hidden;
+}
+
+.titlebar h1 {
+    font-size: 42px;
+}
+
+.titlebar .building {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0px;
+    right: 0;
+    z-index: 2;
+}
+
+.titlebar .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.titlebar .background .mountain {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    bottom: -15%;
+}
+
+.titlebar .background .tower-1 {
+    position: absolute;
+    left: 64%;
+    width: auto;
+    height: 70%;
+    bottom: 27%;
+}
+
+.titlebar .background .tower-2 {
+    position: absolute;
+    left: 65%;
+    width: auto;
+    height: 30%;
+    bottom: 27%;
+}
+
+.titlebar .background .tower-3 {
+    position: absolute;
+    left: 92%;
+    width: auto;
+    height: 50%;
+    bottom: 23%;
+}
+
+.seoul-color {
+    width: 100%;
+}
+
+.seoul-color td {
+    color: transparent;
+    font-size: 0;
+    line-height: 4px;
+}
+
+.frontpage {
+    position: relative;
+    padding: 3% 0 20% 0;
+    background-color: #8795AD;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#FFFFFF),to(#8795AD));
+    background-image: -webkit-linear-gradient(top,#FFFFFF 0,#8795AD 100%);
+    background-image: -o-linear-gradient(top,#FFFFFF 0,#8795AD 100%);
+    background-image: linear-gradient(to bottom,#FFFFFF 0,#8795AD 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#8795AD', GradientType=0);
+    background-repeat: repeat-x;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.frontpage .building {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 220px;
+    right: 0;
+    z-index: 2;
+}
+
+.frontpage .courtesy {
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    margin: 5px;
+}
+
+.frontpage .courtesy a {
+    z-index: 3;
+    color: #EEE;
+    font-size: 9px;
+    line-height: 9px;
+    opacity: 0.5;
+}
+
+.frontpage .slogan {
+    color: #FAFAFA;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 3;
+    top: 10%;
+}
+
+.frontpage .slogan img {
+    width: 50%;
+    height: auto;
+}
+
+.frontpage .slogan h1 {
+    color: #FFFFFF;
+}
+
+.frontpage .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 100px;
+    z-index: 1;
+}
+
+.frontpage .background .mountain {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 0;
+}
+
+.frontpage .background .tower-1 {
+    position: absolute;
+    left: 22%;
+    width: 2%;
+    height: auto;
+    bottom: 20%;
+}
+
+.frontpage .background .tower-2 {
+    position: absolute;
+    left: 75%;
+    width: 2%;
+    height: auto;
+    bottom: 16%;
+}
+
+.frontpage .background .tower-3 {
+    position: absolute;
+    left: 25%;
+    width: 1.25%;
+    height: auto;
+    bottom: 22%;
+}
+
+
+.sponsors {
+}
+
+.sponsors h4 {
+}
+
+.sponsors ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sponsors li {
+    list-style: none;
+    display: inline-block;
+    width: 32%;
+    max-width: 200px;
+}
+
+.sponsors .sponsor-platinum {
+    width: 100%;
+    max-width: 400px;
+}
+
+.sponsors .sponsor-gold {
+    width: 49%;
+    max-width: 300px;
+}
+
+.sponsors li img {
+    width: 100%;
+    padding: 5%;
+    height: auto;
+}
+
+.announcements {
+    margin: 0;
+    padding: 0;
+}
+
+.announcements dt h4 {
+    font-size: 140%;
+}
+
+.announcements dt h4 a {
+    display: block;
+}
+
+.announcements dt h4 span {
+    font-size: 60%;
+}
+
+.announcements dd {
+    margin-bottom: 32px;
+}
+
+.speaker .image {
+    display: block;
+    width: 320px;
+    margin: 10px 0;
+    height: auto;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+}
+
+.btn-homepage {
+    color: #FFF;
+    background-color: #818181;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-homepage:hover, .btn-homepage:focus {
+    color: #FFF;
+    background-color: #696969;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-blog {
+    color: #FFF !important;
+    background-color: #57C791;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-blog:hover, .btn-blog:focus
+{
+    color: #FFF;
+    background-color: #4BB482;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.list-group-item {
+    font-size: 110%;
+}
+
+.list-group-item span {
+    margin-right: 8px;
+}
+
+.speaker-small {
+    display: inline-block;
+}
+
+.speaker-small .image {
+    width: 24px;
+    height: auto;
+    border: 1px solid #E7E7E7;
+    border-radius: 100px;
+}
+
+.timetable .title {
+    font-size: 110%;
+}
+
+.timetable .speaker {
+    margin-top: 12px;
+}
+
+.timetable .speaker img {
+    width: 36px;
+    height: auto;
+    border: 1px solid #E7E7E7;
+    border-radius: 100px;
+}
+
+.timetable-wide .title {
+    display: block;
+}
+
+.jobfair dt img {
+    width: auto;
+    height: 64px;
+}
+
+.well {
+    background: #FFF !important;
+    margin: 14px 0 20px;
+}
+
+.speakers img {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #E7E7E7;
+    border-radius: 100px;
+}
+
+.speakers li {
+    margin-bottom: 32px;
+}
+
+.speakers h4 .badges {
+    margin-left: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+.footer {
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #E7E7E7;
+}
+
+.footer p {
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
+    font-size: 90%;
+}
+
+.footer .pyconkr-badge {
+    width: 96px;
+    height: auto;
+    padding: 10px 0 20px;
+}
+
+.social-badges {
+    display: inline-block;
+    overflow: hidden;
+    height: 20px;
+}
+
+.social-badges span {
+    float: left;
+}
+
+.badges {
+    display: inline-block;
+}
+
+.badges .btn {
+    margin-bottom: 5px;
+}

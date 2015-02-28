@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ block.super }} {% trans "Program" %} | {{ program.name }}{% endblock %}
+{% block og-title %}{{ program.name }}{% endblock %}
+{% block og-desc %}{{ program.desc|striptags|safe }}{% endblock %}
+
+{% block titlebar %}
+{% include "titlebar.html" with title=program.name %}
+{% endblock %}
+
+{% block content %}
+{% include "badge/all.html" %}
+<ul class="list-group">
+  {% if program.category %}
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-tag"></span> {{ program.category }}
+  </li>
+  {% endif %}
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-time"></span> {{ program.date }} {{ program.get_times }}
+  </li>
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-volume-up"></span> {{ program.get_language_display }}
+  </li>
+  {% if program.room %}
+  <li class="list-group-item">
+    <span class="glyphicon glyphicon-map-marker"></span> {{ program.room }}
+  </li>
+  {% endif %}
+  {% if program.get_speakers %}
+  <li class="list-group-item">
+    {% for speaker in program.speakers.all %}
+    <div class="speaker-small">
+    <a href="{{ speaker.get_absolute_url }}">
+        <img class="image" src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.slug }}">
+        <span class="name">{{ speaker }}</span>
+    </a>
+    </div>
+    {% endfor %}
+  </li>
+  {% endif %}
+  <li class="list-group-item">
+  {% if program.is_recordable %}
+    <span class="glyphicon glyphicon-eye-open"></span> {% trans "Photography and recording is allowed" %}
+  {% else %}
+    <span class="glyphicon glyphicon-eye-close"></span> {% trans "Photography and recording is not allowed" %}
+  {% endif %}
+  </li>
+</ul>
+{% if program.slide_url %}
+<h3>{% trans "Slide" %}</h3>
+{{ program.slide_url|urlize }}
+{% endif %}
+{% if program.video_url %}
+<h3>{% trans "Video" %}</h3>
+{{ program.video_url|urlize }}
+{% endif %}
+{% if program.pdf_url %}
+<h3>{% trans "PDF" %}</h3>
+{{ program.pdf_url|urlize }}
+{% endif %}
+<h3>{% trans "Description" %}</h3>
+{{ program.desc|safe }}
+{% if editable %}
+<hr>
+<a href="{% url "program_edit" program.id %}" class="btn btn-large btn-primary">{% trans "Edit" %}</a>
+{% endif %}
+{% include "disqus.html" %}
+{% endblock %}

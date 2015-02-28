@@ -1,0 +1,3 @@
+{% load i18n %}
+{% trans "You can login to PyCon Korea homepage via below url." %}
+http://{{ request.get_host }}{% url "login_req" token.token %}

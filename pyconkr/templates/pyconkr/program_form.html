@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+{{ form.media }}
+{% endblock %}
+
+{% block titlebar %}
+{% include "titlebar.html" with title=program %}
+{% endblock %}
+
+{% block content %}
+{% crispy form %}
+{% endblock %}

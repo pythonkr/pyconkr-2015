@@ -1,1 +1,13 @@
-bower_components
+*.log
+*.pot
+*.pyc
+*.db
+*.mo
+.AppleDouble
+.DS_Store
+
+media/
+collected_static/
+django-summernote/
+**/static/components/**
+settings_*.py

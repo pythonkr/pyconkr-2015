@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ block.super }} {% trans "Speaker" %} | {{ speaker.name }}{% endblock %}
+{% block og-title %}{{ speaker.name }}{% endblock %}
+{% block og-image %}{{ speaker.get_image_url }}{% endblock %}
+{% block og-desc %}{{ speaker.desc|striptags }}{% endblock %}
+
+{% block titlebar %}
+{% include "titlebar.html" with title=speaker %}
+{% endblock %}
+
+{% block content %}
+{% include "badge/all.html" %}
+<div class="speaker">
+  <img class="image" src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.slug }}">
+  {{ speaker.get_badges|safe }}
+  <h3>{% trans "Profile" %}</h3>
+  <div class="profile">
+    {{ speaker.desc|safe }}
+  </div>
+  <h3>{% trans "Program" %}</h3>
+  {% for program in speaker.program_set.all %}
+  <a href="{{ program.get_absolute_url }}">{{ program.name }}</a>
+  {% endfor %}
+</div>
+{% if editable %}
+<hr>
+<a href="{% url "speaker_edit" speaker.slug %}" class="btn btn-large btn-primary">{% trans "Edit" %}</a>
+{% endif %}
+{% endblock %}

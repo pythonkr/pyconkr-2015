@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+{% for obj in object_list %}
+<dl class="jobfair well">
+  <dt>
+    <div class="media">
+      <img class="media-object pull-right" src="{{ obj.sponsor.image.url }}" alt="sponsor image">
+      <div class="media-body">
+        <h2 class="media-heading">{{ obj.name }}</h4>
+        {{ obj.location }}
+      </div>
+    </div>
+  </dt>
+  <hr>
+  <dd>
+  {{ obj.desc|safe }}
+  </dd>
+</dl>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ block.super }} {% trans "Sponsor" %} | {{ sponsor.name }}{% endblock %}
+{% block titlebar %}
+{% include "titlebar.html" with title=sponsor.name %}
+{% endblock %}
+
+{% block content %}
+<div class="sponsor">
+  <img src="{{ sponsor.image.url }}" alt="{{ sponsor.name }}">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <span class="glyphicon glyphicon-tag"></span> {{ sponsor.level }}
+    </li>
+    <li class="list-group-item">
+      <span class="glyphicon glyphicon-share-alt"></span> {{ sponsor.url|urlize }}
+    </li>
+  </ul>
+  <div>
+    {{ sponsor.desc|safe }}
+  </div>
+</div>
+{% endblock %}

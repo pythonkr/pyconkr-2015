@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head %}
+<script>
+$(function() {
+    var $background = $('.background');
+    var $building = $('.building');
+
+    $background.animate({top:0, opacity:0.1}, {duration:1500});
+
+    $(window).scroll(function() {
+        var top = $(document).scrollTop();
+        $background.stop().offset({top:70+top/3}).css({opacity:0.1});
+        $building.offset({top:290-top/6});
+    });
+});
+</script>
+{% endblock %}
+
+{% block frontpage %}
+<div class="frontpage">
+  <div class="container slogan">
+    <img src="{% static "image/pyconkr-logo-large.png" %}">
+    <h1>{% trans "Slogan of PyCon Korea" %}</h1>
+    <p>{% trans "Information of PyCon Korea" %}</p>
+    {% include "badge/all.html" %}
+  </div>
+  <img class="building" src="{% static "image/bg-building.png" %}">
+  <div class="background">
+    <img class="mountain" src="{% static "image/bg-mountain.png" %}">  
+    <img class="tower-1" src="{% static "image/bg-ntower.png" %}">
+    <img class="tower-2" src="{% static "image/bg-tower.png" %}">
+    <img class="tower-3" src="{% static "image/bg-tower.png" %}">
+  </div>
+  <div class="courtesy">
+    <a href="/courtesy/geunjung-jun/">
+      Image courtesy of Doo Ho Kim, 2003
+    </a>
+  </div>
+</div>
+{% include "seoul-color.html" %}
+{% endblock %}
+{% block content %}
+<div class="wrap">
+  <h2>{% trans "Announcements" %}</h2>
+  {% for announcement in recent_announcements %}
+  <dl class="announcements">
+    <dt>
+      <h4>
+        <a href="{% url "announcement" announcement.id %}">{{ announcement }}</a>
+        <span class="datetime">{{ announcement.created|date:"Y-m-d" }}</span>
+      </h4>
+    </dt>
+    <dd>
+      {{ announcement.desc|striptags|truncatechars:300|safe }}
+      <a href="{% url "announcement" announcement.id %}">
+        <span class="continue">{% trans "Read more" %}</span>
+      </a>
+    </dd>
+  </dl>
+  {% endfor %}
+</div>
+{% endblock %}

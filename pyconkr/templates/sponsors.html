@@ -1,0 +1,17 @@
+{% load i18n %}
+<h3>{% trans "Sponsor list" %}</h3>
+<div class="sponsors content">
+{% for lvl in levels %}
+<hr>
+<h4>{{ lvl.name }}</h4>
+<ul>
+  {% for sponsor in lvl.sponsor_set.all %}
+  <li class="sponsor-{{ lvl.slug }}">
+    <a href="{% url "sponsor" sponsor.slug %}">
+      <img src="{{ MEDIA_URL }}{{ sponsor.image }}" alt="{{ sponsor }}">
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
+</div>

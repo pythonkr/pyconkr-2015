@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<p>{% trans "Requested token is not found or invalid." %}</p>
+<p>{% trans "If you lost token mail or be lated, please login again." %}</p>
+<a href="{% url "login" %}" class="btn btn-large btn-primary">{% trans "Login" %}</a>
+{% endblock %}

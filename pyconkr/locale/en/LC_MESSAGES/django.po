@@ -1,0 +1,307 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-18 07:58+0000\n"
+"PO-Revision-Date: 2014-09-18 07:58+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"X-Translated-Using: django-rosetta 0.7.4\n"
+
+#: context_processors.py:12
+msgid "About"
+msgstr "About"
+
+#: context_processors.py:15
+msgid "About PyCon Korea 2015"
+msgstr "About PyCon Korea 2015"
+
+#: context_processors.py:16 templates/footer.html:12
+msgid "Code of Conduct"
+msgstr "Code of Conduct"
+
+#: context_processors.py:17
+msgid "Conference detail"
+msgstr "Conference detail"
+
+#: context_processors.py:18 templates/index.html:47
+msgid "Announcements"
+msgstr "Announcements"
+
+#: context_processors.py:19
+msgid "Sponsors"
+msgstr "Sponsors"
+
+#: context_processors.py:20
+msgid "Staff"
+msgstr "Staff"
+
+#: context_processors.py:24 templates/nav.html:55
+msgid "Programs"
+msgstr "Programs"
+
+#: context_processors.py:27
+msgid "Call for proposal"
+msgstr "Call for proposal"
+
+#: context_processors.py:28
+msgid "Schedule"
+msgstr "Schedule"
+
+#: context_processors.py:29
+msgid "Program list"
+msgstr "Program list"
+
+#: context_processors.py:30
+msgid "Speakers"
+msgstr "Speakers"
+
+#: context_processors.py:31
+msgid "Jobfair"
+msgstr "Jobfair"
+
+#: context_processors.py:32
+msgid "BOF"
+msgstr "BOF"
+
+#: context_processors.py:36
+msgid "Registration"
+msgstr "Registration"
+
+#: context_processors.py:40
+msgid "Venue"
+msgstr "Venue"
+
+#: context_processors.py:44
+msgid "Contact"
+msgstr "Contact"
+
+#: forms.py:28 forms.py:46
+msgid "Submit"
+msgstr "Submit"
+
+#: forms.py:37 templates/nav.html:49 templates/pyconkr/speaker_detail.html:18
+msgid "Profile"
+msgstr "Profile"
+
+#: forms.py:38
+msgid "Additional information"
+msgstr "Additional information"
+
+#: forms.py:55
+msgid "Slide URL"
+msgstr "Presentation slides URL"
+
+#: forms.py:56
+msgid "Video URL"
+msgstr "Presentation video URL"
+
+#: forms.py:57 templates/pyconkr/program_detail.html:45
+msgid "Photography and recording is allowed"
+msgstr "Photography and recording is allowed"
+
+#: forms.py:58 templates/pyconkr/program_detail.html:63
+msgid "Description"
+msgstr "Description"
+
+#: models.py:79
+msgid "help-text-for-speaker-info"
+msgstr ""
+"<p>Add your personal pages in JSON format.</p>\n"
+"<pre>\n"
+"# Example\n"
+"{\n"
+"  \"twitter\": \"https://twitter.com/ev\",\n"
+"  \"github\": \"https://github.com/defunkt\"\n"
+"}\n"
+"</pre>\n"
+"<p>Supported pages are listed in <a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a></p>"
+
+#: settings.py:89
+msgid "Korean"
+msgstr "Korean"
+
+#: settings.py:90
+msgid "English"
+msgstr "English"
+
+#: settings.py:133
+msgid "PyCon Korea 2015 one-time login token"
+msgstr "PyCon Korea 2015 one-time login token"
+
+#: settings.py:134 templates/mail/token_html.html:2
+msgid "PyCon Korea"
+msgstr "Pycon Korea"
+
+#: views.py:180 templates/login_notvalidtoken.html:7 templates/nav.html:66
+msgid "Login"
+msgstr "Login"
+
+#: views.py:193
+msgid "Not valid token"
+msgstr "Not valid token"
+
+#: views.py:215
+msgid "Mail sent"
+msgstr "Mail sent"
+
+#: templates/base.html:7
+msgid "PyCon Korea 2015"
+msgstr "PyCon Korea 2015"
+
+#: templates/disqus.html:2
+msgid "Comments"
+msgstr "Comments"
+
+#: templates/footer.html:7
+msgid "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
+msgstr "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
+
+#: templates/footer.html:10
+msgid "Powered by Django"
+msgstr "Powered by Django"
+
+#: templates/index.html:26
+msgid "Slogan of PyCon Korea"
+msgstr "The First PyCon in Korea"
+
+#: templates/index.html:27
+msgid "Information of PyCon Korea"
+msgstr "Aug 30 '14 at Sookmyung Women's University"
+
+#: templates/index.html:59 templates/pyconkr/announcement_list.html:16
+msgid "Read more"
+msgstr "Read more"
+
+#: templates/login.html:5
+msgid "Login via mail"
+msgstr "Login via mail"
+
+#: templates/login.html:20
+msgid ""
+"We store your mail address only. Never store password or any personal "
+"information."
+msgstr ""
+"We store your mail address only. Never store password or any personal "
+"information."
+
+#: templates/login_mailsent.html:5
+msgid ""
+"One-time login token url was sent to your mail. Please check your mailbox."
+msgstr ""
+"One-time login token url was sent to your mail. Please check your mailbox."
+
+#: templates/login_mailsent.html:6
+msgid "Login token valid for only 1 hour."
+msgstr "Login token valid for only 1 hour."
+
+#: templates/login_mailsent.html:6 templates/login_notvalidtoken.html:6
+msgid "If you lost token mail or be lated, please login again."
+msgstr "If you lost token mail or be lated, please login again."
+
+#: templates/login_mailsent.html:7
+msgid "Back to home"
+msgstr "Back to home"
+
+#: templates/login_notvalidtoken.html:5
+msgid "Requested token is not found or invalid."
+msgstr "Requested token is not found or invalid."
+
+#: templates/nav.html:8
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+#: templates/nav.html:50
+msgid "My Profile"
+msgstr "My Profile"
+
+#: templates/nav.html:51
+msgid "Edit Profile"
+msgstr "Edit Profile"
+
+#: templates/nav.html:61
+msgid "Logout"
+msgstr "Logout"
+
+#: templates/nav.html:71
+msgid "Language"
+msgstr "Language"
+
+#: templates/schedule.html:7
+msgid "Schedule may be subject to change."
+msgstr "Schedule may be subject to change."
+
+#: templates/schedule.html:23 templates/schedule.html.py:40
+#: templates/schedule.html:91 templates/pyconkr/program_list.html:16
+msgid "Slides link"
+msgstr "Slides"
+
+#: templates/schedule.html:26 templates/schedule.html.py:43
+#: templates/schedule.html:94 templates/pyconkr/program_list.html:19
+msgid "Video link"
+msgstr "Video"
+
+#: templates/schedule.html:29 templates/schedule.html.py:46
+#: templates/schedule.html:97 templates/pyconkr/program_list.html:22
+msgid "PDF link"
+msgstr "PDF"
+
+#: templates/sponsors.html:2
+msgid "Sponsor list"
+msgstr "Sponsor list"
+
+#: templates/mail/token_html.html:3 templates/mail/token_text.html:2
+msgid "You can login to PyCon Korea homepage via below url."
+msgstr "You can login to PyCon Korea homepage via below url."
+
+#: templates/mail/token_html.html:4
+msgid "Link"
+msgstr "Link"
+
+#: templates/pyconkr/announcement_detail.html:13
+msgid "Back to list"
+msgstr "Back to list"
+
+#: templates/pyconkr/program_detail.html:4
+#: templates/pyconkr/speaker_detail.html:22
+msgid "Program"
+msgstr "Program"
+
+#: templates/pyconkr/program_detail.html:47
+msgid "Photography and recording is not allowed"
+msgstr "Photography and recording is not allowed"
+
+#: templates/pyconkr/program_detail.html:52
+msgid "Slide"
+msgstr "Presentation slides"
+
+#: templates/pyconkr/program_detail.html:56
+msgid "Video"
+msgstr "Presentation video"
+
+#: templates/pyconkr/program_detail.html:60
+msgid "PDF"
+msgstr "PDF"
+
+#: templates/pyconkr/program_detail.html:67
+#: templates/pyconkr/speaker_detail.html:29
+msgid "Edit"
+msgstr "Edit"
+
+#: templates/pyconkr/speaker_detail.html:4
+msgid "Speaker"
+msgstr "Speaker"
+
+#: templates/pyconkr/sponsor_detail.html:4
+msgid "Sponsor"
+msgstr "Sponsor"

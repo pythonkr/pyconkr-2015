@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<p>{% trans "One-time login token url was sent to your mail. Please check your mailbox." %}</p>
+<p>{% trans "Login token valid for only 1 hour." %} {% trans "If you lost token mail or be lated, please login again." %}</p>
+<a href="{% url "index" %}" class="btn btn-large btn-primary">{% trans "Back to home" %}</a>
+{% endblock %}

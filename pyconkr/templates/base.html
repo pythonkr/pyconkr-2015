@@ -1,0 +1,67 @@
+{% load staticfiles %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>{% block title %}{% trans "PyCon Korea 2015" %}{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.85">
+
+  <!-- Opengraph tag -->
+  <meta property="og:site_name" content="파이콘 한국 2015">
+  <meta property="og:title" content="{% block og-title %}PyCon Korea 2015{% endblock %}">
+  <meta property="og:image" content="{{ domain }}{% block og-image %}{% static "image/pyconkr-badge.png" %}{% endblock %}">
+  <meta property="og:url" content="{{ domain }}{{ request.path }}">
+  <meta property="og:description" content="{% block og-desc %}파이콘은 오픈소스 프로그래밍 언어인 파이썬 사용자들을 위한 행사입니다. 올해 한국에서 처음으로 열리는 파이콘 한국 2014 는 개발자들의 지식과 경험을 공유하여 한국 개발자 커뮤니티와 파이썬의 활성화에 기여하고자 합니다.{% endblock %}">
+
+  <!-- Include basic items -->
+  <link href="{% static "components/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "components/bootstrap-social/bootstrap-social.css" %}" rel="stylesheet">
+  <link href="{% static "components/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet">
+
+  <!-- Override bootstrap css -->
+  <link href="{% static "css/pyconkr.css" %}" rel="stylesheet">
+  <!--[if !IE]><!-->
+  <link href="{% static "css/pyconkr-media.css" %}" rel="stylesheet">
+  <!--<![endif]-->
+
+  <!-- Google fonts -->
+  <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static "image/favicon.ico" %}" type="image/x-icon">
+  <link rel="icon" href="{% static "image/favicon.ico" %}" type="image/x-icon">
+
+  <!-- Scripts -->
+  <script src="{% static "components/jquery/jquery.min.js" %}"></script>
+  <script src="{% static "components/html5shiv/dist/html5shiv.min.js" %}"></script>
+  <script src="{% static "components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+{% include "nav.html" %}
+{% block frontpage %}{% endblock %}
+{% block titlebar %}{% include "titlebar.html" %}{% endblock %}
+<div class="container wrap">
+    {% block wrap %}
+    <div class="row">
+        <div class="col-md-9 content">
+            {% block content %}{% endblock %}
+        </div>
+        <div class="col-md-3 sponsors">
+            {% include "sponsors.html" %}
+        </div>
+    </div>
+    {% endblock %}
+</div>
+{% include "footer.html" %}
+{% include "ga.html" %}
+{% include "facebook_script.html" %}
+</body>
+
+</html>

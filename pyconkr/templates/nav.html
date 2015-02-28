@@ -1,0 +1,91 @@
+{% load staticfiles %}
+{% load i18n %}
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">{% trans "Toggle navigation" %}</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url "index" %}">
+        <img src="{% static "image/pyconkr-logo-small.png" %}" alt="Pycon Korea">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        {% for k, v in menu.items %}
+        {% if v.dropdown %}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-{{ v.icon }}"></span> {{ v.title }} <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+          {% for sk, sv in v.dropdown.items %}
+            <li class="{% if sv.active %}active{% endif %}">
+              <a href="{{ domain }}/{{ k }}/{{ sk }}">{{ sv.title }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li class="{% if v.active %}active{% endif %}">
+          <a href="{{ domain }}/{{ k }}"><span class="glyphicon glyphicon-{{ v.icon }}"></span> {{ v.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      <!-- Right menu -->
+      <ul class="nav navbar-nav navbar-right">
+      <!-- Authenticate -->
+      {% if user.is_authenticated %}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            {% if my_speaker %}
+            <li class="dropdown-header">{% trans "Profile" %}</li>
+            <li><a href="{{ my_speaker.get_absolute_url }}">{% trans "My Profile" %}</a></li>
+            <li><a href="{% url "speaker_edit" my_speaker.slug %}">{% trans "Edit Profile" %}</a></li>
+            <li class="divider"></li>
+            {% endif %}
+            {% if my_programs %}
+            <li class="dropdown-header">{% trans "Programs" %}</li>
+            {% for program in my_programs %}
+            <li><a href="{{ program.get_absolute_url }}">{{ program.name }}</a></li>
+            {% endfor %}
+            <li role="presentation" class="divider"></li>
+            {% endif %}
+            <li><a href="{% url "logout" %}">{% trans "Logout" %}</a></li>
+          </ul>
+        </li>
+      {% else %}
+        <li class="{% if v.active %}active{% endif %}">
+          <a href="{% url "login" %}"><span class="glyphicon glyphicon-user"></span> {% trans "Login" %}</a>
+        </li>
+      {% endif %}
+      <!-- Language -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Language" %} <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+            <li>
+                <a href="{% url 'setlang' language.code %}">{{ language.name_local }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
+      <!--
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+      -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

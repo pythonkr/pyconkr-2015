@@ -1,0 +1,51 @@
+@media (max-width: 992px) {
+    .titlebar .building {
+        display: none;
+    }
+
+    .navbar-nav>li>a {
+        padding: 10px;
+    }
+
+    .titlebar {
+        padding: 8px 0 16px 0;
+        margin-bottom: 8px;
+    }
+
+    .titlebar h1 {
+        font-size: 36px;
+    }
+    .sponsors li {
+        width: 24%;
+    }
+}
+
+@media (max-width: 480px) {
+    .frontpage .slogan img,
+    .frontpage .courtesy,
+    .building {
+        display: none;
+    }
+
+    .footer .pyconkr-badge {
+        width: 64px;
+    }
+
+    .titlebar {
+        padding: 4px 0 8px 0;
+        margin-bottom: 4px;
+    }
+
+    .titlebar h1 {
+        font-size: 28px;
+    }
+
+    .well {
+        margin: 14px -12px;
+    }
+
+    .jobfair dt img {
+        width: auto;
+        height: 32px;
+    }
+}
