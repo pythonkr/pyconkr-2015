@@ -10,7 +10,6 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-from django.utils.translation import ugettext_lazy as _
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -46,7 +45,6 @@ INSTALLED_APPS = (
     # thirt-party apps
     'django_summernote',
     'rosetta',
-    'south',
     'crispy_forms',
 ) + (
     # local apps
@@ -68,7 +66,7 @@ ROOT_URLCONF = 'pyconkr.urls'
 WSGI_APPLICATION = 'pyconkr.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, "pyconkr/templates")
+    os.path.join(BASE_DIR, "pyconkr/templates"),
 )
 
 
@@ -85,9 +83,10 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
+ugettext = lambda s: s
 LANGUAGES = (
-    ('ko', _('Korean')),
-    ('en', _('English')),
+    ('ko', ugettext('Korean')),
+    ('en', ugettext('English')),
 )
 LANGUAGE_CODE = 'en-us'
 
@@ -128,10 +127,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'pyconkr.context_processors.profile',
 )
 
-DOMAIN = 'http://dev.pycon.kr/2014'
+DOMAIN = ''
 
-EMAIL_LOGIN_TITLE = _("PyCon Korea 2014 one-time login token")
-EMAIL_SENDER = _("PyCon Korea") + "<foo@bar.com>"
+EMAIL_LOGIN_TITLE = ugettext("PyCon Korea 2015 one-time login token")
+EMAIL_SENDER = ugettext("PyCon Korea") + "<foo@bar.com>"
 EMAIL_USE_TLS = True
 EMAIL_HOST = ''
 EMAIL_PORT = 587
