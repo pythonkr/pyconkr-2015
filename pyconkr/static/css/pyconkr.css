@@ -12,11 +12,11 @@ body, html {
 
 h1, h2, h3, h4, h5, h6, th, .title {
     font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
-    color: #333;
+    color: #0d284a;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
-    color: #333;
+    color: #0d284a;
 }
 
 h1, h2, h3, h4, h5, h6, th {
@@ -46,20 +46,17 @@ small a:hover {
     padding: 5px 25px 5px 15px;
 }
 
-.navbar-brand img {
-    width: auto;
-    height: 50px;
-}
-
 .navbar-default {
     background: none;
     border: 0;
     border-radius: 0;
 }
 
-.navbar-default .navbar-nav>li>a, .dropdown-menu>li>a {
+.navbar-default .navbar-nav>li>a,
+.dropdown-menu>li>a {
     font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
-    color: #333;
+    font-weight: 300;
+    color: #fff !important;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -74,7 +71,7 @@ small a:hover {
 .navbar-default .glyphicon-python {
     width: 16px;
     height: 16px;
-    background: url("../image/python-black.png");
+    background: url("../image/python-white.png");
     background-size: 100% 100%;
     opacity: 0.8;
 }
@@ -174,58 +171,32 @@ small a:hover {
 
 .frontpage {
     position: relative;
-    padding: 3% 0 20% 0;
-    background-color: #8795AD;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#FFFFFF),to(#8795AD));
-    background-image: -webkit-linear-gradient(top,#FFFFFF 0,#8795AD 100%);
-    background-image: -o-linear-gradient(top,#FFFFFF 0,#8795AD 100%);
-    background-image: linear-gradient(to bottom,#FFFFFF 0,#8795AD 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#8795AD', GradientType=0);
-    background-repeat: repeat-x;
+    padding: 3% 0 0 0;
+    background: #1c4374;
+    background-image: url("../image/jumboback3.jpg");
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
     z-index: 1;
 }
 
-.frontpage .building {
-    position: absolute;
-    width: 50%;
-    height: auto;
-    top: 220px;
-    right: 0;
-    z-index: 2;
-}
-
-.frontpage .courtesy {
-    position: absolute;
-    bottom: 0;
-    z-index: 3;
-    margin: 5px;
-}
-
-.frontpage .courtesy a {
-    z-index: 3;
-    color: #EEE;
-    font-size: 9px;
-    line-height: 9px;
-    opacity: 0.5;
-}
-
 .frontpage .slogan {
     color: #FAFAFA;
-    text-align: center;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
     position: relative;
-    z-index: 3;
     top: 10%;
-}
-
-.frontpage .slogan img {
-    width: 50%;
-    height: auto;
+    padding: 0 0 5% 0;
 }
 
 .frontpage .slogan h1 {
     color: #FFFFFF;
+    font-size: 600%;
+    line-height: 90%;
+    font-weight: 700;
+}
+
+.frontpage .slogan h3 {
+    color: #FFFFFF;
+    font-weight: 100;
 }
 
 .frontpage .background {
@@ -447,6 +418,7 @@ small a:hover {
     display: inline-block;
     overflow: hidden;
     height: 20px;
+    opacity: 0.5;
 }
 
 .social-badges span {

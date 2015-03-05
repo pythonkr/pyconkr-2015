@@ -2,16 +2,17 @@
 {% load staticfiles %}
 {% load i18n %}
 
-{% block frontpage %}
+{% block top %}
 <div class="frontpage">
   <div class="container slogan">
-    <img src="{% static "image/pyconkr-logo-large.png" %}">
-    <h1>{% trans "Slogan of PyCon Korea" %}</h1>
-    <p>{% trans "Information of PyCon Korea" %}</p>
+    <h1>{% trans "Python," %}</h1>
+    <h1>{% trans "Together," %}</h1>
+    <h1>{% trans "Successful." %}</h1>
+    <h3>{% trans "Information of PyCon Korea" %}</h3>
     {% include "badge/all.html" %}
   </div>
+{% include "nav.html" %}
 </div>
-{% include "seoul-color.html" %}
 {% endblock %}
 {% block content %}
 <div class="wrap">
