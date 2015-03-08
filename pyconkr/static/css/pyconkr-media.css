@@ -13,6 +13,10 @@
 }
 
 @media (max-width: 768px) {
+    .frontpage .slogan {
+        padding: 0 15px 3%;
+    }
+
     .navbar {
         top: 0px;
         width: 100%;
@@ -59,7 +63,7 @@
 
 @media (max-width: 640px) {
     .frontpage .slogan h1 {
-        font-size: 400%;
+        font-size: 300%;
     }
     .frontpage .slogan h3 {
         font-size: 100%;
