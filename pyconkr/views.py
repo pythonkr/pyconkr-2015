@@ -138,6 +138,7 @@ class AnnouncementDetail(DetailView):
     model = Announcement
 
 
+@never_cache
 def setlang(request, lang_code):
     # Copied from django.views.i18n.set_language
     next = request.REQUEST.get('next')
