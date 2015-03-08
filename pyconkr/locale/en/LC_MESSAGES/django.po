@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 07:58+0000\n"
-"PO-Revision-Date: 2014-09-18 07:58+0000\n"
+"POT-Creation-Date: 2015-03-08 13:32+0000\n"
+"PO-Revision-Date: 2015-03-08 13:34+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
-"X-Translated-Using: django-rosetta 0.7.4\n"
+"X-Translated-Using: django-rosetta 0.7.5\n"
 
 #: context_processors.py:12
 msgid "About"
@@ -34,7 +34,7 @@ msgstr "Code of Conduct"
 msgid "Conference detail"
 msgstr "Conference detail"
 
-#: context_processors.py:18 templates/index.html:47
+#: context_processors.py:18 templates/index.html:22
 msgid "Announcements"
 msgstr "Announcements"
 
@@ -46,7 +46,7 @@ msgstr "Sponsors"
 msgid "Staff"
 msgstr "Staff"
 
-#: context_processors.py:24 templates/nav.html:55
+#: context_processors.py:24 templates/nav.html:53
 msgid "Programs"
 msgstr "Programs"
 
@@ -90,7 +90,7 @@ msgstr "Contact"
 msgid "Submit"
 msgstr "Submit"
 
-#: forms.py:37 templates/nav.html:49 templates/pyconkr/speaker_detail.html:18
+#: forms.py:37 templates/nav.html:47 templates/pyconkr/speaker_detail.html:18
 msgid "Profile"
 msgstr "Profile"
 
@@ -127,33 +127,21 @@ msgstr ""
 "</pre>\n"
 "<p>Supported pages are listed in <a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a></p>"
 
-#: settings.py:89
+#: settings.py:88
 msgid "Korean"
 msgstr "Korean"
 
-#: settings.py:90
+#: settings.py:89
 msgid "English"
 msgstr "English"
 
-#: settings.py:133
+#: settings.py:132
 msgid "PyCon Korea 2015 one-time login token"
 msgstr "PyCon Korea 2015 one-time login token"
 
-#: settings.py:134 templates/mail/token_html.html:2
+#: settings.py:133 templates/mail/token_html.html:2
 msgid "PyCon Korea"
 msgstr "Pycon Korea"
-
-#: views.py:180 templates/login_notvalidtoken.html:7 templates/nav.html:66
-msgid "Login"
-msgstr "Login"
-
-#: views.py:193
-msgid "Not valid token"
-msgstr "Not valid token"
-
-#: views.py:215
-msgid "Mail sent"
-msgstr "Mail sent"
 
 #: templates/base.html:7
 msgid "PyCon Korea 2015"
@@ -171,15 +159,23 @@ msgstr "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
 msgid "Powered by Django"
 msgstr "Powered by Django"
 
-#: templates/index.html:26
-msgid "Slogan of PyCon Korea"
-msgstr "The First PyCon in Korea"
+#: templates/index.html:8
+msgid "Python,"
+msgstr "Python,"
 
-#: templates/index.html:27
-msgid "Information of PyCon Korea"
-msgstr "Aug 30 '14 at Sookmyung Women's University"
+#: templates/index.html:9
+msgid "Together,"
+msgstr "Together,"
 
-#: templates/index.html:59 templates/pyconkr/announcement_list.html:16
+#: templates/index.html:10
+msgid "Successful."
+msgstr "Successful."
+
+#: templates/index.html:11
+msgid "Frontpage schedule"
+msgstr "Yonsei University, June 27–28"
+
+#: templates/index.html:34 templates/pyconkr/announcement_list.html:16
 msgid "Read more"
 msgstr "Read more"
 
@@ -217,48 +213,9 @@ msgstr "Back to home"
 msgid "Requested token is not found or invalid."
 msgstr "Requested token is not found or invalid."
 
-#: templates/nav.html:8
-msgid "Toggle navigation"
-msgstr "Toggle navigation"
-
-#: templates/nav.html:50
-msgid "My Profile"
-msgstr "My Profile"
-
-#: templates/nav.html:51
-msgid "Edit Profile"
-msgstr "Edit Profile"
-
-#: templates/nav.html:61
-msgid "Logout"
-msgstr "Logout"
-
-#: templates/nav.html:71
-msgid "Language"
-msgstr "Language"
-
-#: templates/schedule.html:7
-msgid "Schedule may be subject to change."
-msgstr "Schedule may be subject to change."
-
-#: templates/schedule.html:23 templates/schedule.html.py:40
-#: templates/schedule.html:91 templates/pyconkr/program_list.html:16
-msgid "Slides link"
-msgstr "Slides"
-
-#: templates/schedule.html:26 templates/schedule.html.py:43
-#: templates/schedule.html:94 templates/pyconkr/program_list.html:19
-msgid "Video link"
-msgstr "Video"
-
-#: templates/schedule.html:29 templates/schedule.html.py:46
-#: templates/schedule.html:97 templates/pyconkr/program_list.html:22
-msgid "PDF link"
-msgstr "PDF"
-
-#: templates/sponsors.html:2
-msgid "Sponsor list"
-msgstr "Sponsor list"
+#: templates/login_notvalidtoken.html:7 templates/nav.html:64 views.py:180
+msgid "Login"
+msgstr "Login"
 
 #: templates/mail/token_html.html:3 templates/mail/token_text.html:2
 msgid "You can login to PyCon Korea homepage via below url."
@@ -267,6 +224,26 @@ msgstr "You can login to PyCon Korea homepage via below url."
 #: templates/mail/token_html.html:4
 msgid "Link"
 msgstr "Link"
+
+#: templates/nav.html:9
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+#: templates/nav.html:48
+msgid "My Profile"
+msgstr "My Profile"
+
+#: templates/nav.html:49
+msgid "Edit Profile"
+msgstr "Edit Profile"
+
+#: templates/nav.html:59
+msgid "Logout"
+msgstr "Logout"
+
+#: templates/nav.html:69
+msgid "Language"
+msgstr "Language"
 
 #: templates/pyconkr/announcement_detail.html:13
 msgid "Back to list"
@@ -298,6 +275,21 @@ msgstr "PDF"
 msgid "Edit"
 msgstr "Edit"
 
+#: templates/pyconkr/program_list.html:16 templates/schedule.html:23
+#: templates/schedule.html.py:40 templates/schedule.html:91
+msgid "Slides link"
+msgstr "Slides"
+
+#: templates/pyconkr/program_list.html:19 templates/schedule.html:26
+#: templates/schedule.html.py:43 templates/schedule.html:94
+msgid "Video link"
+msgstr "Video"
+
+#: templates/pyconkr/program_list.html:22 templates/schedule.html:29
+#: templates/schedule.html.py:46 templates/schedule.html:97
+msgid "PDF link"
+msgstr "PDF"
+
 #: templates/pyconkr/speaker_detail.html:4
 msgid "Speaker"
 msgstr "Speaker"
@@ -305,3 +297,25 @@ msgstr "Speaker"
 #: templates/pyconkr/sponsor_detail.html:4
 msgid "Sponsor"
 msgstr "Sponsor"
+
+#: templates/schedule.html:7
+msgid "Schedule may be subject to change."
+msgstr "Schedule may be subject to change."
+
+#: templates/sponsors.html:2
+msgid "Sponsor list"
+msgstr "Sponsor list"
+
+#: views.py:193
+msgid "Not valid token"
+msgstr "Not valid token"
+
+#: views.py:215
+msgid "Mail sent"
+msgstr "Mail sent"
+
+#~ msgid "Slogan of PyCon Korea"
+#~ msgstr "The First PyCon in Korea"
+
+#~ msgid "Information of PyCon Korea"
+#~ msgstr "Aug 30 '14 at Sookmyung Women's University"

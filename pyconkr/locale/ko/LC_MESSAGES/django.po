@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-18 07:58+0000\n"
-"PO-Revision-Date: 2014-09-18 07:58+0000\n"
+"POT-Creation-Date: 2015-03-08 13:32+0000\n"
+"PO-Revision-Date: 2015-03-08 13:35+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Translated-Using: django-rosetta 0.7.4\n"
+"X-Translated-Using: django-rosetta 0.7.5\n"
 
 #: context_processors.py:12
 msgid "About"
@@ -35,7 +35,7 @@ msgstr "파이콘 성명서"
 msgid "Conference detail"
 msgstr "행사 상세 정보"
 
-#: context_processors.py:18 templates/index.html:47
+#: context_processors.py:18 templates/index.html:22
 msgid "Announcements"
 msgstr "알림"
 
@@ -47,7 +47,7 @@ msgstr "후원사"
 msgid "Staff"
 msgstr "준비위원회 및 자원봉사자"
 
-#: context_processors.py:24 templates/nav.html:55
+#: context_processors.py:24 templates/nav.html:53
 msgid "Programs"
 msgstr "프로그램"
 
@@ -91,7 +91,7 @@ msgstr "연락처"
 msgid "Submit"
 msgstr "제출"
 
-#: forms.py:37 templates/nav.html:49 templates/pyconkr/speaker_detail.html:18
+#: forms.py:37 templates/nav.html:47 templates/pyconkr/speaker_detail.html:18
 msgid "Profile"
 msgstr "프로필"
 
@@ -128,33 +128,21 @@ msgstr ""
 "</pre>\n"
 "<p>지원되는 페이지 목록은 <a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a>에서 확인하실 수 있습니다.</p>"
 
-#: settings.py:89
+#: settings.py:88
 msgid "Korean"
 msgstr "한국어"
 
-#: settings.py:90
+#: settings.py:89
 msgid "English"
 msgstr "영어"
 
-#: settings.py:133
+#: settings.py:132
 msgid "PyCon Korea 2015 one-time login token"
 msgstr "파이콘 한국 2015 일회용 로그인 토큰"
 
-#: settings.py:134 templates/mail/token_html.html:2
+#: settings.py:133 templates/mail/token_html.html:2
 msgid "PyCon Korea"
 msgstr "파이콘 한국"
-
-#: views.py:180 templates/login_notvalidtoken.html:7 templates/nav.html:66
-msgid "Login"
-msgstr "로그인"
-
-#: views.py:193
-msgid "Not valid token"
-msgstr "유효한 토큰 아님"
-
-#: views.py:215
-msgid "Mail sent"
-msgstr "메일 발송 완료"
 
 #: templates/base.html:7
 msgid "PyCon Korea 2015"
@@ -172,15 +160,23 @@ msgstr "파이콘 한국 2015는 파이콘 한국 준비위원회가 만들고 �
 msgid "Powered by Django"
 msgstr "Powered by Django"
 
-#: templates/index.html:26
-msgid "Slogan of PyCon Korea"
-msgstr "한국에서 열리는 첫 번째 파이콘"
+#: templates/index.html:8
+msgid "Python,"
+msgstr "파이썬,"
 
-#: templates/index.html:27
-msgid "Information of PyCon Korea"
-msgstr "2014년 8월 30일, 숙명여대에서 열립니다."
+#: templates/index.html:9
+msgid "Together,"
+msgstr "다같이,"
 
-#: templates/index.html:59 templates/pyconkr/announcement_list.html:16
+#: templates/index.html:10
+msgid "Successful."
+msgstr "성공적."
+
+#: templates/index.html:11
+msgid "Frontpage schedule"
+msgstr "연세대학교, 2015년 6월 27~28일"
+
+#: templates/index.html:34 templates/pyconkr/announcement_list.html:16
 msgid "Read more"
 msgstr "더 보기"
 
@@ -215,48 +211,9 @@ msgstr "첫 화면으로"
 msgid "Requested token is not found or invalid."
 msgstr "요청한 토큰이 없거나 유효하지 않습니다."
 
-#: templates/nav.html:8
-msgid "Toggle navigation"
-msgstr "툴바 토글"
-
-#: templates/nav.html:50
-msgid "My Profile"
-msgstr "내 프로필"
-
-#: templates/nav.html:51
-msgid "Edit Profile"
-msgstr "프로필 수정"
-
-#: templates/nav.html:61
-msgid "Logout"
-msgstr "로그아웃"
-
-#: templates/nav.html:71
-msgid "Language"
-msgstr "언어 / Language"
-
-#: templates/schedule.html:7
-msgid "Schedule may be subject to change."
-msgstr "일정은 예고 없이 변경될 수 있습니다."
-
-#: templates/schedule.html:23 templates/schedule.html.py:40
-#: templates/schedule.html:91 templates/pyconkr/program_list.html:16
-msgid "Slides link"
-msgstr "슬라이드"
-
-#: templates/schedule.html:26 templates/schedule.html.py:43
-#: templates/schedule.html:94 templates/pyconkr/program_list.html:19
-msgid "Video link"
-msgstr "동영상"
-
-#: templates/schedule.html:29 templates/schedule.html.py:46
-#: templates/schedule.html:97 templates/pyconkr/program_list.html:22
-msgid "PDF link"
-msgstr "PDF"
-
-#: templates/sponsors.html:2
-msgid "Sponsor list"
-msgstr "후원사 목록"
+#: templates/login_notvalidtoken.html:7 templates/nav.html:64 views.py:180
+msgid "Login"
+msgstr "로그인"
 
 #: templates/mail/token_html.html:3 templates/mail/token_text.html:2
 msgid "You can login to PyCon Korea homepage via below url."
@@ -265,6 +222,26 @@ msgstr "아래 주소를 통해 파이콘 한국 홈페이지에 로그인하실
 #: templates/mail/token_html.html:4
 msgid "Link"
 msgstr "링크"
+
+#: templates/nav.html:9
+msgid "Toggle navigation"
+msgstr "툴바 토글"
+
+#: templates/nav.html:48
+msgid "My Profile"
+msgstr "내 프로필"
+
+#: templates/nav.html:49
+msgid "Edit Profile"
+msgstr "프로필 수정"
+
+#: templates/nav.html:59
+msgid "Logout"
+msgstr "로그아웃"
+
+#: templates/nav.html:69
+msgid "Language"
+msgstr "언어 / Language"
 
 #: templates/pyconkr/announcement_detail.html:13
 msgid "Back to list"
@@ -296,6 +273,21 @@ msgstr "PDF"
 msgid "Edit"
 msgstr "수정"
 
+#: templates/pyconkr/program_list.html:16 templates/schedule.html:23
+#: templates/schedule.html.py:40 templates/schedule.html:91
+msgid "Slides link"
+msgstr "슬라이드"
+
+#: templates/pyconkr/program_list.html:19 templates/schedule.html:26
+#: templates/schedule.html.py:43 templates/schedule.html:94
+msgid "Video link"
+msgstr "동영상"
+
+#: templates/pyconkr/program_list.html:22 templates/schedule.html:29
+#: templates/schedule.html.py:46 templates/schedule.html:97
+msgid "PDF link"
+msgstr "PDF"
+
 #: templates/pyconkr/speaker_detail.html:4
 msgid "Speaker"
 msgstr "발표자"
@@ -303,3 +295,25 @@ msgstr "발표자"
 #: templates/pyconkr/sponsor_detail.html:4
 msgid "Sponsor"
 msgstr "후원사"
+
+#: templates/schedule.html:7
+msgid "Schedule may be subject to change."
+msgstr "일정은 예고 없이 변경될 수 있습니다."
+
+#: templates/sponsors.html:2
+msgid "Sponsor list"
+msgstr "후원사 목록"
+
+#: views.py:193
+msgid "Not valid token"
+msgstr "유효한 토큰 아님"
+
+#: views.py:215
+msgid "Mail sent"
+msgstr "메일 발송 완료"
+
+#~ msgid "Slogan of PyCon Korea"
+#~ msgstr "한국에서 열리는 첫 번째 파이콘"
+
+#~ msgid "Information of PyCon Korea"
+#~ msgstr "2014년 8월 30일, 숙명여대에서 열립니다."

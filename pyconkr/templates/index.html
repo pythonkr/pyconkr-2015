@@ -18,25 +18,23 @@
 {% endblock %}
 
 {% block content %}
-<div class="wrap">
-  <h2>{% trans "Announcements" %}</h2>
-  {% for announcement in recent_announcements %}
-  <dl class="announcements">
-    <dt>
-      <h4>
-        <a href="{% url "announcement" announcement.id %}">{{ announcement }}</a>
-        <span class="datetime">{{ announcement.created|date:"Y-m-d" }}</span>
-      </h4>
-    </dt>
-    <dd>
-      {{ announcement.desc|striptags|truncatechars:300|safe }}
-      <a href="{% url "announcement" announcement.id %}">
-        <span class="continue">{% trans "Read more" %}</span>
-      </a>
-    </dd>
-  </dl>
-  {% endfor %}
-</div>
+<section id="overview">
+    <h3>행사개요</h3>
+    <p>
+    파이콘은 세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스입니다.
+    </p>
+    <p>
+    한국에서는 처음으로 열린 파이콘 한국 2014를 시작으로 파이콘 한국 준비위원회는 건강한 국내 파이썬 생태계에 지속적인 보탬이 되고자, 커뮤니티 멤버들의 자발적인 봉사로 운영되고 있습니다.
+    작년보다 성숙된, 보다 알찬 모습으로 열릴 ‘파이콘 한국 2015’를 통해 새로운 기술과 정보를 공유하고 참석자들이 서로 교류할 수 있는 행사가 되기를 희망합니다.
+    </p>
+    <ul>
+        <li><strong>일정</strong> : 2015년 6월 27일(토) ~ 28일(일)</li>
+        <li><strong>장소</strong> : 서울 OO 대학교 OO 강당</li>
+        <li><strong>인원</strong> : 약 800명 예상</li>
+        <li><strong>주최</strong> : 파이콘 한국 준비 위원회</li>
+        <li><strong>대상</strong> : 국내외 파이썬 개발자 혹은 관심이 있는 분이라면 누구나</li>
+    </ul>
+</section>
 {% endblock %}
 
 {% block script %}
