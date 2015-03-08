@@ -11,7 +11,9 @@
     <h3>{% trans "Information of PyCon Korea" %}</h3>
     {% include "badge/all.html" %}
   </div>
-{% include "nav.html" %}
+{% with navbar_class="navbar-translucent" %}
+    {% include "nav.html" %}
+{% endwith %}
 </div>
 {% endblock %}
 {% block content %}

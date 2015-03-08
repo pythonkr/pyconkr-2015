@@ -39,41 +39,97 @@ small a:hover {
 .navbar {
     padding: 10px 0;
     margin-bottom: 0px !important;
-}
-
-.navbar-brand {
-    float: none;
-    padding: 5px 25px 5px 15px;
-}
-
-.navbar-default {
     background: none;
     border: 0;
     border-radius: 0;
 }
 
-.navbar-default .navbar-nav>li>a,
-.dropdown-menu>li>a {
+.navbar .navbar-nav>li>a {
     font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
     font-weight: 300;
-    color: #fff !important;
+    color: #333;
 }
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+.navbar .dropdown-menu>li>a {
+    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
+    font-weight: 300;
+    color: #333;
+    font-size: 16px;
+    padding: 3px 20px;
+}
+
+.navbar .dropdown-menu>.active>a,
+.navbar .dropdown-menu>.active>a:hover,
+.navbar .dropdown-menu>.active>a:focus {
+    background-color: #ccc;
+}
+
+.navbar .nav>li>a:hover,
+.navbar .nav>li>a:focus {
+    background-color: #fafafa;
+}
+
+.navbar .navbar-collapse,
+.navbar .navbar-form {
     border: 0;
 }
 
-.navbar-default .glyphicon {
+.navbar .glyphicon {
     margin-right: 3px;
     top: 2px;
 }
 
-.navbar-default .glyphicon-python {
+.navbar .glyphicon-python {
     width: 16px;
     height: 16px;
-    background: url("../image/python-white.png");
+    background: url("../image/python-black.png");
     background-size: 100% 100%;
     opacity: 0.8;
+}
+
+.navbar .navbar-brand {
+    float: none;
+    padding: 5px 25px 5px 15px;
+}
+
+.navbar .navbar-brand img {
+    width: auto;
+    height: 50px;
+}
+
+.navbar .navbar-toggle {
+    border-radius: 0px;
+}
+
+.navbar-translucent .navbar-brand {
+    display: none;
+}
+
+.navbar-translucent .glyphicon-python {
+    background: url("../image/python-white.png");
+    background-size: 100% 100%;
+}
+
+.navbar-translucent .navbar-nav>li>a {
+    font-weight: 300;
+    color: #fff;
+}
+
+.navbar-translucent .nav>li>a:hover,
+.navbar-translucent .nav>li>a:focus {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.navbar-translucent .navbar-nav>.open>a,
+.navbar-translucent .navbar-nav>.open>a:hover,
+.navbar-translucent .navbar-nav>.open>a:focus {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-translucent .navbar-toggle {
+    border: 1px solid #fff;
+    color: #eee;
+    background-color: rgba(0,0,0,0.2);
 }
 
 .wrap {
@@ -104,20 +160,10 @@ small a:hover {
     padding: 12px 0 20px 0;
     margin-bottom: 10px;
     border-bottom: 1px solid #E7E7E7;
-    overflow: hidden;
 }
 
 .titlebar h1 {
     font-size: 42px;
-}
-
-.titlebar .building {
-    position: absolute;
-    width: auto;
-    height: 100%;
-    top: 0px;
-    right: 0;
-    z-index: 2;
 }
 
 .titlebar .background {
@@ -127,48 +173,6 @@ small a:hover {
     opacity: 0.1;
 }
 
-.titlebar .background .mountain {
-    position: absolute;
-    left: 50%;
-    width: 50%;
-    height: 50%;
-    bottom: -15%;
-}
-
-.titlebar .background .tower-1 {
-    position: absolute;
-    left: 64%;
-    width: auto;
-    height: 70%;
-    bottom: 27%;
-}
-
-.titlebar .background .tower-2 {
-    position: absolute;
-    left: 65%;
-    width: auto;
-    height: 30%;
-    bottom: 27%;
-}
-
-.titlebar .background .tower-3 {
-    position: absolute;
-    left: 92%;
-    width: auto;
-    height: 50%;
-    bottom: 23%;
-}
-
-.seoul-color {
-    width: 100%;
-}
-
-.seoul-color td {
-    color: transparent;
-    font-size: 0;
-    line-height: 4px;
-}
-
 .frontpage {
     position: relative;
     padding: 3% 0 0 0;
@@ -176,7 +180,6 @@ small a:hover {
     background-image: url("../image/jumboback3.jpg");
     background-size: cover;
     background-position: center;
-    overflow: hidden;
     z-index: 1;
 }
 
@@ -184,7 +187,7 @@ small a:hover {
     color: #FAFAFA;
     position: relative;
     top: 10%;
-    padding: 0 0 5% 0;
+    padding: 0 30px 3%;
 }
 
 .frontpage .slogan h1 {
@@ -197,6 +200,7 @@ small a:hover {
 .frontpage .slogan h3 {
     color: #FFFFFF;
     font-weight: 100;
+    margin-bottom: 20px;
 }
 
 .frontpage .background {
@@ -207,39 +211,6 @@ small a:hover {
     top: 100px;
     z-index: 1;
 }
-
-.frontpage .background .mountain {
-    position: absolute;
-    width: 100%;
-    height: 25%;
-    left: 0;
-    bottom: 0;
-}
-
-.frontpage .background .tower-1 {
-    position: absolute;
-    left: 22%;
-    width: 2%;
-    height: auto;
-    bottom: 20%;
-}
-
-.frontpage .background .tower-2 {
-    position: absolute;
-    left: 75%;
-    width: 2%;
-    height: auto;
-    bottom: 16%;
-}
-
-.frontpage .background .tower-3 {
-    position: absolute;
-    left: 25%;
-    width: 1.25%;
-    height: auto;
-    bottom: 22%;
-}
-
 
 .sponsors {
 }
@@ -419,6 +390,14 @@ small a:hover {
     overflow: hidden;
     height: 20px;
     opacity: 0.5;
+
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.social-badges:hover {
+    opacity: 1.0;
 }
 
 .social-badges span {

@@ -47,10 +47,11 @@
 {% block top %}
 {% include "nav.html" %}
 {% endblock %}
-{% block titlebar %}{% include "titlebar.html" %}{% endblock %}
-<div class="container wrap">
+
+{% block container %}
+<div class="container">
     {% block wrap %}
-    <div class="row">
+    <div class="row wrap">
         <div class="col-md-9 content">
             {% block content %}{% endblock %}
         </div>
@@ -60,6 +61,8 @@
     </div>
     {% endblock %}
 </div>
+{% endblock %}
+
 {% include "footer.html" %}
 {% include "ga.html" %}
 {% include "facebook_script.html" %}

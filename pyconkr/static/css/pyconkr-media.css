@@ -1,12 +1,4 @@
 @media (max-width: 992px) {
-    .titlebar .building {
-        display: none;
-    }
-
-    .navbar-nav>li>a {
-        padding: 10px;
-    }
-
     .titlebar {
         padding: 8px 0 16px 0;
         margin-bottom: 8px;
@@ -20,13 +12,61 @@
     }
 }
 
-@media (max-width: 480px) {
-    .frontpage .slogan img,
-    .frontpage .courtesy,
-    .building {
-        display: none;
+@media (max-width: 768px) {
+    .navbar {
+        top: 0px;
+        width: 100%;
+        z-index: 50;
+    }
+    .navbar .navbar-toggle {
+        position: fixed;
+        z-index: 100;
+        top: 10px;
+        right: 10px;
+        margin: 0;
     }
 
+    .navbar .navbar-collapse {
+        background: rgba(255,255,255,0.95);
+        top: 0px;
+        position: fixed;
+        width: 100%;
+        min-height: 1024px;
+        max-height: 1024px;
+    }
+    .navbar-translucent {
+        position: absolute;
+    }
+    .navbar-translucent .navbar-collapse {
+        background: rgba(0,0,0,0.8);
+    }
+    .navbar-translucent .dropdown-menu>li>a {
+        color: #fff;
+    }
+    .navbar-nav>li>a {
+        padding: 15px;
+    }
+    .navbar-translucent .nav>li>a:hover,
+    .navbar-translucent .nav>li>a:focus,
+    .navbar-translucent .dropdown-menu>li>a:hover,
+    .navbar-translucent .dropdown-menu>li>a:focus {
+        background-color: #555;
+    }
+    .navbar-nav .open .dropdown-menu>li>a {
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .frontpage .slogan h1 {
+        font-size: 400%;
+    }
+    .frontpage .slogan h3 {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 480px) {
     .footer .pyconkr-badge {
         width: 64px;
     }
@@ -47,5 +87,23 @@
     .jobfair dt img {
         width: auto;
         height: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
     }
 }
