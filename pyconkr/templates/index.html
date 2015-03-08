@@ -8,7 +8,7 @@
     <h1>{% trans "Python," %}</h1>
     <h1>{% trans "Together," %}</h1>
     <h1>{% trans "Successful." %}</h1>
-    <h3>{% trans "Information of PyCon Korea" %}</h3>
+    <h3>{% trans "Frontpage schedule" %}</h3>
     {% include "badge/all.html" %}
   </div>
 {% with navbar_class="navbar-translucent" %}
@@ -16,6 +16,7 @@
 {% endwith %}
 </div>
 {% endblock %}
+
 {% block content %}
 <div class="wrap">
   <h2>{% trans "Announcements" %}</h2>
@@ -36,4 +37,20 @@
   </dl>
   {% endfor %}
 </div>
+{% endblock %}
+
+{% block script %}
+<script>
+var $target = $('.frontpage');
+var bgMax = 5;
+var bg = Math.floor(Math.random() * bgMax + 1);
+
+function changeBg() {
+    $target.removeClass('bg' + bg);
+    bg = bg % bgMax + 1;
+    $target.addClass('bg' + bg);
+    setTimeout(function() { changeBg(); }, 7000);
+}
+changeBg();
+</script>
 {% endblock %}

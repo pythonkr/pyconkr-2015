@@ -134,7 +134,7 @@ small a:hover {
 .navbar-translucent .navbar-toggle {
     border: 1px solid #fff;
     color: #eee;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
 }
 
 .wrap {
@@ -181,11 +181,32 @@ small a:hover {
 .frontpage {
     position: relative;
     padding: 3% 0 0 0;
-    background: #1c4374;
-    background-image: url("../image/jumboback3.jpg");
+    background: #394556;
     background-size: cover;
     background-position: center;
     z-index: 1;
+
+    transition: all 2.0s linear;
+}
+
+.bg1 {
+    background-image: url("../image/jumboback1.jpg");
+}
+
+.bg2 {
+    background-image: url("../image/jumboback2.jpg");
+}
+
+.bg3 {
+    background-image: url("../image/jumboback3.jpg");
+}
+
+.bg4 {
+    background-image: url("../image/jumboback4.jpg");
+}
+
+.bg5 {
+    background-image: url("../image/jumboback5.jpg");
 }
 
 .frontpage .slogan {
