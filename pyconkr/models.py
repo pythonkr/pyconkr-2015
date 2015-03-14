@@ -163,6 +163,7 @@ class Announcement(models.Model):
     title = models.CharField(max_length=100, db_index=True)
     desc = models.TextField(null=True, blank=True)
 
+    announce_after = models.DateTimeField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
