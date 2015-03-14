@@ -84,10 +84,10 @@
         padding: 0 15px 3%;
     }
     .frontpage .slogan h1 {
-        font-size: 300%;
+        font-size: 400%;
     }
     .frontpage .slogan h3 {
-        font-size: 100%;
+        font-size: 150%;
     }
 }
 
@@ -116,6 +116,13 @@
 
     .titlebar h1 {
         font-size: 28px;
+    }
+
+    .frontpage .slogan h1 {
+        font-size: 300%;
+    }
+    .frontpage .slogan h3 {
+        font-size: 100%;
     }
 
     .well {

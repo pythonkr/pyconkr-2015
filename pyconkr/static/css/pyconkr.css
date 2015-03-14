@@ -199,7 +199,7 @@ small a:hover {
 
 .frontpage .slides {
     width: 100%;
-    height: 520px;
+    height: 580px;
 }
 
 .frontpage .onslides {
@@ -220,6 +220,7 @@ small a:hover {
 
 .frontpage .slogan {
     color: #FAFAFA;
+    padding: 3% 15px;
 }
 
 .frontpage .slogan h1 {
