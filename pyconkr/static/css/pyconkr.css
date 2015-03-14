@@ -91,7 +91,6 @@ small a:hover {
     height: 16px;
     background: url("../image/python-black.png");
     background-size: 100% 100%;
-    opacity: 0.8;
 }
 
 .navbar .navbar-brand {
@@ -106,6 +105,12 @@ small a:hover {
 
 .navbar .navbar-toggle {
     border-radius: 0px;
+    padding: 5px;
+}
+
+.navbar .navbar-toggle .icon-bar {
+    width: 32px;
+    margin: 6px;
 }
 
 .navbar-translucent .navbar-brand {
@@ -137,6 +142,10 @@ small a:hover {
     border: 1px solid #fff;
     color: #eee;
     background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-translucent .navbar-toggle .icon-bar {
+    background-color: white;
 }
 
 .wrap {

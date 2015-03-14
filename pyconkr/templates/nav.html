@@ -5,8 +5,10 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-        MENU
         <span class="sr-only">{% trans "Toggle navigation" %}</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="{% url "index" %}">
         <img src="{% static "image/pyconkr-logo-small.png" %}" alt="PyCon Korea">
@@ -66,7 +68,9 @@
       {% endif %}
       <!-- Language -->
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Language" %} <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-globe"></span>
+            {% trans "Language" %} <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             {% get_language_info_list for LANGUAGES as languages %}
             {% for language in languages %}

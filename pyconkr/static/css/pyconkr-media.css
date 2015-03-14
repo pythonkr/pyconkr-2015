@@ -24,8 +24,8 @@
         top: 10px;
         right: 10px;
         margin: 0;
+        background: rgba(255,255,255,0.95);
     }
-
     .navbar .navbar-collapse {
         background: rgba(255,255,255,0.95);
         top: 0px;
@@ -37,14 +37,15 @@
     .navbar-translucent {
         position: absolute;
     }
+    .navbar-translucent .navbar-toggle{
+        position: absolute;
+        background: rgba(0,0,0,0.5);
+    }
     .navbar-translucent .navbar-collapse {
-        background: rgba(0,0,0,0.8);
+        background: rgba(0,0,0,0.9);
     }
     .navbar-translucent .dropdown-menu>li>a {
         color: #fff;
-    }
-    .navbar-nav>li>a {
-        padding: 15px;
     }
     .navbar-translucent .nav>li>a:hover,
     .navbar-translucent .nav>li>a:focus,
@@ -52,10 +53,24 @@
     .navbar-translucent .dropdown-menu>li>a:focus {
         background-color: #555;
     }
-    .navbar-nav .open .dropdown-menu>li>a {
+    .navbar .glyphicon {
+        margin-right: 12px;
+        top: 6px;
+        font-size: 32px;
+    }
+    .navbar .glyphicon-python {
+        width: 32px;
+        height: 32px;
+    }
+    .navbar-nav>li>a {
+        padding: 10px 0 15px 15px;
+        font-size: 24px;
         line-height: 30px;
     }
-
+    .navbar-nav .open .dropdown-menu>li>a {
+        font-size: 20px;
+        line-height: 30px;
+    }
     .frontpage .slides {
         height: 480px;
     }
