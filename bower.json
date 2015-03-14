@@ -9,6 +9,8 @@
     "bootstrap": "~3.1.1",
     "font-awesome": "~4.1.0",
     "select2": "~3.4.6",
-    "bootstrap-social": "~4.6.0"
+    "bootstrap-social": "~4.6.0",
+    "kenburnsy": "~0.0.5",
+    "velocity": "~1.2.2"
   }
 }

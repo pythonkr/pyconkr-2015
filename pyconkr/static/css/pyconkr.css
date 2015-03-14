@@ -183,40 +183,34 @@ small a:hover {
 
 .frontpage {
     position: relative;
-    padding: 3% 0 0 0;
+    padding: 0;
     background: #394556;
-    background-size: cover;
-    background-position: center;
     z-index: 1;
-
-    transition: all 2.0s linear;
 }
 
-.bg1 {
-    background-image: url("../image/jumboback1.jpg");
+.frontpage .slides {
+    width: 100%;
+    height: 520px;
 }
 
-.bg2 {
-    background-image: url("../image/jumboback2.jpg");
+.frontpage .onslides {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
 }
 
-.bg3 {
-    background-image: url("../image/jumboback3.jpg");
-}
+.frontpage .onslides .navbar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 
-.bg4 {
-    background-image: url("../image/jumboback4.jpg");
-}
-
-.bg5 {
-    background-image: url("../image/jumboback5.jpg");
+    margin: 0;
+    padding: 0;
 }
 
 .frontpage .slogan {
     color: #FAFAFA;
-    position: relative;
-    top: 10%;
-    padding: 0 30px 3%;
 }
 
 .frontpage .slogan h1 {
