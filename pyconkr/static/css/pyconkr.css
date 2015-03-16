@@ -167,6 +167,20 @@ small a:hover {
     max-width: 100%;
 }
 
+.side-by-side {
+    width: 100%;
+}
+
+.side-by-side td,
+.side-by-side th {
+    font-size: 1em;
+    text-align: center;
+}
+
+.side-by-side th {
+    background: #eee;
+}
+
 .content .map {
     max-width: 100%;
     border: 1px solid #E7E7E7;
@@ -263,6 +277,11 @@ small a:hover {
     display: inline-block;
     width: 32%;
     max-width: 200px;
+}
+
+.sponsors .sponsor-become-a-sponsor {
+    width: 100%;
+    max-width: 400px;
 }
 
 .sponsors .sponsor-platinum {

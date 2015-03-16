@@ -8,17 +8,19 @@
 
 {% block content %}
 <div class="sponsor">
-  <img src="{{ sponsor.image.url }}" alt="{{ sponsor.name }}">
-  <ul class="list-group">
-    <li class="list-group-item">
-      <span class="glyphicon glyphicon-tag"></span> {{ sponsor.level }}
-    </li>
-    <li class="list-group-item">
-      <span class="glyphicon glyphicon-share-alt"></span> {{ sponsor.url|urlize }}
-    </li>
-  </ul>
-  <div>
-    {{ sponsor.desc|safe }}
-  </div>
+    {% if sponsor.slug != "info" %}
+    <img src="{{ sponsor.image.url }}" alt="{{ sponsor.name }}">
+    <ul class="list-group">
+        <li class="list-group-item">
+        <span class="glyphicon glyphicon-tag"></span> {{ sponsor.level }}
+        </li>
+        <li class="list-group-item">
+        <span class="glyphicon glyphicon-share-alt"></span> {{ sponsor.url|urlize }}
+        </li>
+    </ul>
+    {% endif %}
+    <div>
+        {{ sponsor.desc|safe }}
+    </div>
 </div>
 {% endblock %}
