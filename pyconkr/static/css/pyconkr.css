@@ -104,13 +104,15 @@ small a:hover {
 }
 
 .navbar .navbar-toggle {
-    border-radius: 0px;
+    border-radius: 48px;
     padding: 5px;
 }
 
-.navbar .navbar-toggle .icon-bar {
-    width: 32px;
-    margin: 6px;
+.navbar .navbar-toggle .glyphicon {
+    width: 24px;
+    height: 24px;
+    top: 4px;
+    margin: 0 4px;
 }
 
 .navbar-translucent .navbar-brand {
@@ -139,7 +141,7 @@ small a:hover {
 }
 
 .navbar-translucent .navbar-toggle {
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     color: #eee;
     background-color: rgba(0,0,0,0.4);
 }
