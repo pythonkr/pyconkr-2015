@@ -18,6 +18,7 @@ def menu(request):
                 ('announcements', {'title': _('Announcements')}),
                 ('sponsors', {'title': _('Sponsors')}),
                 ('staff', {'title': _('Staff')}),
+                ('contact', {'title': _('Contact')}),
             ]),
         }),
         ('programs', {
@@ -32,17 +33,21 @@ def menu(request):
                 ('bof', {'title': _('BOF')}),
             ]),
         }),
+        ('venue', {
+            'title': _('Getting here'),
+            'icon': 'map-marker',
+            'dropdown': OrderedDict([
+                ('map', {'title': _('Venue Map')}),
+                ('transportation', {'title': _('Transportation')}),
+                ('hotels', {'title': _('Hotels')}),
+                ('restaurants', {'title': _('Restaurants')}),
+                ('weather', {'title': _('Weather')}),
+                ('international', {'title': _('International Attendees')}),
+            ]),
+        }),
         ('registration', {
             'title': _('Registration'),
             'icon': 'pencil',
-        }),
-        ('venue', {
-            'title': _('Venue'),
-            'icon': 'map-marker',
-        }),
-        ('contact', {
-            'title': _('Contact'),
-            'icon': 'info-sign',
         }),
     ])
 
