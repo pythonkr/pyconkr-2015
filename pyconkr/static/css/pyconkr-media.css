@@ -10,6 +10,19 @@
     .sponsors li {
         width: 24%;
     }
+    .titlebar .slogan {
+        border: 0;
+        display: inline-block;
+        margin: 0;
+        background: transparent;
+        width: auto;
+    }
+    .titlebar .slogan div {
+        display: inline;
+        margin: 0;
+        letter-spacing: 1px;
+        color: #aaa;
+    }
 }
 
 @media (max-width: 768px) {

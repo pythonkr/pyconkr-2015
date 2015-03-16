@@ -198,6 +198,22 @@ small a:hover {
     margin: 0;
 }
 
+.titlebar .slogan {
+    border: 1px solid #ddd;
+    background: #eee;
+    display: inline-block;
+    margin: 8px 0 0 0;
+    width: 100%;
+}
+
+.titlebar .slogan div {
+    font-size: 12px;
+    letter-spacing: 3px;
+    line-height: 14px;
+    color: #666;
+    margin: 4px 12px;
+}
+
 .frontpage {
     position: relative;
     padding: 0;
