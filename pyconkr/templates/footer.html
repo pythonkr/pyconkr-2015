@@ -1,15 +1,33 @@
 {% load staticfiles %}
 {% load i18n %}
 <div class="footer">
-  <div class="container">
-    <img class="pyconkr-badge" src="{% static "image/pyconkr-badge.png" %}" alt="PyCon Korea badge">
-    <p>
-      {% trans "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team" %}
-    </p>
-    <p>
-      {% trans "Powered by Django" %}
-      /
-      <a href="/about/coc/">{% trans "Code of Conduct" %}</a>
-    </p>
-  </div>
+    <div class="container">
+        <div class="row wrap">
+            <div class="col col-sm-2 pyconkr-badge">
+                <img src="{% static "image/pyconkr-badge.png" %}" alt="PyCon Korea badge">
+            </div>
+            <div class="col col-sm-7 credit">
+                <p>
+                {% trans "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team" %}
+                </p>
+                <p>
+                {% trans "Image courtesy information of homepage" %}
+                </p>
+                <p>
+                {% trans "Powered by Django" %}
+                </p>
+            </div>
+            <div class="col col-sm-3 info">
+                <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/pyconkr">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="btn btn-social-icon btn-facebook" href="https://facebook.com/groups/pyconkorea">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="btn btn-social-icon btn-github" href="https://github.com/pythonkr/pyconkr-2015">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

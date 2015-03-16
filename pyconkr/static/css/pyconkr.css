@@ -403,19 +403,24 @@ small a:hover {
 
 .footer {
     padding: 10px 0;
-    text-align: center;
     border-top: 1px solid #E7E7E7;
 }
 
 .footer p {
-    font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
     font-size: 90%;
 }
 
+.footer .col {
+    padding: 10px 0 20px;
+}
+
 .footer .pyconkr-badge {
+    text-align: center;
+}
+
+.footer .pyconkr-badge img {
     width: 96px;
     height: auto;
-    padding: 10px 0 20px;
 }
 
 .social-badges {

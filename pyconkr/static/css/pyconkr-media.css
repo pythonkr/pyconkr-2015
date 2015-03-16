@@ -74,6 +74,9 @@
     .frontpage .slides {
         height: 480px;
     }
+    .footer .col {
+        text-align: center;
+    }
 }
 
 @media (max-width: 640px) {
@@ -103,10 +106,6 @@
     .container>.navbar-collapse {
         margin-left: -5px;
         margin-right: -5px;
-    }
-    
-    .footer .pyconkr-badge {
-        width: 64px;
     }
 
     .titlebar {
