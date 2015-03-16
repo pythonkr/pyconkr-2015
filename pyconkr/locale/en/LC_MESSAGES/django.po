@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-08 13:32+0000\n"
-"PO-Revision-Date: 2015-03-08 13:34+0000\n"
+"POT-Creation-Date: 2015-03-16 07:35+0000\n"
+"PO-Revision-Date: 2015-03-16 07:45+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -26,7 +26,7 @@ msgstr "About"
 msgid "About PyCon Korea 2015"
 msgstr "About PyCon Korea 2015"
 
-#: context_processors.py:16 templates/footer.html:12
+#: context_processors.py:16
 msgid "Code of Conduct"
 msgstr "Code of Conduct"
 
@@ -34,7 +34,7 @@ msgstr "Code of Conduct"
 msgid "Conference detail"
 msgstr "Conference detail"
 
-#: context_processors.py:18 templates/index.html:22
+#: context_processors.py:18
 msgid "Announcements"
 msgstr "Announcements"
 
@@ -46,51 +46,77 @@ msgstr "Sponsors"
 msgid "Staff"
 msgstr "Staff"
 
-#: context_processors.py:24 templates/nav.html:53
+#: context_processors.py:21
+msgid "Contact"
+msgstr "Contact"
+
+#: context_processors.py:25 templates/nav.html:55
 msgid "Programs"
 msgstr "Programs"
 
-#: context_processors.py:27
+#: context_processors.py:28
 msgid "Call for proposal"
 msgstr "Call for proposal"
 
-#: context_processors.py:28
+#: context_processors.py:29
 msgid "Schedule"
 msgstr "Schedule"
 
-#: context_processors.py:29
+#: context_processors.py:30
 msgid "Program list"
 msgstr "Program list"
 
-#: context_processors.py:30
+#: context_processors.py:31
 msgid "Speakers"
 msgstr "Speakers"
 
-#: context_processors.py:31
+#: context_processors.py:32
 msgid "Jobfair"
 msgstr "Jobfair"
 
-#: context_processors.py:32
+#: context_processors.py:33
 msgid "BOF"
 msgstr "BOF"
 
-#: context_processors.py:36
-msgid "Registration"
-msgstr "Registration"
+#: context_processors.py:37
+msgid "Getting here"
+msgstr "Getting Here"
 
 #: context_processors.py:40
-msgid "Venue"
-msgstr "Venue"
+#| msgid "Venue"
+msgid "Venue Map"
+msgstr "Venue Map"
+
+#: context_processors.py:41
+msgid "Transportation"
+msgstr "Transportation"
+
+#: context_processors.py:42
+msgid "Hotels"
+msgstr "Hotels"
+
+#: context_processors.py:43
+msgid "Restaurants"
+msgstr "Restaurants"
 
 #: context_processors.py:44
-msgid "Contact"
-msgstr "Contact"
+#| msgid "Together,"
+msgid "Weather"
+msgstr "Weather"
+
+#: context_processors.py:45
+msgid "International Attendees"
+msgstr "International Attendees"
+
+#: context_processors.py:49
+msgid "Registration"
+msgstr "Registration"
 
 #: forms.py:28 forms.py:46
 msgid "Submit"
 msgstr "Submit"
 
-#: forms.py:37 templates/nav.html:47 templates/pyconkr/speaker_detail.html:18
+#: forms.py:37 templates/nav.html:49 templates/pyconkr/speaker_detail.html:18
 msgid "Profile"
 msgstr "Profile"
 
@@ -127,19 +153,19 @@ msgstr ""
 "</pre>\n"
 "<p>Supported pages are listed in <a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a></p>"
 
-#: settings.py:88
+#: settings.py:89
 msgid "Korean"
 msgstr "Korean"
 
-#: settings.py:89
+#: settings.py:90
 msgid "English"
 msgstr "English"
 
-#: settings.py:132
+#: settings.py:133
 msgid "PyCon Korea 2015 one-time login token"
 msgstr "PyCon Korea 2015 one-time login token"
 
-#: settings.py:133 templates/mail/token_html.html:2
+#: settings.py:134 templates/mail/token_html.html:2
 msgid "PyCon Korea"
 msgstr "Pycon Korea"
 
@@ -151,33 +177,53 @@ msgstr "PyCon Korea 2015"
 msgid "Comments"
 msgstr "Comments"
 
-#: templates/footer.html:7
+#: templates/footer.html:11
 msgid "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
 msgstr "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
 
-#: templates/footer.html:10
+#: templates/footer.html:14
+msgid "Image courtesy information of homepage"
+msgstr "All photos courtesy of each individual contributor."
+
+#: templates/footer.html:17
 msgid "Powered by Django"
 msgstr "Powered by Django"
 
-#: templates/index.html:8
+#: templates/index.html:21
 msgid "Python,"
 msgstr "Python,"
 
-#: templates/index.html:9
+#: templates/index.html:22
 msgid "Together,"
 msgstr "Together,"
 
-#: templates/index.html:10
+#: templates/index.html:23
 msgid "Successful."
 msgstr "Successful."
 
-#: templates/index.html:11
+#: templates/index.html:24
 msgid "Frontpage schedule"
-msgstr "Yonsei University, June 27–28"
+msgstr "Nuri Dream Square, Seoul @ June 27–28"
 
-#: templates/index.html:34 templates/pyconkr/announcement_list.html:16
-msgid "Read more"
-msgstr "Read more"
+#: templates/index.html:37
+msgid "Overview"
+msgstr "Overview"
+
+#: templates/index.html:38
+msgid "overview-detail"
+msgstr ""
+"<p>\n"
+"PyCon is a non-commercial conference held by Python Programming Communities over the world.\n"
+"</p>\n"
+"<p>\n"
+"Since its inaugural edition in 2014, PyCon Korea has been running by a group of volunteers called ‘PyCon Korea Preparation Organizers’, who support the local Korean Python community. Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity.\n"
+"</p>\n"
+"<ul>\n"
+"<li><strong>Date</strong> : June 27th(Sat) – 28th(Sun), 2015</li>\n"
+"<li><strong>Venue</strong> : Nuri Dream Square, Sangam-dong, Seoul</li>\n"
+"<li><strong>Attendees</strong>: Appr. 700 people</li>\n"
+"<li><strong>Talk sessions</strong> : 50 mins long for each sessions (can be changed)</li>\n"
+"</ul>"
 
 #: templates/login.html:5
 msgid "Login via mail"
@@ -213,7 +259,7 @@ msgstr "Back to home"
 msgid "Requested token is not found or invalid."
 msgstr "Requested token is not found or invalid."
 
-#: templates/login_notvalidtoken.html:7 templates/nav.html:64 views.py:180
+#: templates/login_notvalidtoken.html:7 templates/nav.html:66 views.py:181
 msgid "Login"
 msgstr "Login"
 
@@ -225,29 +271,33 @@ msgstr "You can login to PyCon Korea homepage via below url."
 msgid "Link"
 msgstr "Link"
 
-#: templates/nav.html:9
+#: templates/nav.html:8
 msgid "Toggle navigation"
 msgstr "Toggle navigation"
 
-#: templates/nav.html:48
+#: templates/nav.html:50
 msgid "My Profile"
 msgstr "My Profile"
 
-#: templates/nav.html:49
+#: templates/nav.html:51
 msgid "Edit Profile"
 msgstr "Edit Profile"
 
-#: templates/nav.html:59
+#: templates/nav.html:61
 msgid "Logout"
 msgstr "Logout"
 
-#: templates/nav.html:69
+#: templates/nav.html:73
 msgid "Language"
 msgstr "Language"
 
 #: templates/pyconkr/announcement_detail.html:13
 msgid "Back to list"
 msgstr "Back to list"
+
+#: templates/pyconkr/announcement_list.html:16
+msgid "Read more"
+msgstr "Read more"
 
 #: templates/pyconkr/program_detail.html:4
 #: templates/pyconkr/speaker_detail.html:22
@@ -306,16 +356,10 @@ msgstr "Schedule may be subject to change."
 msgid "Sponsor list"
 msgstr "Sponsor list"
 
-#: views.py:193
+#: views.py:194
 msgid "Not valid token"
 msgstr "Not valid token"
 
-#: views.py:215
+#: views.py:216
 msgid "Mail sent"
 msgstr "Mail sent"
-
-#~ msgid "Slogan of PyCon Korea"
-#~ msgstr "The First PyCon in Korea"
-
-#~ msgid "Information of PyCon Korea"
-#~ msgstr "Aug 30 '14 at Sookmyung Women's University"
