@@ -23,9 +23,7 @@
 
   <!-- Override bootstrap css -->
   <link href="{% static "css/pyconkr.css" %}" rel="stylesheet">
-  <!--[if !IE]><!-->
   <link href="{% static "css/pyconkr-media.css" %}" rel="stylesheet">
-  <!--<![endif]-->
 
   <!-- Google fonts -->
   <link href='//fonts.googleapis.com/css?family=Lato:200,400,700' rel='stylesheet' type='text/css'>
@@ -37,8 +35,11 @@
   <link rel="icon" href="{% static "image/favicon.ico" %}" type="image/x-icon">
 
   <!-- Scripts -->
+  <!--[if lt IE 9]>
+    <script src="{% static "components/html5shiv/dist/html5shiv.min.js" %}"></script>
+    <script src="{% static "components/respond/dest/respond.min.js" %}"></script>
+  <![endif]-->
   <script src="{% static "components/jquery/jquery.min.js" %}"></script>
-  <script src="{% static "components/html5shiv/dist/html5shiv.min.js" %}"></script>
   <script src="{% static "components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
   {% block head %}{% endblock %}
 </head>
