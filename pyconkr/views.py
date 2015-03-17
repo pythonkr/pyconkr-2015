@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib.auth import login as user_login, logout as user_logout
 from django.contrib.auth.models import User
+from django.contrib.flatpages.models import FlatPage
 from django.core.urlresolvers import reverse
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponseRedirect
@@ -21,6 +22,7 @@ from .models import (Room,
 
 def index(request):
     return render(request, 'index.html', {
+        'content': FlatPage.objects.get(url='/index').content,
         'recent_announcements': Announcement.objects.all()[:3],
     })
 

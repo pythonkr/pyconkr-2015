@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-16 07:35+0000\n"
-"PO-Revision-Date: 2015-03-16 07:38+0000\n"
+"POT-Creation-Date: 2015-03-17 12:33+0000\n"
+"PO-Revision-Date: 2015-03-17 12:38+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -84,7 +84,6 @@ msgid "Getting here"
 msgstr "오시는 길"
 
 #: context_processors.py:40
-#| msgid "Venue"
 msgid "Venue Map"
 msgstr "행사장 지도"
 
@@ -101,7 +100,6 @@ msgid "Restaurants"
 msgstr "식사"
 
 #: context_processors.py:44
-#| msgid "Together,"
 msgid "Weather"
 msgstr "날씨"
 
@@ -111,7 +109,7 @@ msgstr "해외 방문자 지원"
 
 #: context_processors.py:49
 msgid "Registration"
-msgstr "등록 및 현장 안내"
+msgstr "등록 안내"
 
 #: forms.py:28 forms.py:46
 msgid "Submit"
@@ -178,29 +176,34 @@ msgstr "파이콘 한국 2015"
 msgid "Comments"
 msgstr "댓글"
 
-#: templates/footer.html:11
-msgid "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
-msgstr "파이콘 한국 2015는 파이콘 한국 준비위원회가 만들고 있습니다."
-
-#: templates/footer.html:14
-msgid "Image courtesy information of homepage"
-msgstr "홈페이지에 사용된 사진의 저작권은 각 사진의 저작자에게 있습니다."
-
-#: templates/footer.html:17
-msgid "Powered by Django"
-msgstr "Powered by <a href='https://www.djangoproject.com/'>Django</a>"
-
-#: templates/index.html:21
+#: templates/footer.html:11 templates/index.html:21
 msgid "Python,"
 msgstr "파이썬,"
 
-#: templates/index.html:22
+#: templates/footer.html:12 templates/index.html:22
 msgid "Together,"
 msgstr "다같이,"
 
-#: templates/index.html:23
+#: templates/footer.html:13 templates/index.html:23
 msgid "Successful."
 msgstr "성공적."
+
+#: templates/footer.html:16
+msgid "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
+msgstr "파이콘 한국 2015는 파이콘 한국 준비위원회가 만들고 있습니다."
+
+#: templates/footer.html:19
+msgid "Image courtesy information of homepage"
+msgstr "홈페이지에 사용된 사진의 저작권은 각 사진의 저작자에게 있습니다."
+
+#: templates/footer.html:22
+msgid "Powered by Django"
+msgstr ""
+"파이썬 웹 프레임워크 <a href='https://www.djangoproject.com/'>Django</a>로 만들었습니다."
+
+#: templates/footer.html:26
+msgid "Stay connected"
+msgstr "더 알아보기"
 
 #: templates/index.html:24
 msgid "Frontpage schedule"
@@ -352,7 +355,7 @@ msgstr "후원사"
 msgid "Schedule may be subject to change."
 msgstr "일정은 예고 없이 변경될 수 있습니다."
 
-#: templates/sponsors.html:2
+#: templates/sponsors.html:4
 msgid "Sponsor list"
 msgstr "후원사 목록"
 

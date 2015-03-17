@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-16 07:35+0000\n"
-"PO-Revision-Date: 2015-03-16 07:45+0000\n"
+"POT-Creation-Date: 2015-03-17 12:33+0000\n"
+"PO-Revision-Date: 2015-03-17 12:34+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -83,7 +83,6 @@ msgid "Getting here"
 msgstr "Getting Here"
 
 #: context_processors.py:40
-#| msgid "Venue"
 msgid "Venue Map"
 msgstr "Venue Map"
 
@@ -100,7 +99,6 @@ msgid "Restaurants"
 msgstr "Restaurants"
 
 #: context_processors.py:44
-#| msgid "Together,"
 msgid "Weather"
 msgstr "Weather"
 
@@ -177,29 +175,33 @@ msgstr "PyCon Korea 2015"
 msgid "Comments"
 msgstr "Comments"
 
-#: templates/footer.html:11
-msgid "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
-msgstr "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
-
-#: templates/footer.html:14
-msgid "Image courtesy information of homepage"
-msgstr "All photos courtesy of each individual contributor."
-
-#: templates/footer.html:17
-msgid "Powered by Django"
-msgstr "Powered by Django"
-
-#: templates/index.html:21
+#: templates/footer.html:11 templates/index.html:21
 msgid "Python,"
 msgstr "Python,"
 
-#: templates/index.html:22
+#: templates/footer.html:12 templates/index.html:22
 msgid "Together,"
 msgstr "Together,"
 
-#: templates/index.html:23
+#: templates/footer.html:13 templates/index.html:23
 msgid "Successful."
 msgstr "Successful."
+
+#: templates/footer.html:16
+msgid "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
+msgstr "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
+
+#: templates/footer.html:19
+msgid "Image courtesy information of homepage"
+msgstr "All photos courtesy of each individual contributor"
+
+#: templates/footer.html:22
+msgid "Powered by Django"
+msgstr "Powered by Django"
+
+#: templates/footer.html:26
+msgid "Stay connected"
+msgstr "Stay connected"
 
 #: templates/index.html:24
 msgid "Frontpage schedule"
@@ -352,7 +354,7 @@ msgstr "Sponsor"
 msgid "Schedule may be subject to change."
 msgstr "Schedule may be subject to change."
 
-#: templates/sponsors.html:2
+#: templates/sponsors.html:4
 msgid "Sponsor list"
 msgstr "Sponsor list"
 

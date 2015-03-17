@@ -34,8 +34,7 @@
 
 {% block content %}
 <section id="overview">
-    <h3>{% trans "Overview" %}</h3>
-    {% trans "overview-detail" %}
+{{ content | safe }}
 </section>
 {% endblock %}
 
