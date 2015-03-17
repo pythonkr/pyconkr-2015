@@ -1,12 +1,15 @@
 from django.conf import settings
-from django.utils.translation import ugettext_lazy as _
+from django.contrib.flatpages.models import FlatPage
 from django.db.models import Count
+from django.utils.translation import ugettext_lazy as _
 from collections import OrderedDict
 from .models import SponsorLevel, Speaker
 
 
 def menu(request):
     title = None
+    base_content = FlatPage.objects.filter(url=request.path).first()
+
     menu = OrderedDict([
         ('about', {
             'title': _('About'),
@@ -14,7 +17,6 @@ def menu(request):
             'dropdown': OrderedDict([
                 ('pyconkr', {'title': _('About PyCon Korea 2015')}),
                 ('coc', {'title': _('Code of Conduct')}),
-                ('detail', {'title': _('Conference detail')}),
                 ('announcements', {'title': _('Announcements')}),
                 ('sponsors', {'title': _('Sponsors')}),
                 ('staff', {'title': _('Staff')}),
@@ -70,6 +72,7 @@ def menu(request):
         'menu': menu,
         'title': title,
         'domain': settings.DOMAIN,
+        'base_content': base_content.content if base_content else '',
     }
 
 

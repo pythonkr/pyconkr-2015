@@ -22,7 +22,7 @@ from .models import (Room,
 
 def index(request):
     return render(request, 'index.html', {
-        'content': FlatPage.objects.get(url='/index').content,
+        'base_content': FlatPage.objects.get(url='/index/').content,
         'recent_announcements': Announcement.objects.all()[:3],
     })
 

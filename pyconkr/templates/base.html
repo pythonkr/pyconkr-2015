@@ -53,6 +53,7 @@
     {% block wrap %}
     <div class="row wrap">
         <div class="col-md-9 content">
+            {{ base_content | safe }}
             {% block content %}{% endblock %}
         </div>
         <div class="col-md-3 sponsors">

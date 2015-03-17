@@ -154,6 +154,7 @@ small a:hover {
 
 .content img {
     max-width: 100%;
+    border-radius: 10px;
 }
 
 .side-by-side {

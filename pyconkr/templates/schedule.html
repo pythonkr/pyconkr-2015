@@ -2,11 +2,7 @@
 {% load i18n %}
 {% block wrap %}
 <div class="content">
-<!--
-<div class="alert alert-info" role="alert">
-    {% trans "Schedule may be subject to change." %}
-</div>
--->
+  {{ base_content | safe }} 
   {% for d, d_ in narrow.items %}
   <div class="timetable timetable-narrow visible-xs">
     <h2>{{ d }}</h2>
