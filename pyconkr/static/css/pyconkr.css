@@ -89,7 +89,7 @@ small a:hover {
 .navbar .glyphicon-python {
     width: 16px;
     height: 16px;
-    background: url("../image/python-black.png");
+    background: url("../image/python-black-small.png");
     background-size: 100% 100%;
 }
 
@@ -192,26 +192,34 @@ small a:hover {
     padding: 2px 0 10px 0;
     background: #FAFAFA;
     border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+    overflow: hidden;
 }
 
 .titlebar h1 {
     margin: 0;
 }
 
-.titlebar .slogan {
-    border: 1px solid #ddd;
-    background: #eee;
-    display: inline-block;
-    margin: 8px 0 0 0;
-    width: 100%;
+.titlebar .container {
+    position: relative;
 }
 
-.titlebar .slogan div {
-    font-size: 12px;
-    letter-spacing: 3px;
-    line-height: 14px;
-    color: #666;
-    margin: 4px 12px;
+.titlebar .halftone {
+    position: absolute;
+}
+
+.titlebar .halftone-red {
+    width: 50%;
+    height: auto;
+    top: -200px;
+    right: 60px;
+}
+
+.titlebar .halftone-blue {
+    width: 50%;
+    height: auto;
+    top: -90px;
+    right: -40px;
 }
 
 .frontpage {
@@ -437,10 +445,17 @@ small a:hover {
 
 .footer p {
     font-size: 90%;
+    margin-bottom: 0;
 }
 
 .footer .col {
     padding: 10px 0 20px;
+}
+
+.footer h3,
+.footer h4
+{
+    margin-top: -10px;
 }
 
 .footer .pyconkr-badge {
@@ -450,6 +465,19 @@ small a:hover {
 .footer .pyconkr-badge img {
     width: 96px;
     height: auto;
+}
+
+.footer .btn-social-icon {
+    font-size: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    border: 0;
+    margin-right: 4px;
+}
+
+.footer .btn-social-icon :first-child {
+    line-height: 44px;
 }
 
 .social-badges {

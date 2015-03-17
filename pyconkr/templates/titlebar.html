@@ -3,20 +3,20 @@
 {% if title %}
 <div class="titlebar">
   <div class="container">
-    <div class="row">
-      <div class="col-md-9">
-        <h1>
-          {{ title }}
-        </h1>
-      </div>
-      <div class="col-md-3">
-        <div class="slogan pull-right">
-          <div>{% trans "Python," %}</div>
-          <div>{% trans "Together," %}</div>
-          <div>{% trans "Successful." %}</div>
-        </div>
-      </div>
-    </div>
+    <h1>
+      {{ title }}
+    </h1>
+    <img class="halftone halftone-red" src="{% static "image/halftone-red.png" %}" alt="PyCon Korea Red">
+    <img class="halftone halftone-blue" src="{% static "image/halftone-blue.png" %}" alt="PyCon Korea Blue">
   </div>
 </div>
+<script type="text/javascript">
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+$(".halftone").each(function() {
+    $(this).css({'marginTop' : getRandomInt(-100,100), 'marginLeft' : getRandomInt(-100,100)});
+    $(this).css({'width' : getRandomInt(360,600)});
+});
+</script>
 {% endif %}
