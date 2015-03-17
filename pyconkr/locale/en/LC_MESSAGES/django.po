@@ -207,26 +207,6 @@ msgstr "Stay connected"
 msgid "Frontpage schedule"
 msgstr "Nuri Dream Square, Seoul @ June 27–28"
 
-#: templates/index.html:37
-msgid "Overview"
-msgstr "Overview"
-
-#: templates/index.html:38
-msgid "overview-detail"
-msgstr ""
-"<p>\n"
-"PyCon is a non-commercial conference held by Python Programming Communities over the world.\n"
-"</p>\n"
-"<p>\n"
-"Since its inaugural edition in 2014, PyCon Korea has been running by a group of volunteers called ‘PyCon Korea Preparation Organizers’, who support the local Korean Python community. Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity.\n"
-"</p>\n"
-"<ul>\n"
-"<li><strong>Date</strong> : June 27th(Sat) – 28th(Sun), 2015</li>\n"
-"<li><strong>Venue</strong> : Nuri Dream Square, Sangam-dong, Seoul</li>\n"
-"<li><strong>Attendees</strong>: Appr. 700 people</li>\n"
-"<li><strong>Talk sessions</strong> : 50 mins long for each sessions (can be changed)</li>\n"
-"</ul>"
-
 #: templates/login.html:5
 msgid "Login via mail"
 msgstr "Login via mail"

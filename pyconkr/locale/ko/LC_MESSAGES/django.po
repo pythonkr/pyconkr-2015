@@ -209,28 +209,6 @@ msgstr "더 알아보기"
 msgid "Frontpage schedule"
 msgstr "상암동 누리꿈스퀘어, 2015년 6월 27~28일"
 
-#: templates/index.html:37
-msgid "Overview"
-msgstr "행사 개요"
-
-#: templates/index.html:38
-msgid "overview-detail"
-msgstr ""
-"<p>\n"
-"파이콘은 세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스입니다.\n"
-"</p>\n"
-"<p>\n"
-"한국에서는 처음으로 열린 파이콘 한국 2014를 시작으로 파이콘 한국 준비위원회는 건강한 국내 파이썬 생태계에 지속적인 보탬이 되고자, 커뮤니티 멤버들의 자발적인 봉사로 운영되고 있습니다.\n"
-"작년보다 성숙된, 보다 알찬 모습으로 열릴 ‘파이콘 한국 2015’를 통해 새로운 기술과 정보를 공유하고 참석자들이 서로 교류할 수 있는 행사가 되기를 희망합니다.\n"
-"</p>\n"
-"<ul>\n"
-"<li><strong>일정</strong> : 2015년 6월 27일(토) ~ 28일(일)</li>\n"
-"<li><strong>장소</strong> : 상암동 누리꿈스퀘어</li>\n"
-"<li><strong>인원</strong> : 약 700명 예상</li>\n"
-"<li><strong>주최</strong> : 파이콘 한국 준비 위원회</li>\n"
-"<li><strong>대상</strong> : 국내외 파이썬 개발자 혹은 관심이 있는 분이라면 누구나</li>\n"
-"</ul>"
-
 #: templates/login.html:5
 msgid "Login via mail"
 msgstr "메일로 로그인"
