@@ -15,8 +15,8 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 $(".halftone").each(function() {
-    $(this).css({'marginTop' : getRandomInt(-100,100), 'marginLeft' : getRandomInt(-100,100)});
-    $(this).css({'width' : getRandomInt(360,600)});
+    $(this).css({'marginTop' : getRandomInt(-10,10)+'%', 'marginLeft' : getRandomInt(-10,10)+'%'});
+    $(this).css({'width' : getRandomInt(30,50)+'%'});
 });
 </script>
 {% endif %}
