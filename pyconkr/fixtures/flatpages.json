@@ -2,20 +2,362 @@
 {
     "fields": {
         "registration_required": false,
-        "content_en": "<h3>Overview</h3><p>PyCon is a non-commercial conference held by Python Programming Communities over the world.</p><p>Since its inaugural edition in 2014, PyCon Korea has been running by a group of volunteers called \u2018PyCon Korea Preparation Organizers\u2019, who support the local Korean Python community. Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity.</p><ul><li><strong>Date</strong> : June 27th(Sat) \u2013 28th(Sun), 2015</li><li><strong>Venue</strong> : Nuri Dream Square, Sangam-dong, Seoul</li><li><strong>Attendees</strong>: Appr. 700 people</li><li><strong>Talk sessions</strong> : 50 mins long for each sessions (can be changed)</li></ul>",
+        "content_en": "<h3>Overview</h3><p>PyCon is a non-commercial conference held by Python Programming Communities over the world.</p><p>Since its inaugural edition in 2014, PyCon Korea has been running by a group of volunteers called \u2018PyCon Korea Preparation Organizers\u2019, who support the local Korean Python community. Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity.</p><ul><li><strong>Date</strong> : June 27th(Sat) \u2013 28th(Sun), 2015</li><li><strong>Venue</strong> : Nuri Dream Square, Sangam-dong, Seoul</li><li><strong>Attendees</strong>: Appr. 700 people</li><li><strong>Talk sessions</strong> : 50 mins long for each sessions (can be changed)</li></ul><h3>Call For Proposals</h3><p>We accept a broad range of Python-related proposals, from academic reports to commercial projects and case studies. See <a href=\"/programs/cfp\">Call For Proposals page</a> for detailed information.</p><p></p><ul>                    <li><strong>Feb 10th, 2015</strong> : Opening for Call For Proposals</li>                    <li><strong>Apr 1st, 2015</strong> : Closing of Call For Proposals</li>                    <li><strong>May 2nd, 2015</strong> : Announcement of accepted proposals</li>                </ul><h3>Be a sponsor!</h3><p>We're also find sponsors! Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity. Please refer <a href=\"/about/sponsor/info\">Sponsorship information page</a> to help us.</p>",
         "title_ko": "index",
-        "url": "/index",
+        "url": "/index/",
         "template_name": "",
-        "content_ko": "<h2>\ud589\uc0ac\uac1c\uc694</h2><p>\ud30c\uc774\ucf58\uc740 \uc138\uacc4 \uac01\uad6d\uc758 \ud30c\uc774\uc36c \ud504\ub85c\uadf8\ub798\ubc0d \uc5b8\uc5b4 \ucee4\ubba4\ub2c8\ud2f0\uc5d0\uc11c \uc8fc\uad00\ud558\ub294 \ube44\uc601\ub9ac \ucee8\ud37c\ub7f0\uc2a4\uc785\ub2c8\ub2e4.</p><p>\ud55c\uad6d\uc5d0\uc11c\ub294 \ucc98\uc74c\uc73c\ub85c \uc5f4\ub9b0 \ud30c\uc774\ucf58 \ud55c\uad6d 2014\ub97c \uc2dc\uc791\uc73c\ub85c \ud30c\uc774\ucf58 \ud55c\uad6d \uc900\ube44\uc704\uc6d0\ud68c\ub294 \uac74\uac15\ud55c \uad6d\ub0b4 \ud30c\uc774\uc36c \uc0dd\ud0dc\uacc4\uc5d0 \uc9c0\uc18d\uc801\uc778 \ubcf4\ud0ec\uc774 \ub418\uace0\uc790, \ucee4\ubba4\ub2c8\ud2f0 \uba64\ubc84\ub4e4\uc758 \uc790\ubc1c\uc801\uc778 \ubd09\uc0ac\ub85c \uc6b4\uc601\ub418\uace0 \uc788\uc2b5\ub2c8\ub2e4.\uc791\ub144\ubcf4\ub2e4 \uc131\uc219\ub41c, \ubcf4\ub2e4 \uc54c\ucc2c \ubaa8\uc2b5\uc73c\ub85c \uc5f4\ub9b4 \u2018\ud30c\uc774\ucf58 \ud55c\uad6d 2015\u2019\ub97c \ud1b5\ud574 \uc0c8\ub85c\uc6b4 \uae30\uc220\uacfc \uc815\ubcf4\ub97c \uacf5\uc720\ud558\uace0 \ucc38\uc11d\uc790\ub4e4\uc774 \uc11c\ub85c \uad50\ub958\ud560 \uc218 \uc788\ub294 \ud589\uc0ac\uac00 \ub418\uae30\ub97c \ud76c\ub9dd\ud569\ub2c8\ub2e4.</p><ul><li><strong>\uc77c\uc815</strong> : 2015\ub144 6\uc6d4 27\uc77c(\ud1a0) ~ 28\uc77c(\uc77c)</li><li><strong>\uc7a5\uc18c</strong> : \uc0c1\uc554\ub3d9 \ub204\ub9ac\uafc8\uc2a4\ud018\uc5b4</li><li><strong>\uc778\uc6d0</strong> : \uc57d 700\uba85 \uc608\uc0c1</li><li><strong>\uc8fc\ucd5c</strong> : \ud30c\uc774\ucf58 \ud55c\uad6d \uc900\ube44 \uc704\uc6d0\ud68c</li><li><strong>\ub300\uc0c1</strong> : \uad6d\ub0b4\uc678 \ud30c\uc774\uc36c \uac1c\ubc1c\uc790 \ud639\uc740 \uad00\uc2ec\uc774 \uc788\ub294 \ubd84\uc774\ub77c\uba74 \ub204\uad6c\ub098</li></ul>",
+        "content_ko": "<h3>\ud589\uc0ac\uac1c\uc694</h3>\r\n<p>\ud30c\uc774\ucf58\uc740 \uc138\uacc4 \uac01\uad6d\uc758 \ud30c\uc774\uc36c \ud504\ub85c\uadf8\ub798\ubc0d \uc5b8\uc5b4 \ucee4\ubba4\ub2c8\ud2f0\uc5d0\uc11c \uc8fc\uad00\ud558\ub294 \ube44\uc601\ub9ac \ucee8\ud37c\ub7f0\uc2a4\uc785\ub2c8\ub2e4.</p>\r\n<p>\ud55c\uad6d\uc5d0\uc11c\ub294 \ucc98\uc74c\uc73c\ub85c \uc5f4\ub9b0 \ud30c\uc774\ucf58 \ud55c\uad6d 2014\ub97c \uc2dc\uc791\uc73c\ub85c \ud30c\uc774\ucf58 \ud55c\uad6d \uc900\ube44\uc704\uc6d0\ud68c\ub294 \uac74\uac15\ud55c \uad6d\ub0b4 \ud30c\uc774\uc36c \uc0dd\ud0dc\uacc4\uc5d0 \uc9c0\uc18d\uc801\uc778 \ubcf4\ud0ec\uc774 \ub418\uace0\uc790, \ucee4\ubba4\ub2c8\ud2f0 \uba64\ubc84\ub4e4\uc758 \uc790\ubc1c\uc801\uc778 \ubd09\uc0ac\ub85c \uc6b4\uc601\ub418\uace0 \uc788\uc2b5\ub2c8\ub2e4.\uc791\ub144\ubcf4\ub2e4 \uc131\uc219\ub41c, \ubcf4\ub2e4 \uc54c\ucc2c \ubaa8\uc2b5\uc73c\ub85c \uc5f4\ub9b4 \u2018\ud30c\uc774\ucf58 \ud55c\uad6d 2015\u2019\ub97c \ud1b5\ud574 \uc0c8\ub85c\uc6b4 \uae30\uc220\uacfc \uc815\ubcf4\ub97c \uacf5\uc720\ud558\uace0 \ucc38\uc11d\uc790\ub4e4\uc774 \uc11c\ub85c \uad50\ub958\ud560 \uc218 \uc788\ub294 \ud589\uc0ac\uac00 \ub418\uae30\ub97c \ud76c\ub9dd\ud569\ub2c8\ub2e4.</p>\r\n<ul>\r\n<li><strong>\uc77c\uc815</strong> : 2015\ub144 6\uc6d4 27\uc77c(\ud1a0) ~ 28\uc77c(\uc77c)</li>\r\n<li><strong>\uc7a5\uc18c</strong> : \uc0c1\uc554\ub3d9 \ub204\ub9ac\uafc8\uc2a4\ud018\uc5b4</li>\r\n<li><strong>\uc778\uc6d0</strong> : \uc57d 700\uba85 \uc608\uc0c1</li>\r\n<li><strong>\uc8fc\ucd5c</strong> : \ud30c\uc774\ucf58 \ud55c\uad6d \uc900\ube44 \uc704\uc6d0\ud68c</li>\r\n<li><strong>\ub300\uc0c1</strong> : \uad6d\ub0b4\uc678 \ud30c\uc774\uc36c \uac1c\ubc1c\uc790 \ud639\uc740 \uad00\uc2ec\uc774 \uc788\ub294 \ubd84\uc774\ub77c\uba74 \ub204\uad6c\ub098</li>\r\n</ul>\r\n<h3>\ubc1c\ud45c\uc790 \ubaa8\uc9d1</h3>\r\n<p>\ud30c\uc774\uc36c\uc5d0 \ub300\ud55c \ud559\uc220\uc801 \ub610\ub294 \uc0c1\uc5c5\uc801 \ud504\ub85c\uc81d\ud2b8, \ucf00\uc774\uc2a4 \uc2a4\ud130\ub514 \ub4f1 \ub2e4\uc591\ud55c \ud30c\uc774\uc36c \uad00\ub828 \ubc1c\ud45c\ub97c \ubaa8\uc9d1\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4.&nbsp;<span style=\"line-height: 1.42857143;\">&nbsp;\uc790\uc138\ud55c \ub0b4\uc6a9\uc740 </span><a href=\"/programs/cfp\" style=\"line-height: 1.42857143; background-color: rgb(255, 255, 255);\">\ubc1c\ud45c\uc790 \ubaa8\uc9d1 \ud398\uc774\uc9c0</a><span style=\"line-height: 1.42857143;\">\ub97c \ucc38\uace0\ud574\uc8fc\uc138\uc694.</span></p>\r\n<ul>\r\n<li><strong>2015. 2. 9</strong> : \ubc1c\ud45c\uc790 \ubaa8\uc9d1 \uc624\ud508</li>\r\n<li><strong>2015. 4. 1</strong> : \ubc1c\ud45c\uc790 \ubaa8\uc9d1 \ub9c8\uac10</li>\r\n<li><strong>2015. 4. 2 ~ 5 .1</strong> : \ubc1c\ud45c\uc790 \uc2ec\uc0ac</li>\r\n<li><strong>2015. 5. 2</strong> : \uc2ec\uc0ac \ud655\uc815 \ubc1c\ud45c</li>\r\n<li><strong>2015. 6. 20</strong> : \ubc1c\ud45c\uc790 \uc900\ube44 \ubaa8\uc784</li>\r\n</ul>\r\n<h3>\ud6c4\uc6d0\uc0ac \ubaa8\uc9d1</h3>\r\n<p>\uc131\uacf5\uc801\uc778 \ud30c\uc774\ucf58 \ud55c\uad6d \ud589\uc0ac\ub97c \uc704\ud574\uc11c \ud6c4\uc6d0\uc0ac\ub97c \ubaa8\uc9d1\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. \uc790\uc138\ud55c \ub0b4\uc6a9\uc740 <a href=\"/about/sponsor/info\">\ud6c4\uc6d0\uc0ac \ubaa8\uc9d1 \ud398\uc774\uc9c0</a>\ub97c \ucc38\uace0\ud574\uc8fc\uc138\uc694.</p>",
         "title": "index",
         "title_en": "index",
         "sites": [
             1
         ],
-        "content": "<h3>Overview</h3><p>PyCon is a non-commercial conference held by Python Programming Communities over the world.</p><p>Since its inaugural edition in 2014, PyCon Korea has been running by a group of volunteers called \u2018PyCon Korea Preparation Organizers\u2019, who support the local Korean Python community. Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity.</p><ul><li><strong>Date</strong> : June 27th(Sat) \u2013 28th(Sun), 2015</li><li><strong>Venue</strong> : Nuri Dream Square, Sangam-dong, Seoul</li><li><strong>Attendees</strong>: Appr. 700 people</li><li><strong>Talk sessions</strong> : 50 mins long for each sessions (can be changed)</li></ul>",
+        "content": "<h3>Overview</h3><p>PyCon is a non-commercial conference held by Python Programming Communities over the world.</p><p>Since its inaugural edition in 2014, PyCon Korea has been running by a group of volunteers called \u2018PyCon Korea Preparation Organizers\u2019, who support the local Korean Python community. Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity.</p><ul><li><strong>Date</strong> : June 27th(Sat) \u2013 28th(Sun), 2015</li><li><strong>Venue</strong> : Nuri Dream Square, Sangam-dong, Seoul</li><li><strong>Attendees</strong>: Appr. 700 people</li><li><strong>Talk sessions</strong> : 50 mins long for each sessions (can be changed)</li></ul><h3>Call For Proposals</h3><p>We accept a broad range of Python-related proposals, from academic reports to commercial projects and case studies. See <a href=\"/programs/cfp\">Call For Proposals page</a> for detailed information.</p><p></p><ul>                    <li><strong>Feb 10th, 2015</strong> : Opening for Call For Proposals</li>                    <li><strong>Apr 1st, 2015</strong> : Closing of Call For Proposals</li>                    <li><strong>May 2nd, 2015</strong> : Announcement of accepted proposals</li>                </ul><h3>Be a sponsor!</h3><p>We're also find sponsors! Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity. Please refer <a href=\"/about/sponsor/info\">Sponsorship information page</a> to help us.</p>",
         "enable_comments": false
     },
     "model": "flatpages.flatpage",
     "pk": 1
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<section id=\"apply\">                <h3>Make a proposal</h3>                <ul>                    <li><a class=\"button\" href=\"http://goo.gl/LLbmH0\">Submit Proposal (Google Forms)</a></li>                </ul>            </section><section id=\"program\">                <h3>Topics</h3>                <p>                We accept a broad range of Python-related proposals, from academic reports to commercial projects and case studies.                Suitable topics include, but not limited to:                </p>                <ul>                    <li><h4>Python Projects</h4>                        <ul>                            <li>Web Programming (e.g. Django, Flask, Pyramid)</li>                            <li>Cloud Computing / Network Programming</li>                            <li>System Administration and Security</li>                            <li>Multimedia, Animation and Computer Graphics</li>                            <li>Game / GUI Programming</li>                            <li>Hardware / Embedded System Design</li>                            <li>SciPy and Numpy</li>                            <li>Big Data / PyData, Data Mining, Machine Learning</li>                            <li>Bioinformatics</li>                            <li>Deploying Applications</li>                        </ul>                    </li>                    <li><h4>Python Language</h4>                        <ul>                            <li>Packaging Issues</li>                            <li>Programming Tools</li>                            <li>Python Libraries and Extensions</li>                            <li>Python Implementations: IronPython, Jython, PyPy and Stackless</li>                        </ul>                    </li>                    <li><h4>Python and Business</h4>                        <ul>                            <li>Agile Development and Project Best Practices</li>                            <li>Startups, Business, and Education</li>                        </ul>                    </li>                    <li><h4>Python for Beginners</h4></li>                </ul>            </section><section id=\"schedule\">                <h3>Important Dates</h3>                <ul>                    <li><strong>Feb 10th, 2015</strong> : Opening for Call For Proposals</li>                    <li><strong>Apr 1st, 2015</strong> : Closing of Call For Proposals</li>                    <li><strong>May 2nd, 2015</strong> : Announcement of accepted proposals</li>                </ul>            </section><section id=\"voucher\">                <h3>Speaker Benefits</h3>                <ul>                    <li>Two tickets/ person for PyCon Korea (for 2 full days)</li>                    <li>Lunch and Speaker gift</li>                </ul>            </section><section id=\"contact\">                <h3>Contact</h3>                <ul>                    <li>E-Mail : proposal at pycon dot kr</li>                </ul>            </section>",
+        "title_ko": "\ubc1c\ud45c\uc790 \ubaa8\uc9d1",
+        "url": "/programs/cfp/",
+        "template_name": "",
+        "content_ko": "<section id=\"apply\">                <h3>\ubc1c\ud45c\uc790 \uc9c0\uc6d0 \uc11c\uc2dd \uc791\uc131</h3>                <ul>                    <li><a class=\"button\" href=\"http://goo.gl/LLbmH0\">\ubc1c\ud45c\uc790 \uc9c0\uc6d0 \uc11c\uc2dd \uc791\uc131 (\uad6c\uae00 \ud3fc)</a></li>                </ul>            </section><section id=\"program\">                <h3>\ubc1c\ud45c\uc8fc\uc81c</h3>                <p>                \ud30c\uc774\uc36c\uc5d0 \ub300\ud55c \ud559\uc220\uc801 \ub610\ub294 \uc0c1\uc5c5\uc801 \ud504\ub85c\uc81d\ud2b8, \ucf00\uc774\uc2a4 \uc2a4\ud130\ub514 \ub4f1 \ub2e4\uc591\ud55c \ud30c\uc774\uc36c \uad00\ub828 \ubc1c\ud45c\ub97c \ubaa8\uc9d1\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4.                \uc81c\uc2dc\ub41c \uc8fc\uc81c\ub294 \uc608\uc2dc\uc774\uba70, \uc774\ud558\uc758 \ub0b4\uc6a9\uc73c\ub85c \ud55c\uc815\ud558\ub294 \uac83\uc740 \uc544\ub2d9\ub2c8\ub2e4.                </p>                <ul>                    <li><h4>\ud30c\uc774\uc36c \ud65c\uc6a9</h4>                        <ul>                            <li>\uc6f9 \ud504\ub85c\uadf8\ub798\ubc0d (\uc608: Django, Flask, Pyramid)</li>                            <li>\ud074\ub77c\uc6b0\ub4dc \ucef4\ud4e8\ud305 / \ub124\ud2b8\uc6e4 \ud504\ub85c\uadf8\ub798\ubc0d</li>                            <li>\uc2dc\uc2a4\ud15c \uad00\ub9ac\uc640 \ubcf4\uc548</li>                            <li>\uba40\ud2f0\ubbf8\ub514\uc5b4 / \uc560\ub2c8\uba54\uc774\uc158 / \ucef4\ud4e8\ud130 \uadf8\ub798\ud53d\uc2a4</li>                            <li>\uac8c\uc784 / \uc0ac\uc6a9\uc790 \uc778\ud130\ud398\uc774\uc2a4 \ud504\ub85c\uadf8\ub798\ubc0d</li>                            <li>\ud558\ub4dc\uc6e8\uc5b4 / \uc784\ubca0\ub514\ub4dc \uc2dc\uc2a4\ud15c \ub514\uc790\uc778</li>                            <li>SciPy / Numpy</li>                            <li>\ube45 \ub370\uc774\ud130 / PyData, \ub370\uc774\ud130 \uc218\uc9d1\uacfc \ucd94\ucd9c, \uae30\uacc4 \ud559\uc2b5</li>                            <li>\uc0dd\uba85\uc815\ubcf4\ud559</li>                            <li>\uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ubc30\ud3ec</li>                        </ul>                    </li>                    <li><h4>\ud30c\uc774\uc36c \uc5b8\uc5b4</h4>                        <ul>                            <li>\ud328\ud0a4\uc9d5</li>                            <li>\ud504\ub85c\uadf8\ub798\ubc0d \ub3c4\uad6c</li>                            <li>\ud30c\uc774\uc36c \ub77c\uc774\ube0c\ub7ec\ub9ac\uc640 \ud655\uc7a5</li>                            <li>\ud30c\uc774\uc36c \uad6c\ud604\uccb4: IronPython, Jython, PyPy, Stackless \ub4f1</li>                        </ul>                    </li>                    <li><h4>\ud30c\uc774\uc36c\uacfc \ube44\uc9c0\ub2c8\uc2a4</h4>                        <ul>                            <li>\uc560\uc790\uc77c \uac1c\ubc1c\uacfc \ud504\ub85c\uc81d\ud2b8 \uc6b4\uc601</li>                            <li>\uc2a4\ud0c0\ud2b8\uc5c5, \ube44\uc9c0\ub2c8\uc2a4, \uad50\uc721 \ub4f1</li>                        </ul>                    </li>                    <li><h4>\uc785\ubb38\uc790\ub97c \uc704\ud55c \ub2e4\uc591\ud55c \ud30c\uc774\uc36c \uc18c\uac1c \uc138\uc158</h4></li>                </ul>            </section><section id=\"schedule\">                <h3>\uc77c\uc815</h3>                <ul>                    <li><strong>2015. 2. 9</strong> : \ubc1c\ud45c\uc790 \ubaa8\uc9d1 \uc624\ud508</li>                    <li><strong>2015. 4. 1</strong> : \ubc1c\ud45c\uc790 \ubaa8\uc9d1 \ub9c8\uac10</li>                    <li><strong>2015. 4. 2 ~ 5. 1</strong> : \ubc1c\ud45c\uc790 \uc2ec\uc0ac</li>                    <li><strong>2015. 5. 2</strong> : \uc2ec\uc0ac \ud655\uc815 \ubc1c\ud45c</li>                    <li><strong>2015. 6. 20</strong> : \ubc1c\ud45c\uc790 \uc900\ube44 \ubaa8\uc784</li>                </ul>            </section><section id=\"voucher\">                <h3>\ubc1c\ud45c\uc790 \ud61c\ud0dd</h3>                <ul>                    <li>\uc804\uc77c(2\uc77c) \ud2f0\ucf13 2\uc7a5 \uc81c\uacf5</li>                    <li>\ud589\uc0ac \ub2f9\uc77c \uc810\uc2ec \ubc0f \ubc1c\ud45c\uc790\uc6a9 \uae30\ub150\ud488 \uc81c\uacf5</li>                </ul>            </section><section id=\"information\">                <h3>\uc548\ub0b4</h3>                <ul>                    <li>\ud30c\uc774\ucf58 \ud55c\uad6d\uc740 \ud55c\uad6d\uc758 \ud30c\uc774\uc36c \uac1c\ubc1c\uc790\ub4e4\uc774 \uc9c0\uc2dd\uc744 \uacf5\uc720\ud558\uace0 \ub9cc\ub0a8\uc744 \uac16\uae30 \uc704\ud55c \uacf5\uc720\uc758 \uc7a5\uc785\ub2c8\ub2e4.</li>                    <li>\ubc1c\ud45c\ub0b4\uc6a9\uc740 \ud30c\uc774\ucf58 \ud55c\uad6d\uc758 \ud488\uc9c8\uc744 \uc720\uc9c0\ud558\uae30 \uc704\ud558\uc5ec \uc2ec\uc0ac\ub418\uace0 \ubcf4\uc644\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4. </li>                    <li>\ubc1c\ud45c\uc790\uc5d0 \ud55c\ud574 \uc8fc\ucc28 \uc9c0\uc6d0\uc774 \uac00\ub2a5\ud569\ub2c8\ub2e4.</li>                    <li>\uac01 \uc138\uc158\uc758 \ubc1c\ud45c\uc2dc\uac04\uc740 50\ubd84 \uc785\ub2c8\ub2e4. \ubc1c\ud45c \uc2dc\uac04\uc740 \uc870\uc815\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4.</li>                </ul>            </section><section id=\"contact\">                <h3>\ubb38\uc758</h3>                <ul>                    <li>\uc774\uba54\uc77c : proposal at pycon dot kr</li>                </ul>            </section>",
+        "title": "Call For Proposals",
+        "title_en": "Call For Proposals",
+        "sites": [
+            1
+        ],
+        "content": "<section id=\"apply\">                <h3>Make a proposal</h3>                <ul>                    <li><a class=\"button\" href=\"http://goo.gl/LLbmH0\">Submit Proposal (Google Forms)</a></li>                </ul>            </section><section id=\"program\">                <h3>Topics</h3>                <p>                We accept a broad range of Python-related proposals, from academic reports to commercial projects and case studies.                Suitable topics include, but not limited to:                </p>                <ul>                    <li><h4>Python Projects</h4>                        <ul>                            <li>Web Programming (e.g. Django, Flask, Pyramid)</li>                            <li>Cloud Computing / Network Programming</li>                            <li>System Administration and Security</li>                            <li>Multimedia, Animation and Computer Graphics</li>                            <li>Game / GUI Programming</li>                            <li>Hardware / Embedded System Design</li>                            <li>SciPy and Numpy</li>                            <li>Big Data / PyData, Data Mining, Machine Learning</li>                            <li>Bioinformatics</li>                            <li>Deploying Applications</li>                        </ul>                    </li>                    <li><h4>Python Language</h4>                        <ul>                            <li>Packaging Issues</li>                            <li>Programming Tools</li>                            <li>Python Libraries and Extensions</li>                            <li>Python Implementations: IronPython, Jython, PyPy and Stackless</li>                        </ul>                    </li>                    <li><h4>Python and Business</h4>                        <ul>                            <li>Agile Development and Project Best Practices</li>                            <li>Startups, Business, and Education</li>                        </ul>                    </li>                    <li><h4>Python for Beginners</h4></li>                </ul>            </section><section id=\"schedule\">                <h3>Important Dates</h3>                <ul>                    <li><strong>Feb 10th, 2015</strong> : Opening for Call For Proposals</li>                    <li><strong>Apr 1st, 2015</strong> : Closing of Call For Proposals</li>                    <li><strong>May 2nd, 2015</strong> : Announcement of accepted proposals</li>                </ul>            </section><section id=\"voucher\">                <h3>Speaker Benefits</h3>                <ul>                    <li>Two tickets/ person for PyCon Korea (for 2 full days)</li>                    <li>Lunch and Speaker gift</li>                </ul>            </section><section id=\"contact\">                <h3>Contact</h3>                <ul>                    <li>E-Mail : proposal at pycon dot kr</li>                </ul>            </section>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 2
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<h3>Preface</h3><p>PyCon is a non-commercial conference held by Python Programming Communities over the world.</p><p>Since its inaugural edition in 2014, PyCon Korea has been running by a group of volunteers called \u2018PyCon Korea Preparation Organizers\u2019, who support the local Korean Python community. Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity.</p><h3>PyCon Korea 2014</h3><div>PyCon Korea 2014 was held in Aug 30, 2014. It was a great event with 450 attendees, 17 speakers with 20 sessions. And also with 20 volunteers and 11 staffs were involved to make successful the first PyCon Korea.</div><ul><li><a href=\"http://www.pycon.kr/2014/\" target=\"_blank\">PyCon Korea 2014</a></li></ul>",
+        "title_ko": "\ud30c\uc774\ucf58 \ud55c\uad6d 2015",
+        "url": "/about/pyconkr/",
+        "template_name": "",
+        "content_ko": "<h3>\ud589\uc0ac \uc18c\uac1c</h3><p>\ud30c\uc774\ucf58\uc740 \uc138\uacc4 \uac01\uad6d\uc758 \ud30c\uc774\uc36c \ud504\ub85c\uadf8\ub798\ubc0d \uc5b8\uc5b4 \ucee4\ubba4\ub2c8\ud2f0\uc5d0\uc11c \uc8fc\uad00\ud558\ub294 \ube44\uc601\ub9ac \ucf58\ud37c\ub7f0\uc2a4\uc785\ub2c8\ub2e4.</p><p>\ud55c\uad6d\uc5d0\uc11c\ub294 \ucc98\uc74c\uc73c\ub85c \uc5f4\ub9b0 \ud30c\uc774\ucf58 \ud55c\uad6d 2014\ub97c \uc2dc\uc791\uc73c\ub85c \ud30c\uc774\ucf58 \ud55c\uad6d \uc900\ube44\uc704\uc6d0\ud68c\ub294 \uac74\uac15\ud55c \uad6d\ub0b4 \ud30c\uc774\uc36c \uc0dd\ud0dc\uacc4\uc5d0 \uc9c0\uc18d\uc801\uc778 \ubcf4\ud0ec\uc774 \ub418\uace0\uc790, \ucee4\ubba4\ub2c8\ud2f0 \uba64\ubc84\ub4e4\uc758 \uc790\ubc1c\uc801\uc778 \ubd09\uc0ac\ub85c \uc6b4\uc601\ub418\uace0 \uc788\uc2b5\ub2c8\ub2e4. \uc791\ub144\ubcf4\ub2e4 \uc131\uc219\ub41c, \ubcf4\ub2e4 \uc54c\ucc2c \ubaa8\uc2b5\uc73c\ub85c \uc5f4\ub9b4 \u2018\ud30c\uc774\ucf58 \ud55c\uad6d 2015\u2019\ub97c \ud1b5\ud574 \uc0c8\ub85c\uc6b4 \uae30\uc220\uacfc \uc815\ubcf4\ub97c \uacf5\uc720\ud558\uace0 \ucc38\uc11d\uc790\ub4e4\uc774 \uc11c\ub85c \uad50\ub958\ud560 \uc218 \uc788\ub294 \ud589\uc0ac\uac00 \ub418\uae30\ub97c \ud76c\ub9dd\ud569\ub2c8\ub2e4.</p><h3>\ud30c\uc774\ucf58\uc740 \ub2e4\ub978 \uac1c\ubc1c\uc790 \ud589\uc0ac\uc640 \ubb34\uc5c7\uc774 \ub2e4\ub978\uac00\uc694?</h3><p>\ud30c\uc774\ucf58 \ud55c\uad6d\uc740 \ucee4\ubba4\ub2c8\ud2f0 \uc8fc\uad00\uc73c\ub85c \uc774\ub904\uc9c0\ub294 \ube44\uc601\ub9ac \uac1c\ubc1c\uc790 \ub300\uc0c1 \ud589\uc0ac\ub85c, \ud0c0 \uae30\uc5c5 \ubc0f \uae30\uad00\uc5d0\uc11c \uac1c\ucd5c\ud558\ub294 \uac1c\ubc1c\uc790 \ud589\uc0ac\uc640\ub294 \uc131\uaca9\uc774 \ub2e4\ub985\ub2c8\ub2e4. \ubc1c\ud45c\uc790\uc640 \ud29c\ud1a0\ub9ac\uc5bc \uc9c4\ud589\uc790\ub97c \ud3ec\ud568\ud558\uc5ec, \uc790\uc6d0\ubd09\uc0ac\uc790\uc640 \uc900\ube44\uc704\uc6d0\ud68c \ub2f4\ub2f9\uc790 \ub4f1 \ubaa8\ub4e0 \uc778\uc6d0\uc774 \uae08\uc804\uc801 \uc774\ub4dd \uc5c6\uc774 \uc21c\uc218\ud788 \uc624\ud508\uc18c\uc2a4 \ud504\ub85c\uadf8\ub798\ubc0d \uc5b8\uc5b4\uc778 \ud30c\uc774\uc36c\uc758 \uc800\ubcc0 \ud655\ub300\uc640 \ucee4\ubba4\ub2c8\ud2f0 \ud65c\uc131\ud654\ub97c \uc704\ud574 \uc9c4\ud589\ud558\ub294 \ud589\uc0ac\uc785\ub2c8\ub2e4.</p><div><h3>\ud30c\uc774\ucf58 \ud55c\uad6d 2014</h3><div>\ud30c\uc774\ucf58 \ud55c\uad6d 2014\ub294 2014\ub144 8\uc6d4 30\uc77c, \uc219\uba85\uc5ec\uc790\ub300\ud559\uad50\uc5d0\uc11c 450\uc5ec\uba85\uc758 \ucc38\uc11d\uc790\uc640 20\uc5ec\uac1c\uc758 \uc138\uc158, 17\uba85\uc758 \ubc1c\ud45c\uc790\uc640 \ud568\uaed8 \uc131\ud669\ub9ac\uc5d0 \uc885\ub8cc\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \ud589\uc0ac \uc900\ube44\uc640 \uc9c4\ud589\uc744 \uc704\ud574 20\uba85\uc758 \uc790\uc6d0\ubd09\uc0ac\uc790 \ubd84\ub4e4\uacfc 11\uba85\uc758 \uc900\ube44\uc704\uc6d0\ud68c \uc2a4\ud0dc\ud504\uac00 \ub178\ub825\ud558\uc600\uc2b5\ub2c8\ub2e4.</div><ul><li><a href=\"http://www.pycon.kr/2014/\" target=\"_blank\">\ud30c\uc774\ucf58 \ud55c\uad6d 2014 \ud648\ud398\uc774\uc9c0</a><span style=\"line-height: 1.42857143;\"></span></li></ul></div>",
+        "title": "PyCon Korea 2015",
+        "title_en": "PyCon Korea 2015",
+        "sites": [
+            1
+        ],
+        "content": "<h3>Preface</h3><p>PyCon is a non-commercial conference held by Python Programming Communities over the world.</p><p>Since its inaugural edition in 2014, PyCon Korea has been running by a group of volunteers called \u2018PyCon Korea Preparation Organizers\u2019, who support the local Korean Python community. Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity.</p><h3>PyCon Korea 2014</h3><div>PyCon Korea 2014 was held in Aug 30, 2014. It was a great event with 450 attendees, 17 speakers with 20 sessions. And also with 20 volunteers and 11 staffs were involved to make successful the first PyCon Korea.</div><ul><li><a href=\"http://www.pycon.kr/2014/\" target=\"_blank\">PyCon Korea 2014</a></li></ul>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 3
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<p>PyCon KR is a community conference intended for networking and collaboration in the developer community.</p><p>We value the participation of each member of the Python community and want all attendees to have an enjoyable and fulfilling experience. Accordingly, all attendees are expected to show respect and courtesy to other attendees throughout the conference and at all conference events, whether officially sponsored by PyCon or not.</p><p>To make clear what is expected, all delegates/attendees, speakers, exhibitors, organizers and volunteers at any PyCon event are required to conform to the following Code of Conduct. Organizers will enforce this code throughout the event.</p><p><br></p><h3>THE SHORT VERSION</h3><p>PyCon is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form.</p><p>All communication should be appropriate for a professional audience including people of many different backgrounds. Sexual language and imagery is not appropriate for any conference venue, including talks.</p><p>Be kind to others. Do not insult or put down other attendees. Behave professionally. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for PyCon.</p><p>Attendees violating these rules may be asked to leave the conference without a refund at the sole discretion of the conference organizers.</p><p>Thank you for helping make this a welcoming, friendly event for all.</p><p><br></p><h3>THE LONGER VERSION</h3><p>Harassment includes offensive communication related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p><p>Participants asked to stop any harassing behavior are expected to comply immediately.</p><p>Exhibitors in the expo hall, sponsor or vendor booths, or similar activities are also subject to the anti-harassment policy. In particular, exhibitors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.</p><p>Be careful in the words that you choose. Remember that sexist, racist, and other exclusionary jokes can be offensive to those around you. Excessive swearing and offensive jokes are not appropriate for PyCon.</p><p>If a participant engages in behavior that violates this code of conduct, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.</p><p><br></p><h3>CONTACT INFORMATION</h3><p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff. Conference staff will be wearing \"PyCon Staff\" t-shirts. You may also contact hotel staff and ask to be put in touch with the conference chair \u2014 Bae KwonHan.</p><p>If the matter is especially urgent, please call/contact any of these individuals:</p><p><br></p><p>Bae KwonHan, Event Coordinator, Conference Chair<br>darjeeling@gmail.com<br>+82 (10) 2077-4788</p><p><br></p><p>Kim Younggun, Conference Co-Chair<br>scari.net@gmail.com<br>+82 (10) 3328-5411</p><p><br></p><p>Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p><p><br></p><p>Based on Revision</p><p><br></p><h3>LICENSE</h3><p>This Code of Conduct was forked from the example policy from the Geek Feminism wiki, created by the Ada Initiative and other volunteers. which is under a Creative Commons Zero license.</p>",
+        "title_ko": "\ud30c\uc774\ucf58 \uc131\uba85\uc11c",
+        "url": "/about/coc/",
+        "template_name": "",
+        "content_ko": "<p>PyCon KR is a community conference intended for networking and collaboration in the developer community.</p><p>We value the participation of each member of the Python community and want all attendees to have an enjoyable and fulfilling experience. Accordingly, all attendees are expected to show respect and courtesy to other attendees throughout the conference and at all conference events, whether officially sponsored by PyCon or not.</p><p>To make clear what is expected, all delegates/attendees, speakers, exhibitors, organizers and volunteers at any PyCon event are required to conform to the following Code of Conduct. Organizers will enforce this code throughout the event.</p><p><br></p><h3>THE SHORT VERSION</h3><p>PyCon is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form.</p><p>All communication should be appropriate for a professional audience including people of many different backgrounds. Sexual language and imagery is not appropriate for any conference venue, including talks.</p><p>Be kind to others. Do not insult or put down other attendees. Behave professionally. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for PyCon.</p><p>Attendees violating these rules may be asked to leave the conference without a refund at the sole discretion of the conference organizers.</p><p>Thank you for helping make this a welcoming, friendly event for all.</p><p><br></p><h3>THE LONGER VERSION</h3><p>Harassment includes offensive communication related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p><p>Participants asked to stop any harassing behavior are expected to comply immediately.</p><p>Exhibitors in the expo hall, sponsor or vendor booths, or similar activities are also subject to the anti-harassment policy. In particular, exhibitors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.</p><p>Be careful in the words that you choose. Remember that sexist, racist, and other exclusionary jokes can be offensive to those around you. Excessive swearing and offensive jokes are not appropriate for PyCon.</p><p>If a participant engages in behavior that violates this code of conduct, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.</p><p><br></p><h3>CONTACT INFORMATION</h3><p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff. Conference staff will be wearing \"PyCon Staff\" t-shirts. You may also contact hotel staff and ask to be put in touch with the conference chair \u2014 Bae KwonHan.</p><p>If the matter is especially urgent, please call/contact any of these individuals:</p><p><br></p><p>Bae KwonHan, Event Coordinator, Conference Chair<br>darjeeling@gmail.com<br>+82 (10) 2077-4788</p><p><br></p><p>Kim Younggun, Conference Co-Chair<br>scari.net@gmail.com<br>+82 (10) 3328-5411</p><p><br></p><p>Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p><p><br></p><p>Based on Revision</p><p><br></p><h3>LICENSE</h3><p>This Code of Conduct was forked from the example policy from the Geek Feminism wiki, created by the Ada Initiative and other volunteers. which is under a Creative Commons Zero license.</p>",
+        "title": "Code of Conduct",
+        "title_en": "Code of Conduct",
+        "sites": [
+            1
+        ],
+        "content": "<p>PyCon KR is a community conference intended for networking and collaboration in the developer community.</p><p>We value the participation of each member of the Python community and want all attendees to have an enjoyable and fulfilling experience. Accordingly, all attendees are expected to show respect and courtesy to other attendees throughout the conference and at all conference events, whether officially sponsored by PyCon or not.</p><p>To make clear what is expected, all delegates/attendees, speakers, exhibitors, organizers and volunteers at any PyCon event are required to conform to the following Code of Conduct. Organizers will enforce this code throughout the event.</p><p><br></p><h3>THE SHORT VERSION</h3><p>PyCon is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form.</p><p>All communication should be appropriate for a professional audience including people of many different backgrounds. Sexual language and imagery is not appropriate for any conference venue, including talks.</p><p>Be kind to others. Do not insult or put down other attendees. Behave professionally. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for PyCon.</p><p>Attendees violating these rules may be asked to leave the conference without a refund at the sole discretion of the conference organizers.</p><p>Thank you for helping make this a welcoming, friendly event for all.</p><p><br></p><h3>THE LONGER VERSION</h3><p>Harassment includes offensive communication related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p><p>Participants asked to stop any harassing behavior are expected to comply immediately.</p><p>Exhibitors in the expo hall, sponsor or vendor booths, or similar activities are also subject to the anti-harassment policy. In particular, exhibitors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.</p><p>Be careful in the words that you choose. Remember that sexist, racist, and other exclusionary jokes can be offensive to those around you. Excessive swearing and offensive jokes are not appropriate for PyCon.</p><p>If a participant engages in behavior that violates this code of conduct, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.</p><p><br></p><h3>CONTACT INFORMATION</h3><p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff. Conference staff will be wearing \"PyCon Staff\" t-shirts. You may also contact hotel staff and ask to be put in touch with the conference chair \u2014 Bae KwonHan.</p><p>If the matter is especially urgent, please call/contact any of these individuals:</p><p><br></p><p>Bae KwonHan, Event Coordinator, Conference Chair<br>darjeeling@gmail.com<br>+82 (10) 2077-4788</p><p><br></p><p>Kim Younggun, Conference Co-Chair<br>scari.net@gmail.com<br>+82 (10) 3328-5411</p><p><br></p><p>Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p><p><br></p><p>Based on Revision</p><p><br></p><h3>LICENSE</h3><p>This Code of Conduct was forked from the example policy from the Geek Feminism wiki, created by the Ada Initiative and other volunteers. which is under a Creative Commons Zero license.</p>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 4
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<h3>PyCon Korea Organizing Team</h3><p>PyCon Korea Organizing Team was organized at 2014 and we\u2019re preparing second PyCon in Korea. With impassioned volunteers and devoted staffs, we successfully held the first PyCon Korea at 2014. (in alphabetical order)</p><ul><li>Hyunwoo Park, SMARTSTUDY</li><li>Joeun Park, Neowiz Games</li><li>Junghwan Kim, FairBrite</li><li>Kwonhan Bae(Conference Chair), LINE</li><li>Minhee Hong, Spoqa</li><li>Minwoo Park, InMobi Korea</li><li>Miyu Park, iFunFactory</li><li>Seunghyo Seo, CDNetworks</li><li>Sl Kim, Synapsoft</li><li>Woojing Seok, Yogiyo</li><li>Yeaji Shin, CDNetworks</li><li>Younggun Kim, Piku</li></ul><h3>Volunteers</h3><p>We're hiring impassioned volunteers for PyCon Korea 2015. Please email us to apply.</p><ul><li>Mail : pyconkr at googlegroups dot com</li></ul>",
+        "title_ko": "\uc900\ube44\uc704\uc6d0\ud68c \ubc0f \uc790\uc6d0\ubd09\uc0ac\uc790",
+        "url": "/about/staff/",
+        "template_name": "",
+        "content_ko": "<p>\ud30c\uc774\ucf58 \ud55c\uad6d 2015\ub294 \ub2e4\uc74c\uacfc \uac19\uc740 \uc0ac\ub78c\ub4e4\uc774 \uc900\ube44\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4.</p>\r\n<h3>\uc900\ube44\uc704\uc6d0\ud68c</h3>\r\n<p>\ud30c\uc774\ucf58 \ud55c\uad6d \uc900\ube44\uc704\uc6d0\ud68c\ub294 2014\ub144 \uc870\uc9c1\ub418\uc5b4, \uc62c\ud574 \ub450 \ubc88\uc9f8 \ud55c\uad6d\uc5d0\uc11c\uc758 \ud30c\uc774\ucf58 \ud589\uc0ac\ub97c \uc900\ube44\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. \ud30c\uc774\ucf58 \ud55c\uad6d 2014\ub97c \uc790\uc6d0\ubd09\uc0ac\uc790\ub4e4\uacfc \ud568\uaed8 \uc131\uacf5\uc801\uc73c\ub85c \uac1c\ucd5c\ud558\uc600\uc73c\uba70, \ud604\uc7ac \uc544\ub798\uc758 \uc778\uc6d0\uc774 \ucc38\uac00\ud558\uc5ec \ud589\uc0ac\ub97c \uc900\ube44\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. (\uac00\ub098\ub2e4\uc21c)</p>\r\n<ul>\r\n<li><span style=\"line-height: 1.42857143;\">\uae40\uc2ac, \uc0ac\uc774\ub0c5\uc18c\ud504\ud2b8</span></li>\r\n<li>\uae40\uc815\ud658, \ud398\uc5b4\ube0c\ub77c\uc774\ud2b8</li>\r\n<li>\uae40\uc601\uadfc, \ud53c\ucfe0</li>\r\n<li>\ubc15\ubbf8\uc720, \uc544\uc774\ud380\ud329\ud1a0\ub9ac</li>\r\n<li>\ubc15\ubbfc\uc6b0, \uc778\ubaa8\ube44 \ucf54\ub9ac\uc544</li>\r\n<li>\ubc15\uc870\uc740, \ub124\uc624\uc704\uc988 \uac8c\uc784\uc988</li>\r\n<li>\ubc15\ud604\uc6b0, \uc2a4\ub9c8\ud2b8\uc2a4\ud130\ub514</li>\r\n<li>\ubc30\uad8c\ud55c(\uc758\uc7a5), \ub77c\uc778 \uc8fc\uc2dd\ud68c\uc0ac</li>\r\n<li>\uc11c\uc2b9\ud6a8, \uc528\ub514\ub124\ud2b8\uc6cd\uc2a4</li>\r\n<li>\uc11d\uc6b0\uc9d5, \uc694\uae30\uc694</li>\r\n<li>\uc2e0\uc608\uc9c0, \uc528\ub514\ub124\ud2b8\uc6cd\uc2a4</li>\r\n<li>\ud64d\ubbfc\ud76c, \uc2a4\ud3ec\uce74</li>\r\n</ul>\r\n<h3>\uc790\uc6d0\ubd09\uc0ac\uc790</h3>\r\n<p>\uc790\uc6d0\ubd09\uc0ac\uc790\ub97c \ubaa8\uc9d1\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. \uc0c1\uc138\ud55c \ubaa8\uc9d1 \uc77c\uc815\uc740 \ucd94\ud6c4 \ub2e4\uc2dc \uc548\ub0b4\ud574\ub4dc\ub9b4 \uc608\uc815\uc785\ub2c8\ub2e4.</p>\r\n<ul>\r\n<li>\ubb38\uc758 \uba54\uc77c :&nbsp;pyconkr at googlegroups dot com</li>\r\n</ul>",
+        "title": "Staff and Volunteers",
+        "title_en": "Staff and Volunteers",
+        "sites": [
+            1
+        ],
+        "content": "<h3>PyCon Korea Organizing Team</h3><p>PyCon Korea Organizing Team was organized at 2014 and we\u2019re preparing second PyCon in Korea. With impassioned volunteers and devoted staffs, we successfully held the first PyCon Korea at 2014. (in alphabetical order)</p><ul><li>Hyunwoo Park, SMARTSTUDY</li><li>Joeun Park, Neowiz Games</li><li>Junghwan Kim, FairBrite</li><li>Kwonhan Bae(Conference Chair), LINE</li><li>Minhee Hong, Spoqa</li><li>Minwoo Park, InMobi Korea</li><li>Miyu Park, iFunFactory</li><li>Seunghyo Seo, CDNetworks</li><li>Sl Kim, Synapsoft</li><li>Woojing Seok, Yogiyo</li><li>Yeaji Shin, CDNetworks</li><li>Younggun Kim, Piku</li></ul><h3>Volunteers</h3><p>We're hiring impassioned volunteers for PyCon Korea 2015. Please email us to apply.</p><ul><li>Mail : pyconkr at googlegroups dot com</li></ul>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 5
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<h3>Sponsorship</h3><ul><li>Sponsorship Manager of PyCon Korea Organizing Team</li><ul><li>Email : pycon@python.or.kr</li></ul></ul><h3>General inquiries</h3><ul><li>PyCon Korea Organizing Team</li><ul><li>Mailing list : pyconkr at googlegroups dot com</li></ul></ul><h3>Managers</h3><ul><li><b>Kwonhan Bae</b></li><ul><li>Conference Chair and Sponsorship Manager</li><li>darjeeling at gmail dot com</li></ul><li><b>Younggun Kim</b></li><ul><li>Conference Vice Chair and Sponsorship Manager</li><li>iam at younggun dot kim</li></ul><li><b>Yeaji Shin</b></li><ul><li>Venue Manager</li><li>yeahjishin at gmail dot com</li></ul><li><b>Minhee Hong</b></li><ul><li>Speaker and Program Manager</li><li>hongminhee at member dot fsf dot org</li></ul><li><b>Hyunwoo Park</b></li><ul><li>Web and Design Manager</li><li>ez.amiryo at gmail dot com</li></ul></ul>",
+        "title_ko": "\uc5f0\ub77d\ucc98",
+        "url": "/about/contact/",
+        "template_name": "",
+        "content_ko": "<h3>\ud6c4\uc6d0 \ubb38\uc758</h3><ul><li>\ud30c\uc774\ucf58 \ud55c\uad6d \uc900\ube44\uc704\uc6d0\ud68c \ud6c4\uc6d0 \ub2f4\ub2f9</li><ul><li>\uc774\uba54\uc77c : pycon at python dot or dot kr</li></ul></ul><h3>\uc77c\ubc18 \ubb38\uc758</h3><ul><li>\ud30c\uc774\ucf58 \ud55c\uad6d \uc900\ube44\uc704\uc6d0\ud68c</li><ul><li>\uba54\uc77c\ub9c1 \ub9ac\uc2a4\ud2b8 : pyconkr at googlegroups dot com</li></ul></ul><h3>\ub2f4\ub2f9\ubcc4 \ucc45\uc784\uc790 \uc5f0\ub77d\ucc98</h3><ul><li><b>\ubc30\uad8c\ud55c</b></li><ul><li>\uc758\uc7a5 \uacb8 \ud6c4\uc6d0 \ucc45\uc784\uc790</li><li>darjeeling at gmail dot com</li></ul><li><b>\uae40\uc601\uadfc</b></li><ul><li>\ubd80\uc758\uc7a5 \uacb8 \ud6c4\uc6d0 \ucc45\uc784\uc790</li><li>iam at younggun dot kim</li></ul><li><b>\uc2e0\uc608\uc9c0</b></li><ul><li>\uc7a5\uc18c \ucc45\uc784\uc790</li><li>yeahjishin at gmail dot com</li></ul><li><b>\ud64d\ubbfc\ud76c</b></li><ul><li>\ubc1c\ud45c\uc790, \uc138\uc158 \ucc45\uc784\uc790</li><li>hongminhee at member dot fsf dot org</li></ul><li><b>\ubc15\ud604\uc6b0</b></li><ul><li>\ud648\ud398\uc774\uc9c0, \ub514\uc790\uc778 \ucc45\uc784\uc790</li><li>ez.amiryo at gmail dot com</li></ul></ul>",
+        "title": "Contacts",
+        "title_en": "Contacts",
+        "sites": [
+            1
+        ],
+        "content": "<h3>Sponsorship</h3><ul><li>Sponsorship Manager of PyCon Korea Organizing Team</li><ul><li>Email : pycon@python.or.kr</li></ul></ul><h3>General inquiries</h3><ul><li>PyCon Korea Organizing Team</li><ul><li>Mailing list : pyconkr at googlegroups dot com</li></ul></ul><h3>Managers</h3><ul><li><b>Kwonhan Bae</b></li><ul><li>Conference Chair and Sponsorship Manager</li><li>darjeeling at gmail dot com</li></ul><li><b>Younggun Kim</b></li><ul><li>Conference Vice Chair and Sponsorship Manager</li><li>iam at younggun dot kim</li></ul><li><b>Yeaji Shin</b></li><ul><li>Venue Manager</li><li>yeahjishin at gmail dot com</li></ul><li><b>Minhee Hong</b></li><ul><li>Speaker and Program Manager</li><li>hongminhee at member dot fsf dot org</li></ul><li><b>Hyunwoo Park</b></li><ul><li>Web and Design Manager</li><li>ez.amiryo at gmail dot com</li></ul></ul>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 6
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<div class=\"alert alert-info\" role=\"alert\">We'll post BoF information here at conference day.</div>",
+        "title_ko": "BoF",
+        "url": "/programs/bof/",
+        "template_name": "",
+        "content_ko": "<div class=\"alert alert-info\" role=\"alert\">\uc544\uc9c1 \uc900\ube44\uc911\uc785\ub2c8\ub2e4.</div>",
+        "title": "BoF",
+        "title_en": "BoF",
+        "sites": [
+            1
+        ],
+        "content": "<div class=\"alert alert-info\" role=\"alert\">We'll post BoF information here at conference day.</div>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 7
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<p>Venue Map<br></p>",
+        "title_ko": "\ud589\uc0ac\uc7a5 \uc9c0\ub3c4",
+        "url": "/venue/map/",
+        "template_name": "",
+        "content_ko": "<p>\ud589\uc0ac\uc7a5 \uc9c0\ub3c4<br></p>",
+        "title": "Venue Map",
+        "title_en": "Venue Map",
+        "sites": [
+            1
+        ],
+        "content": "<p>Venue Map<br></p>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 8
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<p>Transportation information will be here.<br></p>",
+        "title_ko": "\uad50\ud1b5\ud3b8",
+        "url": "/venue/transportation/",
+        "template_name": "",
+        "content_ko": "\uad50\ud1b5\ud3b8 \uc548\ub0b4\uac00 \uc81c\uacf5\ub420 \uc608\uc815\uc785\ub2c8\ub2e4.",
+        "title": "Transportation",
+        "title_en": "Transportation",
+        "sites": [
+            1
+        ],
+        "content": "<p>Transportation information will be here.<br></p>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 9
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<p>Hotels information will be posted here.</p>",
+        "title_ko": "\uc219\ubc15 \uc548\ub0b4",
+        "url": "/venue/hotels/",
+        "template_name": "",
+        "content_ko": "<p>\uc219\ubc15 \uc548\ub0b4\uac00 \ud45c\uc2dc\ub420 \uc608\uc815\uc785\ub2c8\ub2e4.</p>",
+        "title": "Hotels",
+        "title_en": "Hotels",
+        "sites": [
+            1
+        ],
+        "content": "<p>Hotels information will be posted here.</p>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 10
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<p>Restaurants.</p>",
+        "title_ko": "\uc2dd\uc0ac \uc548\ub0b4",
+        "url": "/venue/restaurants/",
+        "template_name": "",
+        "content_ko": "<p>\uc2dd\uc0ac \uc548\ub0b4\uac00 \uc788\uc744 \uc608\uc815\uc785\ub2c8\ub2e4.</p>",
+        "title": "Restaurants",
+        "title_en": "Restaurants",
+        "sites": [
+            1
+        ],
+        "content": "<p>Restaurants.</p>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 11
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<p>Weather information.</p>",
+        "title_ko": "\ub0a0\uc528 \uc548\ub0b4",
+        "url": "/venue/weather/",
+        "template_name": "",
+        "content_ko": "<p>\ub0a0\uc528 \uc548\ub0b4\uac00 \uc788\uc744 \uc608\uc815\uc785\ub2c8\ub2e4.</p>",
+        "title": "Weather",
+        "title_en": "Weather",
+        "sites": [
+            1
+        ],
+        "content": "<p>Weather information.</p>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 12
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<p>For international attendees<br></p>",
+        "title_ko": "\u00a0\ud574\uc678 \ubc29\ubb38\uc790 \uc9c0\uc6d0",
+        "url": "/venue/international/",
+        "template_name": "",
+        "content_ko": "<p>\ud574\uc678 \ubc29\ubb38\uc790\ub97c \uc704\ud55c \uc9c0\uc6d0 \uc548\ub0b4\uac00 \ud45c\uc2dc\ub420 \uc608\uc815\uc785\ub2c8\ub2e4.</p>",
+        "title": "For international attendees",
+        "title_en": "For international attendees",
+        "sites": [
+            1
+        ],
+        "content": "<p>For international attendees<br></p>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 13
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<div class=\"alert alert-warning\" role=\"alert\">Registration is not opened, yet.</div>",
+        "title_ko": "\ub4f1\ub85d \uc548\ub0b4",
+        "url": "/registration/",
+        "template_name": "",
+        "content_ko": "<div class=\"alert alert-warning\" role=\"alert\">\ud589\uc0ac \ub4f1\ub85d\uc774 \uc544\uc9c1 \uc2dc\uc791\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4.</div>",
+        "title": "Registrations",
+        "title_en": "Registrations",
+        "sites": [
+            1
+        ],
+        "content": "<div class=\"alert alert-warning\" role=\"alert\">Registration is not opened, yet.</div>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 14
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<p>Under construction.</p>",
+        "title_ko": "\uc900\ube44\uc911",
+        "url": "/underconstruction/",
+        "template_name": "",
+        "content_ko": "<p>\uc544\uc9c1 \uc900\ube44\uc911\uc785\ub2c8\ub2e4.</p>",
+        "title": "Under construction",
+        "title_en": "Under construction",
+        "sites": [
+            1
+        ],
+        "content": "<p>Under construction.</p>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 15
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<div class=\"alert alert-info\" role=\"alert\">We're still waiting for speakers. Please see <a href=\"/programs/cfp\">Call For Proposals</a>.</div>",
+        "title_ko": "\uc138\ubd80 \uc77c\uc815",
+        "url": "/programs/schedule/",
+        "template_name": "",
+        "content_ko": "<div class=\"alert alert-info\" role=\"alert\">\ubc1c\ud45c\uc790 \ubaa8\uc9d1 \uae30\uac04\uc785\ub2c8\ub2e4. <a href=\"/programs/cfp\">\ubc1c\ud45c\uc790 \ubaa8\uc9d1 \ud398\uc774\uc9c0</a>\ub97c \ucc38\uace0\ud574\uc8fc\uc138\uc694.</div>",
+        "title": "Schedule",
+        "title_en": "Schedule",
+        "sites": [
+            1
+        ],
+        "content": "<div class=\"alert alert-info\" role=\"alert\">We're still waiting for speakers. Please see <a href=\"/programs/cfp\">Call For Proposals</a>.</div>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 16
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<div class=\"alert alert-info\" role=\"alert\">We're still waiting for speakers. Please see <a href=\"/programs/cfp\">Call For Proposals</a>.</div>",
+        "title_ko": "\ud504\ub85c\uadf8\ub7a8 \ubaa9\ub85d",
+        "url": "/programs/list/",
+        "template_name": "",
+        "content_ko": "<div class=\"alert alert-info\" role=\"alert\">\ubc1c\ud45c\uc790 \ubaa8\uc9d1 \uae30\uac04\uc785\ub2c8\ub2e4. <a href=\"/programs/cfp\">\ubc1c\ud45c\uc790 \ubaa8\uc9d1 \ud398\uc774\uc9c0</a>\ub97c \ucc38\uace0\ud574\uc8fc\uc138\uc694.</div>",
+        "title": "Program List",
+        "title_en": "Program List",
+        "sites": [
+            1
+        ],
+        "content": "<div class=\"alert alert-info\" role=\"alert\">We're still waiting for speakers. Please see <a href=\"/programs/cfp\">Call For Proposals</a>.</div>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 17
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<div class=\"alert alert-info\" role=\"alert\">We're still waiting for speakers. Please see <a href=\"/programs/cfp\">Call For Proposals</a>.</div>",
+        "title_ko": "\ubc1c\ud45c\uc790",
+        "url": "/programs/speakers/",
+        "template_name": "",
+        "content_ko": "<div class=\"alert alert-info\" role=\"alert\">\ubc1c\ud45c\uc790 \ubaa8\uc9d1 \uae30\uac04\uc785\ub2c8\ub2e4. <a href=\"/programs/cfp\">\ubc1c\ud45c\uc790 \ubaa8\uc9d1 \ud398\uc774\uc9c0</a>\ub97c \ucc38\uace0\ud574\uc8fc\uc138\uc694.</div>",
+        "title": "Speakers",
+        "title_en": "Speakers",
+        "sites": [
+            1
+        ],
+        "content": "<div class=\"alert alert-info\" role=\"alert\">We're still waiting for speakers. Please see <a href=\"/programs/cfp\">Call For Proposals</a>.</div>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 18
+},
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<div class=\"alert alert-info\" role=\"alert\">Under construction.</div>",
+        "title_ko": "\ucde8\uc5c5 \uc124\uba85\ud68c \ubc0f \ub3c4\uc11c \ud310\ub9e4",
+        "url": "/programs/jobfair/",
+        "template_name": "",
+        "content_ko": "<div class=\"alert alert-info\" role=\"alert\">\uc544\uc9c1 \uc900\ube44\uc911\uc785\ub2c8\ub2e4.</div>",
+        "title": "Jobfair",
+        "title_en": "Jobfair",
+        "sites": [
+            1
+        ],
+        "content": "<div class=\"alert alert-info\" role=\"alert\">Under construction.</div>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 19
 }
 ]
