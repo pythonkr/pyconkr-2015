@@ -8,7 +8,10 @@ from .models import SponsorLevel, Speaker
 
 def menu(request):
     title = None
-    base_content = FlatPage.objects.filter(url=request.path).first()
+    url = request.path
+    if settings.FORCE_SCRIPT_NAME:
+        url = url[len(settings.FORCE_SCRIPT_NAME):]
+    base_content = FlatPage.objects.filter(url=url).first()
 
     menu = OrderedDict([
         ('about', {
