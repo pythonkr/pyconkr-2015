@@ -1,27 +1,6 @@
 @media (max-width: 992px) {
-    .titlebar {
-        padding: 8px 0 16px 0;
-        margin-bottom: 8px;
-    }
-
-    .titlebar h1 {
-        font-size: 36px;
-    }
     .sponsors li {
         width: 24%;
-    }
-    .titlebar .slogan {
-        border: 0;
-        display: inline-block;
-        margin: 0;
-        background: transparent;
-        width: auto;
-    }
-    .titlebar .slogan div {
-        display: inline;
-        margin: 0;
-        letter-spacing: 1px;
-        color: #aaa;
     }
 }
 
@@ -96,6 +75,15 @@
     .halftone {
         display: none;
     }
+
+    .titlebar {
+        padding: 4px 10px 8px;
+        margin-bottom: 4px;
+    }
+
+    .titlebar h1 {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -125,15 +113,6 @@
     .container>.navbar-collapse {
         margin-left: -5px;
         margin-right: -5px;
-    }
-
-    .titlebar {
-        padding: 4px 10px 8px;
-        margin-bottom: 4px;
-    }
-
-    .titlebar h1 {
-        font-size: 28px;
     }
 
     .frontpage .slogan h1 {
