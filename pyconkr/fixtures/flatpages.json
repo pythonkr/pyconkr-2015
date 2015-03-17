@@ -1,0 +1,21 @@
+[
+{
+    "fields": {
+        "registration_required": false,
+        "content_en": "<h3>Overview</h3><p>PyCon is a non-commercial conference held by Python Programming Communities over the world.</p><p>Since its inaugural edition in 2014, PyCon Korea has been running by a group of volunteers called \u2018PyCon Korea Preparation Organizers\u2019, who support the local Korean Python community. Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity.</p><ul><li><strong>Date</strong> : June 27th(Sat) \u2013 28th(Sun), 2015</li><li><strong>Venue</strong> : Nuri Dream Square, Sangam-dong, Seoul</li><li><strong>Attendees</strong>: Appr. 700 people</li><li><strong>Talk sessions</strong> : 50 mins long for each sessions (can be changed)</li></ul>",
+        "title_ko": "index",
+        "url": "/index",
+        "template_name": "",
+        "content_ko": "<h2>\ud589\uc0ac\uac1c\uc694</h2><p>\ud30c\uc774\ucf58\uc740 \uc138\uacc4 \uac01\uad6d\uc758 \ud30c\uc774\uc36c \ud504\ub85c\uadf8\ub798\ubc0d \uc5b8\uc5b4 \ucee4\ubba4\ub2c8\ud2f0\uc5d0\uc11c \uc8fc\uad00\ud558\ub294 \ube44\uc601\ub9ac \ucee8\ud37c\ub7f0\uc2a4\uc785\ub2c8\ub2e4.</p><p>\ud55c\uad6d\uc5d0\uc11c\ub294 \ucc98\uc74c\uc73c\ub85c \uc5f4\ub9b0 \ud30c\uc774\ucf58 \ud55c\uad6d 2014\ub97c \uc2dc\uc791\uc73c\ub85c \ud30c\uc774\ucf58 \ud55c\uad6d \uc900\ube44\uc704\uc6d0\ud68c\ub294 \uac74\uac15\ud55c \uad6d\ub0b4 \ud30c\uc774\uc36c \uc0dd\ud0dc\uacc4\uc5d0 \uc9c0\uc18d\uc801\uc778 \ubcf4\ud0ec\uc774 \ub418\uace0\uc790, \ucee4\ubba4\ub2c8\ud2f0 \uba64\ubc84\ub4e4\uc758 \uc790\ubc1c\uc801\uc778 \ubd09\uc0ac\ub85c \uc6b4\uc601\ub418\uace0 \uc788\uc2b5\ub2c8\ub2e4.\uc791\ub144\ubcf4\ub2e4 \uc131\uc219\ub41c, \ubcf4\ub2e4 \uc54c\ucc2c \ubaa8\uc2b5\uc73c\ub85c \uc5f4\ub9b4 \u2018\ud30c\uc774\ucf58 \ud55c\uad6d 2015\u2019\ub97c \ud1b5\ud574 \uc0c8\ub85c\uc6b4 \uae30\uc220\uacfc \uc815\ubcf4\ub97c \uacf5\uc720\ud558\uace0 \ucc38\uc11d\uc790\ub4e4\uc774 \uc11c\ub85c \uad50\ub958\ud560 \uc218 \uc788\ub294 \ud589\uc0ac\uac00 \ub418\uae30\ub97c \ud76c\ub9dd\ud569\ub2c8\ub2e4.</p><ul><li><strong>\uc77c\uc815</strong> : 2015\ub144 6\uc6d4 27\uc77c(\ud1a0) ~ 28\uc77c(\uc77c)</li><li><strong>\uc7a5\uc18c</strong> : \uc0c1\uc554\ub3d9 \ub204\ub9ac\uafc8\uc2a4\ud018\uc5b4</li><li><strong>\uc778\uc6d0</strong> : \uc57d 700\uba85 \uc608\uc0c1</li><li><strong>\uc8fc\ucd5c</strong> : \ud30c\uc774\ucf58 \ud55c\uad6d \uc900\ube44 \uc704\uc6d0\ud68c</li><li><strong>\ub300\uc0c1</strong> : \uad6d\ub0b4\uc678 \ud30c\uc774\uc36c \uac1c\ubc1c\uc790 \ud639\uc740 \uad00\uc2ec\uc774 \uc788\ub294 \ubd84\uc774\ub77c\uba74 \ub204\uad6c\ub098</li></ul>",
+        "title": "index",
+        "title_en": "index",
+        "sites": [
+            1
+        ],
+        "content": "<h3>Overview</h3><p>PyCon is a non-commercial conference held by Python Programming Communities over the world.</p><p>Since its inaugural edition in 2014, PyCon Korea has been running by a group of volunteers called \u2018PyCon Korea Preparation Organizers\u2019, who support the local Korean Python community. Please help us make PyCon Korea 2015 a conference with a full variety of sessions, a great place to share Python knowledge, and a fantastic networking opportunity.</p><ul><li><strong>Date</strong> : June 27th(Sat) \u2013 28th(Sun), 2015</li><li><strong>Venue</strong> : Nuri Dream Square, Sangam-dong, Seoul</li><li><strong>Attendees</strong>: Appr. 700 people</li><li><strong>Talk sessions</strong> : 50 mins long for each sessions (can be changed)</li></ul>",
+        "enable_comments": false
+    },
+    "model": "flatpages.flatpage",
+    "pk": 1
+}
+]
