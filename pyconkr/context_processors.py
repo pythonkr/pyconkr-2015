@@ -30,7 +30,7 @@ def menu(request):
             'title': _('Programs'),
             'icon': 'calendar',
             'dropdown': OrderedDict([
-                ('cfp', {'title': _('Call for proposal')}),
+                ('cfp', {'title': _('Call for proposals')}),
                 ('schedule', {'title': _('Schedule')}),
                 ('list', {'title': _('Program list')}),
                 ('speakers', {'title': _('Speakers')}),

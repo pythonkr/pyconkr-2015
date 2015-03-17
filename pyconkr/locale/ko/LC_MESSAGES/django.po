@@ -56,7 +56,7 @@ msgid "Programs"
 msgstr "프로그램"
 
 #: context_processors.py:28
-msgid "Call for proposal"
+msgid "Call for proposals"
 msgstr "발표자 모집"
 
 #: context_processors.py:29
