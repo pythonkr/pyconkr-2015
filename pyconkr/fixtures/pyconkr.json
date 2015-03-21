@@ -4,7 +4,7 @@
         "desc_en": null,
         "name": "Become a sponsor!",
         "desc_ko": null,
-        "order": 1,
+        "order": 0,
         "name_ko": "\ud30c\uc774\ucf58 \ud55c\uad6d\uc744 \ud6c4\uc6d0\ud574\uc8fc\uc138\uc694!",
         "name_en": "Become a sponsor!",
         "slug": "become-a-sponsor",
@@ -12,6 +12,62 @@
     },
     "model": "pyconkr.sponsorlevel",
     "pk": 1
+},
+{
+    "fields": {
+        "desc_en": "Diamond",
+        "name": "Diamond",
+        "desc_ko": "<p>\ub2e4\uc774\uc544\ubaac\ub4dc \ub4f1\uae09&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+        "order": 1,
+        "name_ko": "\ub2e4\uc774\uc544\ubaac\ub4dc",
+        "name_en": "Diamond",
+        "slug": "diamond",
+        "desc": "Diamond"
+    },
+    "model": "pyconkr.sponsorlevel",
+    "pk": 2
+},
+{
+    "fields": {
+        "desc_en": "Platinum",
+        "name": "Platinum",
+        "desc_ko": "<p>\ud50c\ub798\ud2f0\ub118 \ub4f1\uae09</p>",
+        "order": 2,
+        "name_ko": "\ud50c\ub798\ud2f0\ub118",
+        "name_en": "Platinum",
+        "slug": "platinum",
+        "desc": "Platinum"
+    },
+    "model": "pyconkr.sponsorlevel",
+    "pk": 3
+},
+{
+    "fields": {
+        "desc_en": "Gold",
+        "name": "Gold",
+        "desc_ko": "\uace8\ub4dc \ub4f1\uae09",
+        "order": 3,
+        "name_ko": "\uace8\ub4dc",
+        "name_en": "Gold",
+        "slug": "gold",
+        "desc": "Gold"
+    },
+    "model": "pyconkr.sponsorlevel",
+    "pk": 4
+},
+{
+    "fields": {
+        "desc_en": "Silver",
+        "name": "Silver",
+        "desc_ko": "\uc2e4\ubc84 \ub4f1\uae09",
+        "order": 4,
+        "name_ko": "\uc2e4\ubc84",
+        "name_en": "Silver",
+        "slug": "silver",
+        "desc": "Silver"
+    },
+    "model": "pyconkr.sponsorlevel",
+    "pk": 5
 },
 {
     "fields": {
@@ -28,6 +84,150 @@
     },
     "model": "pyconkr.sponsor",
     "pk": 1
+},
+{
+    "fields": {
+        "desc_en": "Microsoft Korea",
+        "name": "Microsoft",
+        "level": 2,
+        "url": "http://www.microsoft.com/",
+        "image": "sponsor/sponsor-microsoft.png",
+        "desc_ko": "\ub9c8\uc774\ud06c\ub85c\uc18c\ud504\ud2b8 \ucf54\ub9ac\uc544",
+        "name_ko": "\ub9c8\uc774\ud06c\ub85c\uc18c\ud504\ud2b8",
+        "name_en": "Microsoft",
+        "slug": "microsoft",
+        "desc": "Microsoft Korea"
+    },
+    "model": "pyconkr.sponsor",
+    "pk": 2
+},
+{
+    "fields": {
+        "desc_en": "Google Korea",
+        "name": "Google Korea",
+        "level": 3,
+        "url": "https://www.google.co.kr/",
+        "image": "sponsor/sponsor-google.png",
+        "desc_ko": "\uad6c\uae00 \ucf54\ub9ac\uc544",
+        "name_ko": "\uad6c\uae00 \ucf54\ub9ac\uc544",
+        "name_en": "Google Korea",
+        "slug": "google",
+        "desc": "Google Korea"
+    },
+    "model": "pyconkr.sponsor",
+    "pk": 3
+},
+{
+    "fields": {
+        "desc_en": "Devsisters",
+        "name": "Devsisters",
+        "level": 3,
+        "url": "http://www.devsisters.com/",
+        "image": "sponsor/sponsor-devsisters.png",
+        "desc_ko": "\ub370\ube0c\uc2dc\uc2a4\ud130\uc988",
+        "name_ko": "\ub370\ube0c\uc2dc\uc2a4\ud130\uc988",
+        "name_en": "Devsisters",
+        "slug": "devsisters",
+        "desc": "Devsisters"
+    },
+    "model": "pyconkr.sponsor",
+    "pk": 4
+},
+{
+    "fields": {
+        "desc_en": "Spoqa",
+        "name": "Spoqa",
+        "level": 3,
+        "url": "http://www.spoqa.com/",
+        "image": "sponsor/sponsor-spoqa.png",
+        "desc_ko": "\uc2a4\ud3ec\uce74",
+        "name_ko": "\uc2a4\ud3ec\uce74",
+        "name_en": "Spoqa",
+        "slug": "spoqa",
+        "desc": "Spoqa"
+    },
+    "model": "pyconkr.sponsor",
+    "pk": 5
+},
+{
+    "fields": {
+        "desc_en": "SMARTSTUDY",
+        "name": "smartstudy",
+        "level": 4,
+        "url": "http://www.smartstudy.co.kr/",
+        "image": "sponsor/sponsor-smartstudy.png",
+        "desc_ko": "\uc2a4\ub9c8\ud2b8\uc2a4\ud130\ub514",
+        "name_ko": "\uc2a4\ub9c8\ud2b8\uc2a4\ud130\ub514",
+        "name_en": "smartstudy",
+        "slug": "smartstudy",
+        "desc": "SMARTSTUDY"
+    },
+    "model": "pyconkr.sponsor",
+    "pk": 6
+},
+{
+    "fields": {
+        "desc_en": "SK planet",
+        "name": "SK Planet",
+        "level": 4,
+        "url": "http://www.skplanet.com/",
+        "image": "sponsor/sponsor-skplanet.png",
+        "desc_ko": "SK\ud50c\ub798\ub2db",
+        "name_ko": "SK\ud50c\ub798\ub2db",
+        "name_en": "SK Planet",
+        "slug": "skplanet",
+        "desc": "SK planet"
+    },
+    "model": "pyconkr.sponsor",
+    "pk": 7
+},
+{
+    "fields": {
+        "desc_en": "Yogiyo",
+        "name": "Yogiyo",
+        "level": 4,
+        "url": "https://www.yogiyo.co.kr/",
+        "image": "sponsor/sponsor-yogiyo.png",
+        "desc_ko": "<p>\uc694\uae30\uc694</p>",
+        "name_ko": "\uc694\uae30\uc694",
+        "name_en": "Yogiyo",
+        "slug": "yogiyo",
+        "desc": "Yogiyo"
+    },
+    "model": "pyconkr.sponsor",
+    "pk": 8
+},
+{
+    "fields": {
+        "desc_en": "NIPA",
+        "name": "NIPA",
+        "level": 3,
+        "url": "http://nipa.kr/",
+        "image": "sponsor/sponsor-nipa.png",
+        "desc_ko": "NIPA \uc815\ubcf4\ud1b5\uc2e0\uc0b0\uc5c5\uc9c4\ud765\uc6d0",
+        "name_ko": "NIPA \uc815\ubcf4\ud1b5\uc2e0\uc0b0\uc5c5\uc9c4\ud765\uc6d0",
+        "name_en": "NIPA",
+        "slug": "nipa",
+        "desc": "NIPA"
+    },
+    "model": "pyconkr.sponsor",
+    "pk": 9
+},
+{
+    "fields": {
+        "desc_en": "<p>JetBrains</p>",
+        "name": "JetBrains",
+        "level": 5,
+        "url": "https://www.jetbrains.com/",
+        "image": "sponsor/sponsor-jetbrains.png",
+        "desc_ko": "\uc82f\ube0c\ub808\uc778",
+        "name_ko": "\uc82f\ube0c\ub808\uc778",
+        "name_en": "JetBrains",
+        "slug": "jetbrains",
+        "desc": "<p>JetBrains</p>"
+    },
+    "model": "pyconkr.sponsor",
+    "pk": 10
 },
 {
     "fields": {
