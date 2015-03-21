@@ -56,6 +56,20 @@ small a:hover {
     color: #333;
 }
 
+.navbar .dropdown .caret {
+    transition: background 0.2s, transform 0.25s ease;
+    -webkit-transition: background 0.2s, -webkit-transform 0.25s ease;
+    -moz-transition: background 0.2s, -moz-transform 0.25s ease;
+    -o-transition: background 0.2s, -o-transform 0.25s ease;
+}
+
+.navbar .dropdown.open .caret {
+    transform: rotateZ(-180deg);
+    -webkit-transform: rotateZ(-180deg);
+    -moz-tranform: rotateZ(-180deg);
+    -o-transform: rotateZ(-180deg);
+}
+
 .navbar .dropdown-menu>li>a {
     font-family: 'Lato', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Nanum Gothic', 'Arial', 'Apple Gothic', sans-serif;
     font-weight: 300;
