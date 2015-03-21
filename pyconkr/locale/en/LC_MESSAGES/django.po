@@ -161,7 +161,7 @@ msgstr "PyCon Korea 2015 one-time login token"
 
 #: settings.py:134 templates/mail/token_html.html:2
 msgid "PyCon Korea"
-msgstr "Pycon Korea"
+msgstr "PyCon Korea"
 
 #: templates/base.html:7 templates/base.html.py:13 templates/base.html:14
 msgid "PyCon Korea 2015"
