@@ -10,11 +10,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.85">
 
   <!-- Opengraph tag -->
-  <meta property="og:site_name" content="파이콘 한국 2015">
-  <meta property="og:title" content="{% block og-title %}PyCon Korea 2015{% endblock %}">
+  <meta property="og:site_name" content="{% trans "PyCon Korea 2015" %}">
+  <meta property="og:title" content="{% block og-title %}{% trans "PyCon Korea 2015" %}{% endblock %}">
   <meta property="og:image" content="{{ domain }}{% block og-image %}{% static "image/pyconkr-badge.png" %}{% endblock %}">
   <meta property="og:url" content="{{ domain }}{{ request.path }}">
-  <meta property="og:description" content="{% block og-desc %}파이콘은 오픈소스 프로그래밍 언어인 파이썬 사용자들을 위한 행사입니다. 올해 한국에서 처음으로 열리는 파이콘 한국 2014 는 개발자들의 지식과 경험을 공유하여 한국 개발자 커뮤니티와 파이썬의 활성화에 기여하고자 합니다.{% endblock %}">
+  <meta property="og:description" content="{% block og-desc %}{% trans "PyCon Korea Opengraph Description" %}{% endblock %}">
 
   <!-- Include basic items -->
   <link href="{% static "components/bootstrap/dist/css/bootstrap.min.css" %}" rel="stylesheet">
@@ -26,8 +26,8 @@
   <link href="{% static "css/pyconkr-media.css" %}" rel="stylesheet">
 
   <!-- Google fonts -->
-  <link href='//fonts.googleapis.com/css?family=Lato:200,400,700' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'>
 
   <!-- Favicon -->

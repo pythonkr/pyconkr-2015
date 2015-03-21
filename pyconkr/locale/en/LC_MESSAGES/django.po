@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-17 12:33+0000\n"
-"PO-Revision-Date: 2015-03-17 12:34+0000\n"
+"POT-Creation-Date: 2015-03-21 01:03+0000\n"
+"PO-Revision-Date: 2015-03-21 01:09+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,95 +18,91 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Translated-Using: django-rosetta 0.7.5\n"
 
-#: context_processors.py:12
+#: context_processors.py:18
 msgid "About"
 msgstr "About"
 
-#: context_processors.py:15
+#: context_processors.py:21
 msgid "About PyCon Korea 2015"
 msgstr "About PyCon Korea 2015"
 
-#: context_processors.py:16
+#: context_processors.py:22
 msgid "Code of Conduct"
 msgstr "Code of Conduct"
 
-#: context_processors.py:17
-msgid "Conference detail"
-msgstr "Conference detail"
-
-#: context_processors.py:18
+#: context_processors.py:23
 msgid "Announcements"
 msgstr "Announcements"
 
-#: context_processors.py:19
+#: context_processors.py:24
 msgid "Sponsors"
 msgstr "Sponsors"
 
-#: context_processors.py:20
+#: context_processors.py:25
 msgid "Staff"
 msgstr "Staff"
 
-#: context_processors.py:21
+#: context_processors.py:26
 msgid "Contact"
 msgstr "Contact"
 
-#: context_processors.py:25 templates/nav.html:55
+#: context_processors.py:30 templates/nav.html:55
 msgid "Programs"
 msgstr "Programs"
 
-#: context_processors.py:28
+#: context_processors.py:33
 msgid "Call for proposals"
 msgstr "Call for proposals"
 
-#: context_processors.py:29
+#: context_processors.py:34
 msgid "Schedule"
 msgstr "Schedule"
 
-#: context_processors.py:30
+#: context_processors.py:35
 msgid "Program list"
 msgstr "Program list"
 
-#: context_processors.py:31
+#: context_processors.py:36
 msgid "Speakers"
 msgstr "Speakers"
 
-#: context_processors.py:32
+#: context_processors.py:37
 msgid "Jobfair"
 msgstr "Jobfair"
 
-#: context_processors.py:33
+#: context_processors.py:38
 msgid "BOF"
 msgstr "BOF"
 
-#: context_processors.py:37
+#: context_processors.py:42
 msgid "Getting here"
 msgstr "Getting Here"
 
-#: context_processors.py:40
+#: context_processors.py:45
 msgid "Venue Map"
 msgstr "Venue Map"
 
-#: context_processors.py:41
+#: context_processors.py:46
 msgid "Transportation"
 msgstr "Transportation"
 
-#: context_processors.py:42
+#: context_processors.py:47
 msgid "Hotels"
 msgstr "Hotels"
 
-#: context_processors.py:43
+#: context_processors.py:48
 msgid "Restaurants"
 msgstr "Restaurants"
 
-#: context_processors.py:44
+#: context_processors.py:49
 msgid "Weather"
 msgstr "Weather"
 
-#: context_processors.py:45
+#: context_processors.py:50
 msgid "International Attendees"
 msgstr "International Attendees"
 
-#: context_processors.py:49
+#: context_processors.py:54
 msgid "Registration"
 msgstr "Registration"
 
@@ -167,23 +163,31 @@ msgstr "PyCon Korea 2015 one-time login token"
 msgid "PyCon Korea"
 msgstr "Pycon Korea"
 
-#: templates/base.html:7
+#: templates/base.html:7 templates/base.html.py:13 templates/base.html:14
 msgid "PyCon Korea 2015"
 msgstr "PyCon Korea 2015"
+
+#: templates/base.html:17
+msgid "PyCon Korea Opengraph Description"
+msgstr ""
+"PyCon is a non-commercial conference held by Python Programming Communities "
+"over the world. Please help us make PyCon Korea 2015 a conference with a "
+"full variety of sessions, a great place to share Python knowledge, and a "
+"fantastic networking opportunity."
 
 #: templates/disqus.html:2
 msgid "Comments"
 msgstr "Comments"
 
-#: templates/footer.html:11 templates/index.html:21
+#: templates/footer.html:11 templates/index.html:24
 msgid "Python,"
 msgstr "Python,"
 
-#: templates/footer.html:12 templates/index.html:22
+#: templates/footer.html:12 templates/index.html:25
 msgid "Together,"
 msgstr "Together,"
 
-#: templates/footer.html:13 templates/index.html:23
+#: templates/footer.html:13 templates/index.html:26
 msgid "Successful."
 msgstr "Successful."
 
@@ -203,7 +207,7 @@ msgstr "Powered by <a href='https://www.djangoproject.com/'>Django</a>"
 msgid "Stay connected"
 msgstr "Stay connected"
 
-#: templates/index.html:24
+#: templates/index.html:27
 msgid "Frontpage schedule"
 msgstr "Nuri Dream Square, Seoul @ June 27–28"
 
@@ -241,7 +245,7 @@ msgstr "Back to home"
 msgid "Requested token is not found or invalid."
 msgstr "Requested token is not found or invalid."
 
-#: templates/login_notvalidtoken.html:7 templates/nav.html:66 views.py:181
+#: templates/login_notvalidtoken.html:7 templates/nav.html:66 views.py:183
 msgid "Login"
 msgstr "Login"
 
@@ -307,18 +311,18 @@ msgstr "PDF"
 msgid "Edit"
 msgstr "Edit"
 
-#: templates/pyconkr/program_list.html:16 templates/schedule.html:23
-#: templates/schedule.html.py:40 templates/schedule.html:91
+#: templates/pyconkr/program_list.html:16 templates/schedule.html:19
+#: templates/schedule.html.py:36 templates/schedule.html:87
 msgid "Slides link"
 msgstr "Slides"
 
-#: templates/pyconkr/program_list.html:19 templates/schedule.html:26
-#: templates/schedule.html.py:43 templates/schedule.html:94
+#: templates/pyconkr/program_list.html:19 templates/schedule.html:22
+#: templates/schedule.html.py:39 templates/schedule.html:90
 msgid "Video link"
 msgstr "Video"
 
-#: templates/pyconkr/program_list.html:22 templates/schedule.html:29
-#: templates/schedule.html.py:46 templates/schedule.html:97
+#: templates/pyconkr/program_list.html:22 templates/schedule.html:25
+#: templates/schedule.html.py:42 templates/schedule.html:93
 msgid "PDF link"
 msgstr "PDF"
 
@@ -330,18 +334,14 @@ msgstr "Speaker"
 msgid "Sponsor"
 msgstr "Sponsor"
 
-#: templates/schedule.html:7
-msgid "Schedule may be subject to change."
-msgstr "Schedule may be subject to change."
-
 #: templates/sponsors.html:4
 msgid "Sponsor list"
 msgstr "Sponsor list"
 
-#: views.py:194
+#: views.py:196
 msgid "Not valid token"
 msgstr "Not valid token"
 
-#: views.py:216
+#: views.py:218
 msgid "Mail sent"
 msgstr "Mail sent"
