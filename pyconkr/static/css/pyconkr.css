@@ -295,17 +295,18 @@ small a:hover {
     max-width: 200px;
 }
 
-.sponsors .sponsor-become-a-sponsor {
+.sponsors .sponsor-0,
+.sponsors .sponsor-1 {
     width: 100%;
     max-width: 400px;
 }
 
-.sponsors .sponsor-platinum {
+.sponsors .sponsor-2 {
     width: 100%;
     max-width: 400px;
 }
 
-.sponsors .sponsor-gold {
+.sponsors .sponsor-3 {
     width: 49%;
     max-width: 300px;
 }
@@ -314,6 +315,11 @@ small a:hover {
     width: 100%;
     padding: 5%;
     height: auto;
+}
+
+.sponsor img {
+    border: 0;
+    margin: 15px 0;
 }
 
 .announcements {

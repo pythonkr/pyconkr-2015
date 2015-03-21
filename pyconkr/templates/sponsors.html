@@ -8,7 +8,7 @@
       <h4>{{ lvl.name }}</h4>
       <ul>
         {% for sponsor in lvl.sponsor_set.all %}
-        <li class="sponsor-{{ lvl.slug }}">
+        <li class="sponsor-{{ lvl.order }}">
         <a href="{% url "sponsor" sponsor.slug %}">
           <img src="{{ MEDIA_URL }}{{ sponsor.image }}" alt="{{ sponsor }}">
         </a>

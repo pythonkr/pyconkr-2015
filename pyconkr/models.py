@@ -44,11 +44,18 @@ class ProgramCategory(models.Model):
         return self.name
 
 
+class SponsorLevelManager(models.Manager):
+    def get_queryset(self):
+        return super(SponsorLevelManager, self).get_queryset().all().order_by('order')
+
+
 class SponsorLevel(models.Model):
     name = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100)
     desc = models.TextField(null=True, blank=True)
     order = models.IntegerField(default=1)
+
+    objects = SponsorLevelManager()
 
     def __unicode__(self):
         return self.name
