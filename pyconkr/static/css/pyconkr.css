@@ -155,19 +155,20 @@ small a:hover {
 .content img {
     max-width: 100%;
     border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
-.side-by-side {
+.content .table {
     width: 100%;
 }
 
-.side-by-side td,
-.side-by-side th {
+.content .table td,
+.content .table th {
     font-size: 1em;
     text-align: center;
 }
 
-.side-by-side th {
+.content .table th {
     background: #eee;
 }
 
