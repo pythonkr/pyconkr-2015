@@ -7,7 +7,7 @@
 
 {% block content %}
 {{ object.desc|safe }}
-<p class="pull-right">{{ object.created }}</p>
+<p class="pull-right">{{ object.at }}</p>
 <hr class="clear">
 <a href="{% url "announcements" %}" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-chevron-left"></span> {% trans "Back to list" %}

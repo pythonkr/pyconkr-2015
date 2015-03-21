@@ -2,8 +2,9 @@ from django.conf import settings
 from django.contrib.auth import login as user_login, logout as user_logout
 from django.contrib.auth.models import User
 from django.contrib.flatpages.models import FlatPage
-from django.core.urlresolvers import reverse
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.urlresolvers import reverse
+from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.utils.http import is_safe_url
@@ -134,6 +135,11 @@ class JobfairList(ListView):
 
 class AnnouncementList(ListView):
     model = Announcement
+
+    def get_queryset(self):
+        now = datetime.now()
+        queryset = super(AnnouncementList, self).get_queryset()
+        return queryset.filter(Q(announce_after__isnull=True) | Q(announce_after__lt=now))
 
 
 class AnnouncementDetail(DetailView):

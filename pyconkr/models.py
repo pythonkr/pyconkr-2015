@@ -170,6 +170,9 @@ class Announcement(models.Model):
     class Meta:
         ordering = ['-id']
 
+    def at(self):
+        return self.announce_after if self.announce_after else self.created
+
     def __unicode__(self):
         return self.title
 
