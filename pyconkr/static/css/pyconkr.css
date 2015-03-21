@@ -224,6 +224,11 @@ small a:hover {
     height: 800px;
 }
 
+.frontpage .slides img {
+    width: 100%;
+    display: none;
+}
+
 .frontpage .onslides {
     width: 100%;
     height: 100%;

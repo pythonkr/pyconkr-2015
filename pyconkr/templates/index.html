@@ -6,6 +6,7 @@
 <link href="{% static "components/kenburnsy/dist/jquery.kenburnsy.css" %}" rel="stylesheet">
 <script src="{% static "components/velocity/velocity.min.js" %}"></script>
 <script src="{% static "components/kenburnsy/dist/jquery.kenburnsy.min.js" %}"></script>
+<script src="{% static "js/jquery.shuffle.js" %}"></script>
 {% endblock %}
 
 {% block top %}
@@ -14,6 +15,8 @@
         <img src="{% static "image/jumboback1.jpg" %}">
         <img src="{% static "image/jumboback2.jpg" %}">
         <img src="{% static "image/jumboback3.jpg" %}">
+        <img src="{% static "image/jumboback4.jpg" %}">
+        <img src="{% static "image/jumboback5.jpg" %}">
     </div>
     <div class="onslides">
         <div class="container">
@@ -35,6 +38,7 @@
 {% block script %}
 <script>
 $(function() {
+    $(".slides img").shuffle();
     $(".slides").kenburnsy({
         'height': $(".slides").height()
     });
