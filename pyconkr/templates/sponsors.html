@@ -9,9 +9,14 @@
       <ul>
         {% for sponsor in lvl.sponsor_set.all %}
         <li class="sponsor-{{ lvl.order }}">
-        <a href="{% url "sponsor" sponsor.slug %}">
-          <img src="{{ MEDIA_URL }}{{ sponsor.image }}" alt="{{ sponsor }}">
-        </a>
+          <a href="{% url "sponsor" sponsor.slug %}">
+            <img src="{{ MEDIA_URL }}{{ sponsor.image }}" alt="{{ sponsor.name }}">
+            {% if detail == 'True' %}
+            <div class="info">
+              {{ sponsor.name }}
+            </div>
+            {% endif %}
+          </a>
         </li>
         {% endfor %}
       </ul>

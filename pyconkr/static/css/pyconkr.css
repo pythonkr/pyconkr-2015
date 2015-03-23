@@ -303,15 +303,16 @@ small a:hover {
 }
 
 .sponsors ul {
-    margin: 0 0 15px;
+    margin: 0 auto 15px auto;
     padding: 0;
+    text-align: center;
 }
 
 .sponsors li {
     list-style: none;
     display: inline-block;
     width: 49%;
-    max-width: 300px;
+    max-width: 240px;
     padding: 3%;
     box-sizing: border-box;
 }
@@ -321,11 +322,18 @@ small a:hover {
     height: auto;
 }
 
-.sponsors .sponsor-0,
-.sponsors .sponsor-1, 
+.sponsors div.info {
+    margin-top: 10px;
+}
+
+.sponsors .sponsor-1 {
+    width: 100%;
+    max-width: 500px;
+}
+
 .sponsors .sponsor-2 {
     width: 100%;
-    max-width: 400px;
+    max-width: 320px;
 }
 
 .announcements {
