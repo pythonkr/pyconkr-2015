@@ -2,5 +2,9 @@
 {% load i18n %}
 
 {% block wrap %}
-{% include "sponsors.html" with detail="True" %}
+<div class="row">
+  <div class="col-md-12">
+    {% include "sponsors.html" with detail="True" %}
+  </div>
+</div>
 {% endblock %}

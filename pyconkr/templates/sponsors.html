@@ -1,26 +1,22 @@
 {% load i18n %}
-<div class="row">
-  <div class="col-md-12">
-    <h3>{% trans "Sponsor list" %}</h3>
-    <div class="sponsors">
-      {% for lvl in levels %}
-      <hr>
-      <h4>{{ lvl.name }}</h4>
-      <ul>
-        {% for sponsor in lvl.sponsor_set.all %}
-        <li class="sponsor-{{ lvl.order }}">
-          <a href="{% url "sponsor" sponsor.slug %}">
-            <img src="{{ MEDIA_URL }}{{ sponsor.image }}" alt="{{ sponsor.name }}">
-            {% if detail == 'True' %}
-            <div class="info">
-              {{ sponsor.name }}
-            </div>
-            {% endif %}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-      {% endfor %}
-    </div>
-  </div>
+<h3>{% trans "Sponsor list" %}</h3>
+<div class="sponsors">
+  {% for lvl in levels %}
+  <hr>
+  <h4>{{ lvl.name }}</h4>
+  <ul>
+    {% for sponsor in lvl.sponsor_set.all %}
+    <li class="sponsor-{{ lvl.order }}">
+      <a href="{% url "sponsor" sponsor.slug %}">
+        <img src="{{ MEDIA_URL }}{{ sponsor.image }}" alt="{{ sponsor.name }}">
+        {% if detail == 'True' %}
+        <div class="info">
+          {{ sponsor.name }}
+        </div>
+        {% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
 </div>
