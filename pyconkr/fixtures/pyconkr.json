@@ -133,16 +133,16 @@
 },
 {
     "fields": {
-        "desc_en": "Devsisters",
+        "desc_en": "<p>Devsisters is a global entertainment company known for the popular mobile game \u2018Cookie Run.\u2019</p><p>Since its launch in 2013, more than 65 million users have played \u2018Cookie Run\u2019 worldwide, accumulating over 15 billion plays and counting. This side-scrolling action game starring a variety of sweet and stylish cookies have seen success not only in Korea, but ranked #1 place in App Stores around the globe in countries including Japan, Taiwan, Thailand and more. In addition, these charming cookies are brought to real life in forms of cushions, plush toys, school supplies and many more as merchandise products. </p><p>Based on these results, Devsisters was listed in KOSDAQ in 2014 and the company continues to grow each day.</p>",
         "name": "Devsisters",
         "level": 3,
         "url": "http://www.devsisters.com/",
         "image": "sponsor/sponsor-devsisters.png",
-        "desc_ko": "\ub370\ube0c\uc2dc\uc2a4\ud130\uc988",
+        "desc_ko": "<p>\ub370\ube0c\uc2dc\uc2a4\ud130\uc988\ub294 \uc804\uc138\uacc4 \ub204\uc801 \ub2e4\uc6b4\ub85c\ub4dc \uc218 6,500\ub9cc\uac74 \uc774\uc0c1 \ub2e4\uc6b4\ub85c\ub4dc \ub41c \uc778\uae30 \uc2a4\ub9c8\ud2b8 \ud3f0 \uac8c\uc784 \u2018\ucfe0\ud0a4\ub7f0(Cookie run)\u2019\uc744 \uac1c\ubc1c, \uc11c\ube44\uc2a4\ud558\ub294 \uae00\ub85c\ubc8c \uc5d4\ud130\ud14c\uc778\uba3c\ud2b8 \ucee8\ud150\uce20 \ud68c\uc0ac\uc785\ub2c8\ub2e4.</p><p>2013\ub144 \ucd9c\uc2dc\ub41c \u2018\ucfe0\ud0a4\ub7f0' \uc740 \uadc0\uc5ec\uc6b4 \ucfe0\ud0a4\ub4e4\uc758 \uc624\ube10 \ud0c8\ucd9c \uc2a4\ud1a0\ub9ac\ub97c \uae30\ubc18\uc73c\ub85c \ud55c \ub7ec\ub2dd \uac8c\uc784\uc73c\ub85c \uad6d\ub0b4\ubfd0 \uc544\ub2c8\ub77c \ub300\ub9cc,\uc77c\ubcf8,\ud0dc\uad6d \ub4f1\uc5d0\uc11c \ucd9c\uc2dc \uc9c1\ud6c4 \uc571\uc2a4\ud1a0\uc5b4 1\uc704\ub97c \ucc28\uc9c0\ud558\uba70 \ub3cc\ud48d\uc744 \uc77c\uc73c\ucf30\uc73c\uba70 \uc804\uc138\uacc4 \ub204\uc801 \ud50c\ub808\uc774\uc218 150\uc5b5\ud68c\ub97c \uae30\ub85d\ud558\uc600\uc2b5\ub2c8\ub2e4. \ub610\ud55c \ucfe0\ud0a4\ub7f0 \uac8c\uc784\uc5d0 \ub4f1\uc7a5\ud558\ub294 \uce90\ub9ad\ud130\ub4e4\uc740 \ucfe0\uc158, \uc778\ud615, \ub178\ud2b8 \ub4f1 \ub2e4\uc591\ud55c \uc0c1\ud488\uc73c\ub85c \ub9cc\ub4e4\uc5b4\uc838 &nbsp;\uc804\uc138\uacc4 \ub9ce\uc740 \uc0ac\ub78c\ub4e4\uc5d0\uac8c \ud070 \uc0ac\ub791\uc744 \ubc1b\uace0 \uc788\uc2b5\ub2c8\ub2e4. </p><p>\uc774\ub7ec\ud55c \uc131\uacfc\ub97c \ud1a0\ub300\ub85c \uc9c0\ub09c \ud574 \uad6d\ub0b4 \ucf54\uc2a4\ub2e5 \uc2dc\uc7a5\uc5d0 \uc0c1\uc7a5\ud55c \ub370\ube0c\uc2dc\uc2a4\ud130\uc988\ub294 \uae00\ub85c\ubc8c \uc2dc\uc7a5 \uacf5\ub7b5\uc744 \uac15\ud654\ud558\uba70 \uc9c0\uc18d\uc801\uc73c\ub85c \uc131\uc7a5\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4.&nbsp;</p>",
         "name_ko": "\ub370\ube0c\uc2dc\uc2a4\ud130\uc988",
         "name_en": "Devsisters",
         "slug": "devsisters",
-        "desc": "Devsisters"
+        "desc": "<p>Devsisters is a global entertainment company known for the popular mobile game \u2018Cookie Run.\u2019</p><p>Since its launch in 2013, more than 65 million users have played \u2018Cookie Run\u2019 worldwide, accumulating over 15 billion plays and counting. This side-scrolling action game starring a variety of sweet and stylish cookies have seen success not only in Korea, but ranked #1 place in App Stores around the globe in countries including Japan, Taiwan, Thailand and more. In addition, these charming cookies are brought to real life in forms of cushions, plush toys, school supplies and many more as merchandise products. </p><p>Based on these results, Devsisters was listed in KOSDAQ in 2014 and the company continues to grow each day.</p>"
     },
     "model": "pyconkr.sponsor",
     "pk": 4
@@ -258,6 +258,22 @@
     },
     "model": "pyconkr.sponsor",
     "pk": 11
+},
+{
+    "fields": {
+        "desc_en": "THE BEATPACKING COMPANY",
+        "name": "THE BEATPACKING COMPANY",
+        "level": 3,
+        "url": "http://beatpacking.com",
+        "image": "sponsor/sponsor-beatpacking.png",
+        "desc_ko": "\ube44\ud2b8\ud328\ud0b9\ucef4\ud37c\ub2c8",
+        "name_ko": "\ube44\ud2b8\ud328\ud0b9\ucef4\ud37c\ub2c8",
+        "name_en": "THE BEATPACKING COMPANY",
+        "slug": "beatpacking",
+        "desc": "THE BEATPACKING COMPANY"
+    },
+    "model": "pyconkr.sponsor",
+    "pk": 12
 },
 {
     "fields": {
