@@ -7,3 +7,4 @@ django-summernote>=0.5.14
 polib>=1.0.4
 requests>=2.3.0
 django-modeltranslation>=0.8
+django-allauth>=0.19.1

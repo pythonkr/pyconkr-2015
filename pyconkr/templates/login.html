@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load socialaccount %}
 {% load i18n %}
 
 {% block content %}
@@ -19,4 +20,7 @@
 <div class="alert alert-info" role="alert">
     {% trans "We store your mail address only. Never store password or any personal information." %}
 </div>
+<h3>{% trans "Login via Social accounts" %}</h3>
+<a class="btn btn-social btn-github" href="{% provider_login_url "github" %}">
+    <i class="fa fa-github"></i> {% trans "Sign in with GitHub" %}</a>
 {% endblock %}

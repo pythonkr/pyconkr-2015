@@ -53,6 +53,8 @@ urlpatterns = patterns(
     url(r'^robots.txt$', robots, name='robots'),
     url(r'^summernote/', include('django_summernote.urls')),
     url(r'^admin/', include(admin.site.urls)),
+
+    (r'^accounts/', include('allauth.urls')),
 )
 
 # for development
