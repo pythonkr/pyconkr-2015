@@ -202,3 +202,7 @@ class EmailToken(models.Model):
     def save(self, *args, **kwargs):
         self.token = str(uuid4())
         super(EmailToken, self).save(*args, **kwargs)
+
+
+class Profile(models.Model):
+    pass

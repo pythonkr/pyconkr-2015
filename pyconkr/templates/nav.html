@@ -58,6 +58,7 @@
             {% endfor %}
             <li role="presentation" class="divider"></li>
             {% endif %}
+            <li><a href="{% url "profile" %}">{% trans "Profile" %}</a></li>
             <li><a href="{% url "logout" %}">{% trans "Logout" %}</a></li>
           </ul>
         </li>
