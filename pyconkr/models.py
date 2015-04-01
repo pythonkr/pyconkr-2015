@@ -67,7 +67,7 @@ class Sponsor(models.Model):
     image = models.ImageField(upload_to='sponsor', null=True, blank=True)
     url = models.CharField(max_length=255, null=True, blank=True)
     desc = models.TextField(null=True, blank=True)
-    level = models.ForeignKey(SponsorLevel, null=True)
+    level = models.ForeignKey(SponsorLevel, null=True, blank=True)
 
     def get_absolute_url(self):
         return reverse('sponsor', args=[self.slug])
