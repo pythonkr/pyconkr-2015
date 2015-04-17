@@ -123,7 +123,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.core.context_processors.request',
-    'pyconkr.context_processors.menu',
+    'pyconkr.context_processors.default',
     'pyconkr.context_processors.sponsors',
     'pyconkr.context_processors.profile',
 )

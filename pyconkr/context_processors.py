@@ -6,7 +6,7 @@ from collections import OrderedDict
 from .models import SponsorLevel, Speaker
 
 
-def menu(request):
+def default(request):
     title = None
     url = request.path
     if settings.FORCE_SCRIPT_NAME:
