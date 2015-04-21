@@ -133,7 +133,7 @@ class Program(models.Model):
                                 default='ko')
 
     date = models.ForeignKey(ProgramDate)
-    rooms = models.ManyToManyField(Room, null=True, blank=True)
+    rooms = models.ManyToManyField(Room, blank=True)
     times = models.ManyToManyField(ProgramTime)
     category = models.ForeignKey(ProgramCategory, null=True, blank=True)
 
