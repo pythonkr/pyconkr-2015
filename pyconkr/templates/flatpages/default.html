@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block og-title %}{{ block.super }} {{ flatpage.title }}{% endblock %}
+{% block og-desc %}{{ flatpage.content|striptags|truncatechars:300 }}{% endblock %}
 {% block title %}{{ block.super }} {{ flatpage.title }}{% endblock %}
 
 {% block titlebar %}

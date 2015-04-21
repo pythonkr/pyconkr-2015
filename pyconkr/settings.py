@@ -137,10 +137,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.core.context_processors.request',
 
-    "allauth.account.context_processors.account",
-    "allauth.socialaccount.context_processors.socialaccount",
+    'allauth.account.context_processors.account',
+    'allauth.socialaccount.context_processors.socialaccount',
 
-    'pyconkr.context_processors.menu',
+    'pyconkr.context_processors.default',
     'pyconkr.context_processors.sponsors',
     'pyconkr.context_processors.profile',
 )
