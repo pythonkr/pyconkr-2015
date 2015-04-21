@@ -1,26 +1,26 @@
 {% extends "base.html" %}
 {% load socialaccount %}
 {% load i18n %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <h3>{% trans "Login via mail" %}</h3>
-<form method="post">
-  {% csrf_token %}
-  <div class="col-lg-6">
-    <div class="input-group">
-        {{ form }}
-      <span class="input-group-btn">
-        <button class="btn btn-large btn-primary" type="submit">Login</button>
-      </span>
-    </div>
-  </div>
-  <div class="clear"></div>
-</form>
-<hr>
 <div class="alert alert-info" role="alert">
     {% trans "We store your mail address only. Never store password or any personal information." %}
 </div>
+<form method="post">
+  {% csrf_token %}
+  {% crispy form %}
+    <button class="btn btn-large btn-primary" type="submit">Login</button>
+</form>
+<hr>
 <h3>{% trans "Login via Social accounts" %}</h3>
-<a class="btn btn-social btn-github" href="{% provider_login_url "github" %}">
-    <i class="fa fa-github"></i> {% trans "Sign in with GitHub" %}</a>
+<p>
+    <a class="btn btn-social btn-github" href="{% provider_login_url "github" %}">
+        <i class="fa fa-github"></i> {% trans "Sign in with GitHub" %}</a>
+    <a class="btn btn-social btn-twitter" href="{% provider_login_url "twitter" %}">
+        <i class="fa fa-twitter"></i> {% trans "Sign in with Twitter" %}</a>
+    <a class="btn btn-social btn-facebook" href="{% provider_login_url "facebook" %}">
+        <i class="fa fa-facebook"></i> {% trans "Sign in with Facebook" %}</a>
+</p>
 {% endblock %}
