@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.contrib.auth import login as user_login, logout as user_logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.flatpages.models import FlatPage
 from django.core.exceptions import ObjectDoesNotExist
@@ -228,3 +229,8 @@ def login_mailsent(request):
 def logout(request):
     user_logout(request)
     return redirect(reverse('index'))
+
+
+@login_required
+def profile(request):
+    return render(request, 'profile.html')

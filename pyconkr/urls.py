@@ -8,7 +8,7 @@ from .views import AnnouncementList, AnnouncementDetail
 from .views import SpeakerList, SpeakerDetail, SpeakerUpdate
 from .views import SponsorList, SponsorDetail
 from .views import ProgramList, ProgramDetail, ProgramUpdate
-from .views import login, login_req, login_mailsent, logout
+from .views import login, login_req, login_mailsent, logout, profile
 
 from django.contrib import admin
 admin.autodiscover()
@@ -48,11 +48,14 @@ urlpatterns = patterns(
     url(r'^login/req/(?P<token>[a-z0-9\-]+)$', login_req, name='login_req'),
     url(r'^login/mailsent/$', login_mailsent, name='login_mailsent'),
     url(r'^logout/$', logout, name='logout'),
+    url(r'^profile/$', profile, name='profile'),
 
     url(r'^lang/(?P<lang_code>.*)/$', setlang, name='setlang'),
     url(r'^robots.txt$', robots, name='robots'),
     url(r'^summernote/', include('django_summernote.urls')),
     url(r'^admin/', include(admin.site.urls)),
+
+    (r'^accounts/', include('allauth.urls')),
 )
 
 # for development
