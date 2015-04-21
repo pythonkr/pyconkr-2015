@@ -145,6 +145,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'pyconkr.context_processors.profile',
 )
 
+LOGIN_REDIRECT_URL = '/profile/'
+
 DOMAIN = ''
 
 EMAIL_LOGIN_TITLE = ugettext("PyCon Korea 2015 one-time login token")
