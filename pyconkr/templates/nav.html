@@ -72,16 +72,26 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <span class="glyphicon glyphicon-globe"></span>
             {% trans "Language" %} <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
+          <ul id="language-menu" class="dropdown-menu" role="menu">
             {% get_language_info_list for LANGUAGES as languages %}
             {% for language in languages %}
-            <li>
-              <a href="{% url 'setlang' language.code %}?next={{ request.path }}">{{ language.name_local }}</a>
-            </li>
+            <li><a href="#" data-code="{{ language.code }}">{{ language.name_local }}</a></li>
             {% endfor %}
           </ul>
+          <form id="language-form" action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input name="next" type="hidden" value="{{ request.path }}" />
+            <input name="language" type="hidden" />
+          </form>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
 </nav>
+<script>
+$("#language-menu a").click(function() {
+    var form = $("#language-form");
+    form.find("input[name='language']").val($(this).data("code"));
+    form.submit();
+});
+</script>

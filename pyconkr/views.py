@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.contrib.auth import login as user_login, logout as user_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -6,10 +5,7 @@ from django.contrib.flatpages.models import FlatPage
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
 from django.db.models import Q
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django.utils.http import is_safe_url
-from django.utils.translation import check_for_language
 from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.cache import never_cache
 from django.views.generic import ListView, DetailView, UpdateView
@@ -145,23 +141,6 @@ class AnnouncementList(ListView):
 
 class AnnouncementDetail(DetailView):
     model = Announcement
-
-
-@never_cache
-def setlang(request, lang_code):
-    # Copied from django.views.i18n.set_language
-    next = request.REQUEST.get('next')
-    if not is_safe_url(url=next, host=request.get_host()):
-        next = request.META.get('HTTP_REFERER')
-        if not is_safe_url(url=next, host=request.get_host()):
-            next = '/'
-    response = HttpResponseRedirect(next)
-    if lang_code and check_for_language(lang_code):
-        if hasattr(request, 'session'):
-            request.session['django_language'] = lang_code
-        else:
-            response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
-    return response
 
 
 def robots(request):
