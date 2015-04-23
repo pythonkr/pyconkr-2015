@@ -25,7 +25,7 @@ msgstr "Pycon KR"
 
 #: context_processors.py:21
 msgid "About PyCon Korea 2015"
-msgstr "About PyCon 韓国 2015"
+msgstr "About PyCon Korea 2015"
 
 #: context_processors.py:22
 msgid "Code of Conduct"
@@ -45,7 +45,7 @@ msgstr "スタッフとボランティア"
 
 #: context_processors.py:26
 msgid "Contact"
-msgstr "アクセス"
+msgstr "連絡先"
 
 #: context_processors.py:30 templates/nav.html:55
 msgid "Programs"
@@ -57,7 +57,7 @@ msgstr "発表者募集"
 
 #: context_processors.py:34
 msgid "Schedule"
-msgstr "細部の日程"
+msgstr "スケジュール"
 
 #: context_processors.py:35
 msgid "Program list"
@@ -69,11 +69,11 @@ msgstr "発表者"
 
 #: context_processors.py:37
 msgid "Jobfair"
-msgstr "就職説明会や図書販売"
+msgstr "就職説明会"
 
 #: context_processors.py:38
 msgid "BOF"
-msgstr "BOF 案内"
+msgstr "BOF案内"
 
 #: context_processors.py:42
 msgid "Getting here"
@@ -85,15 +85,15 @@ msgstr "アクセスマップ"
 
 #: context_processors.py:46
 msgid "Transportation"
-msgstr "交通の便"
+msgstr "交通手段"
 
 #: context_processors.py:47
 msgid "Hotels"
-msgstr "宿泊"
+msgstr "ホテル"
 
 #: context_processors.py:48
 msgid "Restaurants"
-msgstr "お食事"
+msgstr "レストラン"
 
 #: context_processors.py:49
 msgid "Weather"
@@ -101,15 +101,15 @@ msgstr "天気"
 
 #: context_processors.py:50
 msgid "International Attendees"
-msgstr "外国の訪問者支援"
+msgstr "外国の訪問者"
 
 #: context_processors.py:54
 msgid "Registration"
-msgstr "同録案内"
+msgstr "登録案内"
 
 #: forms.py:28 forms.py:46
 msgid "Submit"
-msgstr "保存"
+msgstr "提出"
 
 #: forms.py:37 templates/nav.html:49 templates/pyconkr/speaker_detail.html:18
 msgid "Profile"
@@ -117,7 +117,7 @@ msgstr "プロフィール"
 
 #: forms.py:38
 msgid "Additional information"
-msgstr "その他情報"
+msgstr "その他の情報"
 
 #: forms.py:55
 msgid "Slide URL"
@@ -129,24 +129,25 @@ msgstr "発表動画のURL"
 
 #: forms.py:57 templates/pyconkr/program_detail.html:45
 msgid "Photography and recording is allowed"
-msgstr "촬영, 녹화 가능합니다."
+msgstr "写真撮影、録画は許可されています"
 
 #: forms.py:58 templates/pyconkr/program_detail.html:63
 msgid "Description"
 msgstr "説明"
 
+
 #: models.py:79
 msgid "help-text-for-speaker-info"
 msgstr ""
-"<p>개인 페이지들을 JSON 형식으로 추가해주세요.</p>\n"
+"<p>個人のページをJSON形式で追加してください。</p>\n"
 "<pre>\n"
-"# 예제\n"
+"# 例\n"
 "{\n"
 "  \"twitter\": \"https://twitter.com/ev\",\n"
 "  \"github\": \"https://github.com/defunkt\"\n"
 "}\n"
 "</pre>\n"
-"<p>지원되는 페이지 목록은 <a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a>에서 확인하실 수 있습니다.</p>"
+"<p>サポートされているページのリストは<a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a>より確認できます。</p>"
 
 #: settings.py:89
 msgid "Korean"
@@ -158,21 +159,21 @@ msgstr "英語"
 
 #: settings.py:133
 msgid "PyCon Korea 2015 one-time login token"
-msgstr "PyCon 韓国 2015 일회용 로그인 토큰"
+msgstr "PyCon Korea 2015 ワンタイムログイントークン"
 
 #: settings.py:134 templates/mail/token_html.html:2
 msgid "PyCon Korea"
-msgstr "PyCon 韓国"
+msgstr "PyCon Korea"
 
 #: templates/base.html:7 templates/base.html.py:13 templates/base.html:14
 msgid "PyCon Korea 2015"
-msgstr "파이콘 한국 2015"
+msgstr "PyCon Korea 2015"
 
 #: templates/base.html:17
 msgid "PyCon Korea Opengraph Description"
 msgstr ""
-"파이콘은 오픈소스 프로그래밍 언어인 파이썬 사용자들을 위한 행사입니다. 파이콘 한국 2015는 파이썬 개발자 및 사용자의 지식과 경험을 "
-"공유하여 한국 오픈소스 커뮤니티와 파이썬의 활성화에 기여하고자 합니다."
+"PyConはオープンソースのプログラミング言語であるPythonユーザーのためのイベントです。PyCon Korea 2015はPythonを使った開発者やユーザーの知識と経験を"
+"共有し、韓国オープンソースコミュニティとPythonの活性化に寄与いたします。"
 
 #: templates/disqus.html:2
 msgid "Comments"
@@ -184,63 +185,63 @@ msgstr "Python,"
 
 #: templates/footer.html:12 templates/index.html:25
 msgid "Together,"
-msgstr "一緒に,"
+msgstr "Together,"
 
 #: templates/footer.html:13 templates/index.html:26
 msgid "Successful."
-msgstr "成功."
+msgstr "Successful."
 
 #: templates/footer.html:16
 msgid "PyCon Korea 2015 is a production of the PyCon Korea Organizing Team"
-msgstr "파이콘 한국 2015는 파이콘 한국 준비위원회가 만들고 있습니다."
+msgstr "PyCon Korea 2015は、PyCon Koreaのスタッフが準備しています。"
 
 #: templates/footer.html:19
 msgid "Image courtesy information of homepage"
-msgstr "홈페이지에 사용된 사진의 저작권은 각 사진의 저작자에게 있습니다."
+msgstr "ウェブサイトに使われている写真の著作権は各写真の著作者に帰属します。"
 
 #: templates/footer.html:22
 msgid "Powered by Django"
 msgstr ""
-"파이썬 웹 프레임워크 <a href='https://www.djangoproject.com/'>Django</a>로 만들었습니다."
+"PythonのWebフレームワーク<a href='https://www.djangoproject.com/'>Django</a>で作りました。"
 
 #: templates/footer.html:26
 msgid "Stay connected"
-msgstr "더 알아보기"
+msgstr "詳細情報"
 
 #: templates/index.html:27
 msgid "Frontpage schedule"
-msgstr "상암동 누리꿈스퀘어, 2015년 6월 27~28일"
+msgstr "上巖洞ヌリクムスクエア, 2015年 6月 27~28日"
 
 #: templates/login.html:5
 msgid "Login via mail"
-msgstr "메일로 로그인"
+msgstr "Eメールでログイン"
 
 #: templates/login.html:20
 msgid ""
 "We store your mail address only. Never store password or any personal "
 "information."
-msgstr "오직 메일 주소만 저장합니다. 비밀번호나 기타 개인 정보를 절대로 저장하지 않습니다."
+msgstr "Eメールアドレスのみ保存されます。パスワードやその他の個人情報は保存されません。"
 
 #: templates/login_mailsent.html:5
 msgid ""
 "One-time login token url was sent to your mail. Please check your mailbox."
-msgstr "일회용 로그인 토큰 주소가 메일로 발송되었습니다. 메일함을 확인해주세요."
+msgstr "ワンタイムログイントークンのURLをメールでお送りしました。メールをご確認ください。"
 
 #: templates/login_mailsent.html:6
 msgid "Login token valid for only 1 hour."
-msgstr "로그인 토큰은 1시간 동안만 유효합니다."
+msgstr "ログイントークンは1時間のみ有効です。"
 
 #: templates/login_mailsent.html:6 templates/login_notvalidtoken.html:6
 msgid "If you lost token mail or be lated, please login again."
-msgstr "토큰을 잃어버리셨거나, 늦었다면 다시 로그인 해주세요."
+msgstr "トークンをなくしてしまったり、時間が過ぎてしまった場合は再度ログインしてください。"
 
 #: templates/login_mailsent.html:7
 msgid "Back to home"
-msgstr "첫 화면으로"
+msgstr "ホームへ戻る"
 
 #: templates/login_notvalidtoken.html:5
 msgid "Requested token is not found or invalid."
-msgstr "요청한 토큰이 없거나 유효하지 않습니다."
+msgstr "リクエストされたトークンは存在しないか有効ではありません。"
 
 #: templates/login_notvalidtoken.html:7 templates/nav.html:66 views.py:183
 msgid "Login"
@@ -248,7 +249,7 @@ msgstr "ログイン"
 
 #: templates/mail/token_html.html:3 templates/mail/token_text.html:2
 msgid "You can login to PyCon Korea homepage via below url."
-msgstr "아래 주소를 통해 파이콘 한국 홈페이지에 로그인하실 수 있습니다."
+msgstr "下記のURLよりPyCon Koreaのウェブサイトにログインできます。"
 
 #: templates/mail/token_html.html:4
 msgid "Link"
@@ -256,15 +257,15 @@ msgstr "リンク"
 
 #: templates/nav.html:8
 msgid "Toggle navigation"
-msgstr "툴바 토글"
+msgstr "トグルナビゲーション"
 
 #: templates/nav.html:50
 msgid "My Profile"
-msgstr "내 프로필"
+msgstr "プロフィール"
 
 #: templates/nav.html:51
 msgid "Edit Profile"
-msgstr "프로필 수정"
+msgstr "プロフィール編集"
 
 #: templates/nav.html:61
 msgid "Logout"
@@ -272,11 +273,11 @@ msgstr "ログアウト"
 
 #: templates/nav.html:73
 msgid "Language"
-msgstr "언어 / Language"
+msgstr "言語 / Language"
 
 #: templates/pyconkr/announcement_detail.html:13
 msgid "Back to list"
-msgstr "목록으로"
+msgstr "リストへ戻る"
 
 #: templates/pyconkr/announcement_list.html:16
 msgid "Read more"
@@ -289,7 +290,7 @@ msgstr "プログラム"
 
 #: templates/pyconkr/program_detail.html:47
 msgid "Photography and recording is not allowed"
-msgstr "촬영, 녹화가 금지되어 있습니다."
+msgstr "写真撮影、録画は禁止されています。"
 
 #: templates/pyconkr/program_detail.html:52
 msgid "Slide"
@@ -306,22 +307,22 @@ msgstr "PDF"
 #: templates/pyconkr/program_detail.html:67
 #: templates/pyconkr/speaker_detail.html:29
 msgid "Edit"
-msgstr "修正"
+msgstr "編集"
 
 #: templates/pyconkr/program_list.html:16 templates/schedule.html:19
 #: templates/schedule.html.py:36 templates/schedule.html:87
 msgid "Slides link"
-msgstr "スライド"
+msgstr "スライドリンク"
 
 #: templates/pyconkr/program_list.html:19 templates/schedule.html:22
 #: templates/schedule.html.py:39 templates/schedule.html:90
 msgid "Video link"
-msgstr "動画"
+msgstr "動画リンク"
 
 #: templates/pyconkr/program_list.html:22 templates/schedule.html:25
 #: templates/schedule.html.py:42 templates/schedule.html:93
 msgid "PDF link"
-msgstr "PDF"
+msgstr "PDFリンク"
 
 #: templates/pyconkr/speaker_detail.html:4
 msgid "Speaker"
@@ -337,8 +338,9 @@ msgstr "スポンサーリスト"
 
 #: views.py:196
 msgid "Not valid token"
-msgstr "유효한 토큰 아님"
+msgstr "有効なトークンではありません"
 
 #: views.py:218
 msgid "Mail sent"
-msgstr "메일 발송 완료"
+msgstr "メールを送りました"
+
