@@ -15,10 +15,12 @@
 <div class="speaker">
   <img class="image" src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.slug }}">
   {{ speaker.get_badges|safe }}
+  {% if speaker.desc %}
   <h3>{% trans "Profile" %}</h3>
   <div class="profile">
-    {{ speaker.desc|default:""|safe }}
+    {{ speaker.desc|safe }}
   </div>
+  {% endif %}
   <h3>{% trans "Program" %}</h3>
   {% for program in speaker.program_set.all %}
   <a href="{{ program.get_absolute_url }}">{{ program.name }}</a>
