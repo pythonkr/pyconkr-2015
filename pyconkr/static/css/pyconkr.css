@@ -519,6 +519,7 @@ small a:hover {
 
 .social-badges span {
     float: left;
+    min-width: 90px;
 }
 
 .badges {
