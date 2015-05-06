@@ -63,7 +63,7 @@
 {{ program.pdf_url|urlize }}
 {% endif %}
 <h3>{% trans "Description" %}</h3>
-{{ program.desc|safe }}
+{{ program.desc|default:""|safe }}
 {% if editable %}
 <hr>
 <a href="{% url "program_edit" program.id %}" class="btn btn-large btn-primary">{% trans "Edit" %}</a>
