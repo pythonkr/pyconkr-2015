@@ -132,9 +132,9 @@ class Program(models.Model):
                                 choices=settings.LANGUAGES,
                                 default='ko')
 
-    date = models.ForeignKey(ProgramDate)
+    date = models.ForeignKey(ProgramDate, null=True, blank=True)
     rooms = models.ManyToManyField(Room, blank=True)
-    times = models.ManyToManyField(ProgramTime)
+    times = models.ManyToManyField(ProgramTime, blank=True)
     category = models.ForeignKey(ProgramCategory, null=True, blank=True)
 
     is_recordable = models.BooleanField(default=True)
@@ -159,8 +159,12 @@ class Program(models.Model):
 
     def get_times(self):
         times = self.times.all()
-        return '%s - %s' % (times[0].begin.strftime("%H:%M"),
-                            times[len(times) - 1].end.strftime("%H:%M"))
+
+        if times:
+            return '%s - %s' % (times[0].begin.strftime("%H:%M"),
+                                times[len(times) - 1].end.strftime("%H:%M"))
+        else:
+            return _("Not arranged yet")
 
     def __unicode__(self):
         return self.name
