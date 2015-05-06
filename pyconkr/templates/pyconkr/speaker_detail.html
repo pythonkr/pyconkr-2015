@@ -17,7 +17,7 @@
   {{ speaker.get_badges|safe }}
   <h3>{% trans "Profile" %}</h3>
   <div class="profile">
-    {{ speaker.desc|safe }}
+    {{ speaker.desc|default:""|safe }}
   </div>
   <h3>{% trans "Program" %}</h3>
   {% for program in speaker.program_set.all %}
