@@ -10,6 +10,15 @@
     }
 }
 
+@media (max-width: 960px) {
+    .titlebar h1 {
+        max-width: 100%;
+    }
+    .halftone {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         top: 0px;
@@ -78,10 +87,6 @@
     .footer .col {
         text-align: center;
     }
-    .halftone {
-        display: none;
-    }
-
     .titlebar {
         padding: 4px 10px 8px;
         margin-bottom: 4px;

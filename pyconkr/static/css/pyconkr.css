@@ -212,7 +212,9 @@ small a:hover {
 }
 
 .titlebar h1 {
-    margin: 0;
+    margin: 1% 0;
+    max-width: 66%;
+    line-height: 160%;
 }
 
 .titlebar .container {
