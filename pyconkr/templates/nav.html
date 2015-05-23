@@ -46,9 +46,8 @@
             {{ user.username }} <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             {% if my_speaker %}
-            <li class="dropdown-header">{% trans "Profile" %}</li>
-            <li><a href="{{ my_speaker.get_absolute_url }}">{% trans "My Profile" %}</a></li>
-            <li><a href="{% url "speaker_edit" my_speaker.slug %}">{% trans "Edit Profile" %}</a></li>
+            <li class="dropdown-header">{% trans "Speaker profile" %}</li>
+            <li><a href="{% url "speaker_edit" my_speaker.slug %}">{% trans "Edit profile" %}</a></li>
             <li class="divider"></li>
             {% endif %}
             {% if my_programs %}

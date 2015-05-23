@@ -34,8 +34,8 @@
   <li class="list-group-item">
     {% for speaker in program.speakers.all %}
     <div class="speaker-small">
+    <img class="image" src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.slug }}">
     <a href="{{ speaker.get_absolute_url }}">
-        <img class="image" src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.slug }}">
         <span class="name">{{ speaker }}</span>
     </a>
     </div>
