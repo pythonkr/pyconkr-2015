@@ -38,7 +38,7 @@ class ProgramTime(models.Model):
 
 class ProgramCategory(models.Model):
     name = models.CharField(max_length=100, db_index=True)
-    slug = models.SlugField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=100, unique=True)
 
     def __unicode__(self):
         return self.name
@@ -51,7 +51,7 @@ class SponsorLevelManager(models.Manager):
 
 class SponsorLevel(models.Model):
     name = models.CharField(max_length=100, db_index=True)
-    slug = models.SlugField(max_length=100)
+    slug = models.SlugField(max_length=100, unique=True)
     desc = models.TextField(null=True, blank=True)
     order = models.IntegerField(default=1)
 
@@ -62,7 +62,7 @@ class SponsorLevel(models.Model):
 
 
 class Sponsor(models.Model):
-    slug = models.SlugField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=100, unique=True)
     name = models.CharField(max_length=100, db_index=True)
     image = models.ImageField(upload_to='sponsor', null=True, blank=True)
     url = models.CharField(max_length=255, null=True, blank=True)
@@ -77,7 +77,7 @@ class Sponsor(models.Model):
 
 
 class Speaker(models.Model):
-    slug = models.SlugField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=100, unique=True)
     name = models.CharField(max_length=100, db_index=True)
     email = models.EmailField(max_length=255, db_index=True,
                               null=True, blank=True)
