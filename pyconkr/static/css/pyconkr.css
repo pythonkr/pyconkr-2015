@@ -410,6 +410,7 @@ small a:hover {
     height: auto;
     border: 1px solid #E7E7E7;
     border-radius: 100px;
+    margin: 0 4px 0 -4px;
 }
 
 .timetable .title {
