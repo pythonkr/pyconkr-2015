@@ -16,6 +16,12 @@ class EmailLoginForm(forms.Form):
         })
     )
 
+    def __init__(self, *args, **kwargs):
+        super(EmailLoginForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_method = 'post'
+        self.helper.add_input(Submit('submit', _('Login')))
+
     def clean(self):
         cleaned_data = super(EmailLoginForm, self).clean()
         return cleaned_data
@@ -25,6 +31,7 @@ class SpeakerForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(SpeakerForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
+        self.helper.form_method = 'post'
         self.helper.add_input(Submit('submit', _('Submit')))
 
     class Meta:
@@ -43,6 +50,7 @@ class ProgramForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(ProgramForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
+        self.helper.form_method = 'post'
         self.helper.add_input(Submit('submit', _('Submit')))
 
     class Meta:
