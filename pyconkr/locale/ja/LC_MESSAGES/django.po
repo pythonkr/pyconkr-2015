@@ -260,11 +260,11 @@ msgid "Toggle navigation"
 msgstr "トグルナビゲーション"
 
 #: templates/nav.html:50
-msgid "My Profile"
+msgid "Speaker profile"
 msgstr "プロフィール"
 
 #: templates/nav.html:51
-msgid "Edit Profile"
+msgid "Edit profile"
 msgstr "プロフィール編集"
 
 #: templates/nav.html:61

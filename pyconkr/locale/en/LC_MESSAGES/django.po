@@ -262,12 +262,12 @@ msgid "Toggle navigation"
 msgstr "Toggle navigation"
 
 #: templates/nav.html:50
-msgid "My Profile"
-msgstr "My Profile"
+msgid "Speaker profile"
+msgstr "Speaker profile"
 
 #: templates/nav.html:51
 msgid "Edit Profile"
-msgstr "Edit Profile"
+msgstr "Edit profile"
 
 #: templates/nav.html:61
 msgid "Logout"

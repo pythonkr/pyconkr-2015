@@ -259,12 +259,12 @@ msgid "Toggle navigation"
 msgstr "툴바 토글"
 
 #: templates/nav.html:50
-msgid "My Profile"
-msgstr "내 프로필"
+msgid "Speaker profile"
+msgstr "발표자 프로필"
 
 #: templates/nav.html:51
-msgid "Edit Profile"
-msgstr "프로필 수정"
+msgid "Edit profile"
+msgstr "발표자 정보 수정"
 
 #: templates/nav.html:61
 msgid "Logout"
