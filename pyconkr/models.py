@@ -3,23 +3,15 @@ from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.template.defaultfilters import date as _date
-from django.utils.six import with_metaclass
 from django.utils.translation import ugettext_lazy as _
-from linguist.metaclasses import ModelMeta as LinguistMeta
 from jsonfield import JSONField
 from uuid import uuid4
 
 
-class Room(with_metaclass(LinguistMeta, models.Model)):
+class Room(models.Model):
     name = models.CharField(max_length=100)
     location = models.CharField(max_length=255, null=True, blank=True)
     desc = models.TextField(null=True, blank=True)
-
-    class Meta:
-        linguist = {
-            'identifier': 'room',
-            'fields': ('name', 'location', 'desc', ),
-        }
 
     def get_absolute_url(self):
         return reverse('room', args=[self.id])
@@ -28,37 +20,25 @@ class Room(with_metaclass(LinguistMeta, models.Model)):
         return self.name
 
 
-class ProgramDate(with_metaclass(LinguistMeta, models.Model)):
+class ProgramDate(models.Model):
     day = models.DateField()
 
     def __unicode__(self):
         return _date(self.day, "Y-m-d (D)")
 
 
-class ProgramTime(with_metaclass(LinguistMeta, models.Model)):
+class ProgramTime(models.Model):
     name = models.CharField(max_length=100)
     begin = models.TimeField()
     end = models.TimeField()
-
-    class Meta:
-        linguist = {
-            'identifier': 'program_time',
-            'fields': ('name', ),
-        }
 
     def __unicode__(self):
         return '%s - %s / %s' % (self.begin, self.end, self.name)
 
 
-class ProgramCategory(with_metaclass(LinguistMeta, models.Model)):
+class ProgramCategory(models.Model):
     name = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, unique=True)
-
-    class Meta:
-        linguist = {
-            'identifier': 'program_category',
-            'fields': ('name', ),
-        }
 
     def __unicode__(self):
         return self.name
@@ -69,7 +49,7 @@ class SponsorLevelManager(models.Manager):
         return super(SponsorLevelManager, self).get_queryset().all().order_by('order')
 
 
-class SponsorLevel(with_metaclass(LinguistMeta, models.Model)):
+class SponsorLevel(models.Model):
     name = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, unique=True)
     desc = models.TextField(null=True, blank=True)
@@ -77,29 +57,17 @@ class SponsorLevel(with_metaclass(LinguistMeta, models.Model)):
 
     objects = SponsorLevelManager()
 
-    class Meta:
-        linguist = {
-            'identifier': 'sponsor_level',
-            'fields': ('name', 'desc', ),
-        }
-
     def __unicode__(self):
         return self.name
 
 
-class Sponsor(with_metaclass(LinguistMeta, models.Model)):
+class Sponsor(models.Model):
     slug = models.SlugField(max_length=100, unique=True)
     name = models.CharField(max_length=100, db_index=True)
     image = models.ImageField(upload_to='sponsor', null=True, blank=True)
     url = models.CharField(max_length=255, null=True, blank=True)
     desc = models.TextField(null=True, blank=True)
     level = models.ForeignKey(SponsorLevel, null=True, blank=True)
-
-    class Meta:
-        linguist = {
-            'identifier': 'sponsor',
-            'fields': ('name', 'desc', ),
-        }
 
     def get_absolute_url(self):
         return reverse('sponsor', args=[self.slug])
@@ -108,7 +76,7 @@ class Sponsor(with_metaclass(LinguistMeta, models.Model)):
         return self.name
 
 
-class Speaker(with_metaclass(LinguistMeta, models.Model)):
+class Speaker(models.Model):
     slug = models.SlugField(max_length=100, unique=True)
     name = models.CharField(max_length=100, db_index=True)
     email = models.EmailField(max_length=255, db_index=True,
@@ -119,10 +87,6 @@ class Speaker(with_metaclass(LinguistMeta, models.Model)):
 
     class Meta:
         ordering = ['name']
-        linguist = {
-            'identifier': 'speaker',
-            'fields': ('name', 'desc', ),
-        }
 
     def get_badges(self, size_class=""):
         badge = \
@@ -157,7 +121,7 @@ class Speaker(with_metaclass(LinguistMeta, models.Model)):
         return '%s / %s' % (self.name, self.slug)
 
 
-class Program(with_metaclass(LinguistMeta, models.Model)):
+class Program(models.Model):
     name = models.CharField(max_length=100, db_index=True)
     desc = models.TextField(null=True, blank=True)
     slide_url = models.CharField(max_length=255, null=True, blank=True)
@@ -174,13 +138,6 @@ class Program(with_metaclass(LinguistMeta, models.Model)):
     category = models.ForeignKey(ProgramCategory, null=True, blank=True)
 
     is_recordable = models.BooleanField(default=True)
-
-    class Meta:
-        ordering = ['name']
-        linguist = {
-            'identifier': 'program',
-            'fields': ('name', 'desc', ),
-        }
 
     def get_absolute_url(self):
         return reverse('program', args=[self.id])
@@ -213,7 +170,7 @@ class Program(with_metaclass(LinguistMeta, models.Model)):
         return self.name
 
 
-class Announcement(with_metaclass(LinguistMeta, models.Model)):
+class Announcement(models.Model):
     title = models.CharField(max_length=100, db_index=True)
     desc = models.TextField(null=True, blank=True)
 
@@ -223,16 +180,22 @@ class Announcement(with_metaclass(LinguistMeta, models.Model)):
 
     class Meta:
         ordering = ['-id']
-        linguist = {
-            'identifier': 'announcement',
-            'fields': ('title', 'desc', ),
-        }
 
     def at(self):
         return self.announce_after if self.announce_after else self.created
 
     def __unicode__(self):
         return self.title
+
+
+class Jobfair(models.Model):
+    name = models.CharField(max_length=100, db_index=True)
+    location = models.CharField(max_length=255, null=True, blank=True)
+    sponsor = models.ForeignKey(Sponsor, null=True)
+    desc = models.TextField(null=True, blank=True)
+
+    def __unicode__(self):
+        return self.name
 
 
 class EmailToken(models.Model):

@@ -33,6 +33,7 @@ SITE_ID = 1
 
 INSTALLED_APPS = (
     # django apps
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,7 +47,6 @@ INSTALLED_APPS = (
     'django_summernote',
     'rosetta',
     'crispy_forms',
-    'linguist',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -94,7 +94,6 @@ ugettext = lambda s: s
 LANGUAGES = (
     ('ko', ugettext('Korean')),
     ('en', ugettext('English')),
-    ('ja', ugettext('Japanase')),
 )
 LANGUAGE_CODE = 'en-us'
 

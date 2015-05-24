@@ -3,13 +3,13 @@ from django.contrib.flatpages.models import FlatPage
 from django.db import models
 from django_summernote.admin import SummernoteModelAdmin
 from django_summernote.widgets import SummernoteWidget
-from linguist.admin import ModelTranslationAdmin
+from modeltranslation.admin import TranslationAdmin
 from .models import (Room, Program, ProgramTime, ProgramDate, ProgramCategory,
                      Speaker, Sponsor, SponsorLevel,
-                     Announcement, EmailToken)
+                     Announcement, Jobfair, EmailToken)
 
 
-class RoomAdmin(SummernoteModelAdmin, ModelTranslationAdmin):
+class RoomAdmin(SummernoteModelAdmin, TranslationAdmin):
     list_display = ('id', 'name',)
     list_editable = ('name',)
     search_fields = ('name',)
@@ -21,20 +21,20 @@ class ProgramDateAdmin(admin.ModelAdmin):
 admin.site.register(ProgramDate, ProgramDateAdmin)
 
 
-class ProgramTimeAdmin(ModelTranslationAdmin):
+class ProgramTimeAdmin(TranslationAdmin):
     list_display = ('id', 'name', 'begin', 'end',)
     list_editable = ('name',)
     ordering = ('begin',)
 admin.site.register(ProgramTime, ProgramTimeAdmin)
 
 
-class ProgramCategoryAdmin(ModelTranslationAdmin):
+class ProgramCategoryAdmin(TranslationAdmin):
     list_display = ('id', 'name', 'slug',)
     list_editable = ('name', 'slug',)
 admin.site.register(ProgramCategory, ProgramCategoryAdmin)
 
 
-class SponsorAdmin(SummernoteModelAdmin, ModelTranslationAdmin):
+class SponsorAdmin(SummernoteModelAdmin, TranslationAdmin):
     list_display = ('id', 'slug', 'name',)
     ordering = ('name',)
     list_editable = ('slug', 'name',)
@@ -42,7 +42,7 @@ class SponsorAdmin(SummernoteModelAdmin, ModelTranslationAdmin):
 admin.site.register(Sponsor, SponsorAdmin)
 
 
-class SponsorLevelAdmin(SummernoteModelAdmin, ModelTranslationAdmin):
+class SponsorLevelAdmin(SummernoteModelAdmin, TranslationAdmin):
     list_display = ('id', 'order', 'name', 'slug',)
     list_editable = ('order', 'name', 'slug',)
     ordering = ('order',)
@@ -50,7 +50,7 @@ class SponsorLevelAdmin(SummernoteModelAdmin, ModelTranslationAdmin):
 admin.site.register(SponsorLevel, SponsorLevelAdmin)
 
 
-class SpeakerAdmin(SummernoteModelAdmin, ModelTranslationAdmin):
+class SpeakerAdmin(SummernoteModelAdmin, TranslationAdmin):
     list_display = ('id', 'slug', 'name', 'email',)
     list_editable = ('slug', 'name', 'email',)
     ordering = ('name',)
@@ -58,7 +58,7 @@ class SpeakerAdmin(SummernoteModelAdmin, ModelTranslationAdmin):
 admin.site.register(Speaker, SpeakerAdmin)
 
 
-class ProgramAdmin(SummernoteModelAdmin, ModelTranslationAdmin):
+class ProgramAdmin(SummernoteModelAdmin, TranslationAdmin):
     list_display = ('id', 'name', 'date', 'room', 'get_speakers', 'category', 'is_recordable',)
     list_editable = ('name', 'category', 'is_recordable',)
     ordering = ('id',)
@@ -67,11 +67,19 @@ class ProgramAdmin(SummernoteModelAdmin, ModelTranslationAdmin):
 admin.site.register(Program, ProgramAdmin)
 
 
-class AnnouncementAdmin(SummernoteModelAdmin, ModelTranslationAdmin):
+class AnnouncementAdmin(SummernoteModelAdmin, TranslationAdmin):
     list_display = ('id', 'title', 'created', 'modified')
     ordering = ('id',)
     search_fields = ('title',)
 admin.site.register(Announcement, AnnouncementAdmin)
+
+
+class JobfairAdmin(SummernoteModelAdmin, TranslationAdmin):
+    list_display = ('id', 'name', 'location', 'sponsor')
+    list_editable = ('name', 'location', 'sponsor')
+    ordering = ('id',)
+    search_fields = ('name', 'sponsor__name')
+admin.site.register(Jobfair, JobfairAdmin)
 
 
 class EmailTokenAdmin(admin.ModelAdmin):
@@ -92,7 +100,7 @@ class SummernoteWidgetWithCustomToolbar(SummernoteWidget):
         return contexts
 
 
-class FlatPageAdmin(ModelTranslationAdmin):
+class FlatPageAdmin(TranslationAdmin):
     formfield_overrides = {models.TextField: {'widget': SummernoteWidgetWithCustomToolbar}}
 
 
