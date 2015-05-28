@@ -94,6 +94,7 @@ ugettext = lambda s: s
 LANGUAGES = (
     ('ko', ugettext('Korean')),
     ('en', ugettext('English')),
+    ('ja', ugettext('Japanse')),
 )
 LANGUAGE_CODE = 'en-us'
 
