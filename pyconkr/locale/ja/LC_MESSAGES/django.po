@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-21 01:03+0000\n"
-"PO-Revision-Date: 2015-03-21 01:04+0000\n"
-"Last-Translator:   <>\n"
+"POT-Creation-Date: 2015-05-28 17:55+0000\n"
+"PO-Revision-Date: 2015-05-28 17:58+0000\n"
+"Last-Translator: Hyunwoo Park <ez.amiryo@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Translated-Using: django-rosetta 0.7.5\n"
+"X-Translated-Using: django-rosetta 0.7.6\n"
 
 #: context_processors.py:18
 msgid "About"
@@ -107,36 +107,55 @@ msgstr "外国の訪問者"
 msgid "Registration"
 msgstr "登録案内"
 
-#: forms.py:28 forms.py:46
+#: forms.py:25 templates/login_notvalidtoken.html:7 templates/nav.html:67
+#: views.py:169
+msgid "Login"
+msgstr "ログイン"
+
+#: forms.py:37 forms.py:79
 msgid "Submit"
 msgstr "提出"
 
-#: forms.py:37 templates/nav.html:49 templates/pyconkr/speaker_detail.html:18
+#: forms.py:38 forms.py:60
+#, python-format
+msgid "Maximum size is %d MB"
+msgstr ""
+
+#: forms.py:40 forms.py:67
+#, python-format
+msgid "Minimum dimension is %d x %d"
+msgstr ""
+
+#: forms.py:50
+msgid "Photo"
+msgstr ""
+
+#: forms.py:51 templates/nav.html:49 templates/nav.html.py:61
+#: templates/pyconkr/speaker_detail.html:19
 msgid "Profile"
 msgstr "プロフィール"
 
-#: forms.py:38
+#: forms.py:52
 msgid "Additional information"
 msgstr "その他の情報"
 
-#: forms.py:55
+#: forms.py:88
 msgid "Slide URL"
 msgstr "発表スライドのURL"
 
-#: forms.py:56
+#: forms.py:89
 msgid "Video URL"
 msgstr "発表動画のURL"
 
-#: forms.py:57 templates/pyconkr/program_detail.html:45
+#: forms.py:90 templates/pyconkr/program_detail.html:47
 msgid "Photography and recording is allowed"
 msgstr "写真撮影、録画は許可されています"
 
-#: forms.py:58 templates/pyconkr/program_detail.html:63
+#: forms.py:91 templates/pyconkr/program_detail.html:66
 msgid "Description"
 msgstr "説明"
 
-
-#: models.py:79
+#: models.py:86
 msgid "help-text-for-speaker-info"
 msgstr ""
 "<p>個人のページをJSON形式で追加してください。</p>\n"
@@ -149,19 +168,27 @@ msgstr ""
 "</pre>\n"
 "<p>サポートされているページのリストは<a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a>より確認できます。</p>"
 
-#: settings.py:89
+#: models.py:167
+msgid "Not arranged yet"
+msgstr ""
+
+#: settings.py:95
 msgid "Korean"
 msgstr "韓国語"
 
-#: settings.py:90
+#: settings.py:96
 msgid "English"
 msgstr "英語"
 
-#: settings.py:133
+#: settings.py:97
+msgid "Japanese"
+msgstr "日本語"
+
+#: settings.py:154
 msgid "PyCon Korea 2015 one-time login token"
 msgstr "PyCon Korea 2015 ワンタイムログイントークン"
 
-#: settings.py:134 templates/mail/token_html.html:2
+#: settings.py:155 templates/mail/token_html.html:2
 msgid "PyCon Korea"
 msgstr "PyCon Korea"
 
@@ -172,8 +199,8 @@ msgstr "PyCon Korea 2015"
 #: templates/base.html:17
 msgid "PyCon Korea Opengraph Description"
 msgstr ""
-"PyConはオープンソースのプログラミング言語であるPythonユーザーのためのイベントです。PyCon Korea 2015はPythonを使った開発者やユーザーの知識と経験を"
-"共有し、韓国オープンソースコミュニティとPythonの活性化に寄与いたします。"
+"PyConはオープンソースのプログラミング言語であるPythonユーザーのためのイベントです。PyCon Korea "
+"2015はPythonを使った開発者やユーザーの知識と経験を共有し、韓国オープンソースコミュニティとPythonの活性化に寄与いたします。"
 
 #: templates/disqus.html:2
 msgid "Comments"
@@ -212,15 +239,32 @@ msgstr "詳細情報"
 msgid "Frontpage schedule"
 msgstr "上巖洞ヌリクムスクエア, 2015年 6月 27~28日"
 
-#: templates/login.html:5
+#: templates/login.html:7
 msgid "Login via mail"
 msgstr "Eメールでログイン"
 
-#: templates/login.html:20
+#: templates/login.html:9
 msgid ""
 "We store your mail address only. Never store password or any personal "
 "information."
 msgstr "Eメールアドレスのみ保存されます。パスワードやその他の個人情報は保存されません。"
+
+#: templates/login.html:13
+#| msgid "Login via mail"
+msgid "Login via Social accounts"
+msgstr ""
+
+#: templates/login.html:16
+msgid "Sign in with GitHub"
+msgstr ""
+
+#: templates/login.html:18
+msgid "Sign in with Twitter"
+msgstr ""
+
+#: templates/login.html:20
+msgid "Sign in with Facebook"
+msgstr ""
 
 #: templates/login_mailsent.html:5
 msgid ""
@@ -243,10 +287,6 @@ msgstr "ホームへ戻る"
 msgid "Requested token is not found or invalid."
 msgstr "リクエストされたトークンは存在しないか有効ではありません。"
 
-#: templates/login_notvalidtoken.html:7 templates/nav.html:66 views.py:183
-msgid "Login"
-msgstr "ログイン"
-
 #: templates/mail/token_html.html:3 templates/mail/token_text.html:2
 msgid "You can login to PyCon Korea homepage via below url."
 msgstr "下記のURLよりPyCon Koreaのウェブサイトにログインできます。"
@@ -260,22 +300,24 @@ msgid "Toggle navigation"
 msgstr "トグルナビゲーション"
 
 #: templates/nav.html:50
-msgid "Speaker profile"
+#| msgid "Profile"
+msgid "My Profile"
 msgstr "プロフィール"
 
 #: templates/nav.html:51
-msgid "Edit profile"
+#| msgid "Edit profile"
+msgid "Edit Profile"
 msgstr "プロフィール編集"
 
-#: templates/nav.html:61
+#: templates/nav.html:62
 msgid "Logout"
 msgstr "ログアウト"
 
-#: templates/nav.html:73
+#: templates/nav.html:74
 msgid "Language"
 msgstr "言語 / Language"
 
-#: templates/pyconkr/announcement_detail.html:13
+#: templates/pyconkr/announcement_detail.html:16
 msgid "Back to list"
 msgstr "リストへ戻る"
 
@@ -284,28 +326,28 @@ msgid "Read more"
 msgstr "もっと見る"
 
 #: templates/pyconkr/program_detail.html:4
-#: templates/pyconkr/speaker_detail.html:22
+#: templates/pyconkr/speaker_detail.html:24
 msgid "Program"
 msgstr "プログラム"
 
-#: templates/pyconkr/program_detail.html:47
+#: templates/pyconkr/program_detail.html:49
 msgid "Photography and recording is not allowed"
 msgstr "写真撮影、録画は禁止されています。"
 
-#: templates/pyconkr/program_detail.html:52
+#: templates/pyconkr/program_detail.html:54
 msgid "Slide"
 msgstr "発表スライド"
 
-#: templates/pyconkr/program_detail.html:56
+#: templates/pyconkr/program_detail.html:58
 msgid "Video"
 msgstr "発表動画"
 
-#: templates/pyconkr/program_detail.html:60
+#: templates/pyconkr/program_detail.html:62
 msgid "PDF"
 msgstr "PDF"
 
-#: templates/pyconkr/program_detail.html:67
-#: templates/pyconkr/speaker_detail.html:29
+#: templates/pyconkr/program_detail.html:71
+#: templates/pyconkr/speaker_detail.html:31
 msgid "Edit"
 msgstr "編集"
 
@@ -332,15 +374,17 @@ msgstr "発表者"
 msgid "Sponsor"
 msgstr "スポンサー"
 
-#: templates/sponsors.html:4
+#: templates/sponsors.html:2
 msgid "Sponsor list"
 msgstr "スポンサーリスト"
 
-#: views.py:196
+#: views.py:182
 msgid "Not valid token"
 msgstr "有効なトークンではありません"
 
-#: views.py:218
+#: views.py:204
 msgid "Mail sent"
 msgstr "メールを送りました"
 
+#~ msgid "Speaker profile"
+#~ msgstr "プロフィール"

@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-21 01:03+0000\n"
-"PO-Revision-Date: 2015-03-21 01:04+0000\n"
-"Last-Translator:   <>\n"
+"POT-Creation-Date: 2015-05-28 17:55+0000\n"
+"PO-Revision-Date: 2015-05-28 17:57+0000\n"
+"Last-Translator: Hyunwoo Park <ez.amiryo@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Translated-Using: django-rosetta 0.7.5\n"
+"X-Translated-Using: django-rosetta 0.7.6\n"
 
 #: context_processors.py:18
 msgid "About"
@@ -107,35 +107,55 @@ msgstr "해외 방문자 지원"
 msgid "Registration"
 msgstr "등록 안내"
 
-#: forms.py:28 forms.py:46
+#: forms.py:25 templates/login_notvalidtoken.html:7 templates/nav.html:67
+#: views.py:169
+msgid "Login"
+msgstr "로그인"
+
+#: forms.py:37 forms.py:79
 msgid "Submit"
 msgstr "제출"
 
-#: forms.py:37 templates/nav.html:49 templates/pyconkr/speaker_detail.html:18
+#: forms.py:38 forms.py:60
+#, python-format
+msgid "Maximum size is %d MB"
+msgstr "최대 크기 %d MB"
+
+#: forms.py:40 forms.py:67
+#, python-format
+msgid "Minimum dimension is %d x %d"
+msgstr "최소 해상도 %d x %d"
+
+#: forms.py:50
+msgid "Photo"
+msgstr "사진"
+
+#: forms.py:51 templates/nav.html:49 templates/nav.html.py:61
+#: templates/pyconkr/speaker_detail.html:19
 msgid "Profile"
 msgstr "프로필"
 
-#: forms.py:38
+#: forms.py:52
 msgid "Additional information"
 msgstr "추가 정보"
 
-#: forms.py:55
+#: forms.py:88
 msgid "Slide URL"
 msgstr "발표 슬라이드 URL"
 
-#: forms.py:56
+#: forms.py:89
 msgid "Video URL"
 msgstr "발표 동영상 URL"
 
-#: forms.py:57 templates/pyconkr/program_detail.html:45
+#: forms.py:90 templates/pyconkr/program_detail.html:47
 msgid "Photography and recording is allowed"
 msgstr "촬영, 녹화 가능합니다."
 
-#: forms.py:58 templates/pyconkr/program_detail.html:63
+#: forms.py:91 templates/pyconkr/program_detail.html:66
 msgid "Description"
 msgstr "설명"
 
-#: models.py:79
+#: models.py:86
 msgid "help-text-for-speaker-info"
 msgstr ""
 "<p>개인 페이지들을 JSON 형식으로 추가해주세요.</p>\n"
@@ -148,19 +168,27 @@ msgstr ""
 "</pre>\n"
 "<p>지원되는 페이지 목록은 <a href=\"http://lipis.github.io/bootstrap-social/\" target=\"_blank\">http://lipis.github.io/bootstrap-social/</a>에서 확인하실 수 있습니다.</p>"
 
-#: settings.py:89
+#: models.py:167
+msgid "Not arranged yet"
+msgstr "아직 결정되지 않았습니다"
+
+#: settings.py:95
 msgid "Korean"
 msgstr "한국어"
 
-#: settings.py:90
+#: settings.py:96
 msgid "English"
 msgstr "영어"
 
-#: settings.py:133
+#: settings.py:97
+msgid "Japanese"
+msgstr "일본어"
+
+#: settings.py:154
 msgid "PyCon Korea 2015 one-time login token"
 msgstr "파이콘 한국 2015 일회용 로그인 토큰"
 
-#: settings.py:134 templates/mail/token_html.html:2
+#: settings.py:155 templates/mail/token_html.html:2
 msgid "PyCon Korea"
 msgstr "파이콘 한국"
 
@@ -211,15 +239,32 @@ msgstr "더 알아보기"
 msgid "Frontpage schedule"
 msgstr "상암동 누리꿈스퀘어, 2015년 6월 27~28일"
 
-#: templates/login.html:5
+#: templates/login.html:7
 msgid "Login via mail"
 msgstr "메일로 로그인"
 
-#: templates/login.html:20
+#: templates/login.html:9
 msgid ""
 "We store your mail address only. Never store password or any personal "
 "information."
 msgstr "오직 메일 주소만 저장합니다. 비밀번호나 기타 개인 정보를 절대로 저장하지 않습니다."
+
+#: templates/login.html:13
+#| msgid "Login via mail"
+msgid "Login via Social accounts"
+msgstr "소셜 계정으로 로그인"
+
+#: templates/login.html:16
+msgid "Sign in with GitHub"
+msgstr "GitHub으로 로그인"
+
+#: templates/login.html:18
+msgid "Sign in with Twitter"
+msgstr "트위터로 로그인 "
+
+#: templates/login.html:20
+msgid "Sign in with Facebook"
+msgstr "페이스북으로 로그인"
 
 #: templates/login_mailsent.html:5
 msgid ""
@@ -242,10 +287,6 @@ msgstr "첫 화면으로"
 msgid "Requested token is not found or invalid."
 msgstr "요청한 토큰이 없거나 유효하지 않습니다."
 
-#: templates/login_notvalidtoken.html:7 templates/nav.html:66 views.py:183
-msgid "Login"
-msgstr "로그인"
-
 #: templates/mail/token_html.html:3 templates/mail/token_text.html:2
 msgid "You can login to PyCon Korea homepage via below url."
 msgstr "아래 주소를 통해 파이콘 한국 홈페이지에 로그인하실 수 있습니다."
@@ -259,22 +300,24 @@ msgid "Toggle navigation"
 msgstr "툴바 토글"
 
 #: templates/nav.html:50
-msgid "Speaker profile"
-msgstr "발표자 프로필"
+#| msgid "Profile"
+msgid "My Profile"
+msgstr "내 정보"
 
 #: templates/nav.html:51
-msgid "Edit profile"
-msgstr "발표자 정보 수정"
+#| msgid "Edit profile"
+msgid "Edit Profile"
+msgstr "내 정보 수정"
 
-#: templates/nav.html:61
+#: templates/nav.html:62
 msgid "Logout"
 msgstr "로그아웃"
 
-#: templates/nav.html:73
+#: templates/nav.html:74
 msgid "Language"
 msgstr "언어 / Language"
 
-#: templates/pyconkr/announcement_detail.html:13
+#: templates/pyconkr/announcement_detail.html:16
 msgid "Back to list"
 msgstr "목록으로"
 
@@ -283,28 +326,28 @@ msgid "Read more"
 msgstr "더 보기"
 
 #: templates/pyconkr/program_detail.html:4
-#: templates/pyconkr/speaker_detail.html:22
+#: templates/pyconkr/speaker_detail.html:24
 msgid "Program"
 msgstr "프로그램"
 
-#: templates/pyconkr/program_detail.html:47
+#: templates/pyconkr/program_detail.html:49
 msgid "Photography and recording is not allowed"
 msgstr "촬영, 녹화가 금지되어 있습니다."
 
-#: templates/pyconkr/program_detail.html:52
+#: templates/pyconkr/program_detail.html:54
 msgid "Slide"
 msgstr "발표 슬라이드"
 
-#: templates/pyconkr/program_detail.html:56
+#: templates/pyconkr/program_detail.html:58
 msgid "Video"
 msgstr "발표 동영상"
 
-#: templates/pyconkr/program_detail.html:60
+#: templates/pyconkr/program_detail.html:62
 msgid "PDF"
 msgstr "PDF"
 
-#: templates/pyconkr/program_detail.html:67
-#: templates/pyconkr/speaker_detail.html:29
+#: templates/pyconkr/program_detail.html:71
+#: templates/pyconkr/speaker_detail.html:31
 msgid "Edit"
 msgstr "수정"
 
@@ -331,14 +374,17 @@ msgstr "발표자"
 msgid "Sponsor"
 msgstr "후원사"
 
-#: templates/sponsors.html:4
+#: templates/sponsors.html:2
 msgid "Sponsor list"
 msgstr "후원사 목록"
 
-#: views.py:196
+#: views.py:182
 msgid "Not valid token"
 msgstr "유효한 토큰 아님"
 
-#: views.py:218
+#: views.py:204
 msgid "Mail sent"
 msgstr "메일 발송 완료"
+
+#~ msgid "Speaker profile"
+#~ msgstr "발표자 프로필"
