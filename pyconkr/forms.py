@@ -1,4 +1,6 @@
 from django import forms
+from django.conf import settings
+from django.core.files.images import get_image_dimensions
 from django.utils.translation import ugettext_lazy as _
 from django_summernote.widgets import SummernoteInplaceWidget
 from crispy_forms.helper import FormHelper
@@ -33,17 +35,40 @@ class SpeakerForm(forms.ModelForm):
         self.helper = FormHelper()
         self.helper.form_method = 'post'
         self.helper.add_input(Submit('submit', _('Submit')))
+        self.fields['image'].help_text += _('Maximum size is %d MB') \
+            % settings.SPEAKER_IMAGE_MAXIMUM_FILESIZE_IN_MB
+        self.fields['image'].help_text += ' / ' + _('Minimum dimension is %d x %d') \
+            % settings.SPEAKER_IMAGE_MINIMUM_DIMENSION
 
     class Meta:
         model = Speaker
-        fields = ('desc', 'info', )
+        fields = ('image', 'desc', 'info', )
         widgets = {
             'desc': SummernoteInplaceWidget(),
         }
         labels = {
+            'image': _('Photo'),
             'desc': _('Profile'),
             'info': _('Additional information'),
         }
+
+    def clean_image(self):
+        image = self.cleaned_data.get('image')
+        if image:
+            if image._size > settings.SPEAKER_IMAGE_MAXIMUM_FILESIZE_IN_MB * 1024 * 1024:
+                raise forms.ValidationError(
+                    _('Maximum size is %d MB')
+                    % settings.SPEAKER_IMAGE_MAXIMUM_FILESIZE_IN_MB
+                )
+            w, h = get_image_dimensions(image)
+            if w < settings.SPEAKER_IMAGE_MINIMUM_DIMENSION[0] \
+                    or h < settings.SPEAKER_IMAGE_MINIMUM_DIMENSION[1]:
+                raise forms.ValidationError(
+                    _('Minimum dimension is %d x %d')
+                    % settings.SPEAKER_IMAGE_MINIMUM_DIMENSION
+                )
+
+        return image
 
 
 class ProgramForm(forms.ModelForm):
