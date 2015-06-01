@@ -55,11 +55,15 @@ class SpeakerForm(forms.ModelForm):
     def clean_image(self):
         image = self.cleaned_data.get('image')
         if image:
-            if image._size > settings.SPEAKER_IMAGE_MAXIMUM_FILESIZE_IN_MB * 1024 * 1024:
-                raise forms.ValidationError(
-                    _('Maximum size is %d MB')
-                    % settings.SPEAKER_IMAGE_MAXIMUM_FILESIZE_IN_MB
-                )
+            try:
+                if image._size > settings.SPEAKER_IMAGE_MAXIMUM_FILESIZE_IN_MB * 1024 * 1024:
+                    raise forms.ValidationError(
+                        _('Maximum size is %d MB')
+                        % settings.SPEAKER_IMAGE_MAXIMUM_FILESIZE_IN_MB
+                    )
+            except AttributeError:
+                pass
+
             w, h = get_image_dimensions(image)
             if w < settings.SPEAKER_IMAGE_MINIMUM_DIMENSION[0] \
                     or h < settings.SPEAKER_IMAGE_MINIMUM_DIMENSION[1]:
