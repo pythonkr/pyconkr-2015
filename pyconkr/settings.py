@@ -97,6 +97,9 @@ LANGUAGES = (
     ('ja', ugettext('Japanese')),
 )
 LANGUAGE_CODE = 'en-us'
+MODELTRANSLATION_FALLBACK_LANGUAGES = {
+    'default': ('ko', 'en', 'ja'),
+}
 
 TIME_ZONE = 'UTC'
 
