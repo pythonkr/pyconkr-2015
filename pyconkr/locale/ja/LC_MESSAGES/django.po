@@ -237,7 +237,7 @@ msgstr "詳細情報"
 
 #: templates/index.html:27
 msgid "Frontpage schedule"
-msgstr "上巖洞ヌリクムスクエア, 2015年 6月 27~28日"
+msgstr "上巖洞ヌリクムスクエア, 2015年 8月 29~30日"
 
 #: templates/login.html:7
 msgid "Login via mail"

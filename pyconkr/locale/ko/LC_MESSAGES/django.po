@@ -237,7 +237,7 @@ msgstr "더 알아보기"
 
 #: templates/index.html:27
 msgid "Frontpage schedule"
-msgstr "상암동 누리꿈스퀘어, 2015년 6월 27~28일"
+msgstr "상암동 누리꿈스퀘어, 2015년 8월 29~30일"
 
 #: templates/login.html:7
 msgid "Login via mail"

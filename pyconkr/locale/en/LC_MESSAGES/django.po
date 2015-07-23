@@ -237,7 +237,7 @@ msgstr "Stay connected"
 
 #: templates/index.html:27
 msgid "Frontpage schedule"
-msgstr "Nuri Dream Square, Seoul @ June 27–28"
+msgstr "Nuri Dream Square, Seoul @ August 29–30"
 
 #: templates/login.html:7
 msgid "Login via mail"
