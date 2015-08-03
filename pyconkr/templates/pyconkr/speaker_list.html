@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load i18n %}
+{% load thumbnail %}
 
 {% block content %}
 <ul class="speakers media-list">
 {% for speaker in object_list %}
   <li class="media">
     <a class="pull-left" href="{{ speaker.get_absolute_url }}">
-      <img class="media-speakerect" src="{{ speaker.get_image_url }}" alt="photo of {{ speaker.name }}">
+      {% thumbnail speaker.image "128x128" crop="center" as im %}
+      <img class="media-speakerect" src="{{ im.url }}" alt="photo of {{ speaker.name }}">
+      {% endthumbnail %}
     </a>
     <div class="media-body">
       <h4 class="media-heading">
