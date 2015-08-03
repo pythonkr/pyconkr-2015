@@ -393,6 +393,10 @@ small a:hover {
     border-color: rgba(0, 0, 0, 0.2);
 }
 
+.btn-social-default {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
 .list-group-item {
     font-size: 110%;
 }

@@ -90,8 +90,8 @@ class Speaker(models.Model):
 
     def get_badges(self, size_class=""):
         badge = \
-            '<a class="btn btn-social {} btn-{}" href="{}" target="_blank">' \
-            '<i class="fa fa-{}"></i>{}</a>'
+            '<a class="btn btn-social btn-social-default {} btn-{}" href="{}" target="_blank">' \
+            '<i class="fa fa-external-link fa-{}"></i>{}</a>'
         fa_replacement = {
             "homepage": "home",
             "blog": "pencil",

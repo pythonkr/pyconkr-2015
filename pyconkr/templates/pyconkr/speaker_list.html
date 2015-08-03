@@ -10,6 +10,8 @@
     <a class="pull-left" href="{{ speaker.get_absolute_url }}">
       {% thumbnail speaker.image "128x128" crop="center" as im %}
       <img class="media-speakerect" src="{{ im.url }}" alt="photo of {{ speaker.name }}">
+      {% empty %}
+      <img class="media-speakerect" src="{% static "image/anonymous.png" %}">
       {% endthumbnail %}
     </a>
     <div class="media-body">
