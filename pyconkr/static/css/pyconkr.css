@@ -417,6 +417,10 @@ small a:hover {
     margin: 0 4px 0 -4px;
 }
 
+.timetable .table td {
+    text-align: left;
+}
+
 .timetable .title {
     font-size: 110%;
 }

@@ -22,9 +22,11 @@
   </div>
   {% endif %}
   <h3>{% trans "Program" %}</h3>
+  <ul>
   {% for program in speaker.program_set.all %}
-  <a href="{{ program.get_absolute_url }}">{{ program.name }}</a>
+    <li><a href="{{ program.get_absolute_url }}">{{ program.name }}</a></li>
   {% endfor %}
+  </ul>
 </div>
 {% if editable %}
 <hr>
