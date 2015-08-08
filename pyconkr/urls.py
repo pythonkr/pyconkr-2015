@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib.flatpages import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from .views import index, schedule, robots
+from .views import index, schedule, robots, registration
 from .views import RoomDetail, JobfairList
 from .views import AnnouncementList, AnnouncementDetail
 from .views import SpeakerList, SpeakerDetail, SpeakerUpdate
@@ -50,6 +50,7 @@ urlpatterns = patterns(
     url(r'^logout/$', logout, name='logout'),
     url(r'^profile/$', profile, name='profile'),
 
+    url(r'^registration/$', registration, name='registration'),
     url(r'^robots.txt$', robots, name='robots'),
     url(r'^summernote/', include('django_summernote.urls')),
     url(r'^admin/', include(admin.site.urls)),

@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from django_summernote.widgets import SummernoteInplaceWidget
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
-from .models import Speaker, Program
+from .models import Speaker, Program, Registration
 
 
 class EmailLoginForm(forms.Form):
@@ -95,3 +95,17 @@ class ProgramForm(forms.ModelForm):
             'is_recordable': _('Photography and recording is allowed'),
             'desc': _('Description'),
         }
+
+
+class RegistrationForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(RegistrationForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_id = 'registration-form'
+        self.helper.form_method = 'post'
+        self.helper.add_input(Submit('submit', _('Pay'), disabled='disabled'))
+
+    class Meta:
+        model = Registration
+        fields = ('name', 'email', 'payment_method', )
+

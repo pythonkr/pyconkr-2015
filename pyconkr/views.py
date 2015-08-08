@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib.auth import login as user_login, logout as user_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -10,12 +11,14 @@ from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.cache import never_cache
 from django.views.generic import ListView, DetailView, UpdateView
 from datetime import datetime, timedelta
-from .forms import EmailLoginForm, SpeakerForm, ProgramForm
-from .helper import sendEmailToken
+from uuid import uuid4
+from .forms import EmailLoginForm, SpeakerForm, ProgramForm, RegistrationForm
+from .helper import sendEmailToken, render_json
 from .models import (Room,
                      Program, ProgramDate, ProgramTime, ProgramCategory,
                      Speaker, Sponsor, Jobfair, Announcement,
-                     EmailToken)
+                     EmailToken, Registration)
+from iamporter import get_access_token, Iamporter, IamporterError
 
 
 def index(request):
@@ -213,3 +216,61 @@ def logout(request):
 @login_required
 def profile(request):
     return render(request, 'profile.html')
+
+
+
+def registration(request):
+    if request.method == 'GET':
+        uid = str(uuid4())
+        form = RegistrationForm()
+
+        return render(request, 'pyconkr/registration.html', {
+            'IMP_USER_CODE': settings.IMP_USER_CODE,
+            'form': form,
+            'uid': uid,
+            'amount': 15000,
+            'vat': 0
+        })
+    elif request.method == 'POST':
+        print(request.POST)
+        form = RegistrationForm(request.POST)
+
+        # TODO : more form validation
+        if not form.is_valid():
+            return render_json({
+                'success': False,
+                'message': _('User information is not valid.'),
+            })
+
+        try:
+            access_token = get_access_token(settings.IMP_API_KEY, settings.IMP_API_SECRET)
+            imp_client = Iamporter(access_token)
+
+            result = imp_client.onetime(
+                token=request.POST.get('token'),
+                merchant_uid=request.POST.get('merchant_uid'),
+                amount=request.POST.get('amount'),
+                vat=request.POST.get('vat'),
+                card_number=request.POST.get('card_number'),
+                expiry=request.POST.get('expiry'),
+                birth=request.POST.get('birth'),
+                pwd_2digit=request.POST.get('pwd_2digit'),
+            )
+            print(result)
+        except IamporterError as e:
+            # TODO : other status code
+            return render_json({
+                'success': False,
+                'code': e.code,
+                'message': e.message,
+            })
+        else:
+            Registration(
+                name=request.POST.get('name'),
+                email=request.POST.get('email'),
+                payment_method=request.POST.get('payment_method'),
+            ).save()
+
+            return render_json({
+                'success': True,
+            })

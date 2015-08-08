@@ -210,3 +210,16 @@ class EmailToken(models.Model):
 
 class Profile(models.Model):
     pass
+
+
+class Registration(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=255)
+    payment_method = models.CharField(
+        max_length=10,
+        choices=(
+            ('card', _('Credit Card')),
+            ('bank', _('Bank Transfer')),
+        )
+    )
+    created = models.DateTimeField(auto_now_add=True)
