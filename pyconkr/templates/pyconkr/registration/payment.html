@@ -17,9 +17,6 @@
         // 자 콜백의 지옥으로 가자..
         $(document).ready(function() {
             function handleResponse(response) {
-                console.log(this);
-                console.log(response);
-
                 response['csrfmiddlewaretoken'] = '{{ csrf_token }}';
                 // TODO : validation
                 response['name'] = $('#id_name').val();

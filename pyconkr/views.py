@@ -263,7 +263,6 @@ def registration_payment(request):
             'vat': 0
         })
     elif request.method == 'POST':
-        print(request.POST)
         form = RegistrationForm(request.POST)
 
         # TODO : more form validation
@@ -298,10 +297,8 @@ def registration_payment(request):
                     pwd_2digit=request.POST.get('pwd_2digit'),
                     customer_uid=form.cleaned_data.get('email'),
                 )
-                print(result)
 
             confirm = imp_client.find_by_merchant_uid(request.POST.get('merchant_uid'))
-            print(confirm)
 
             if confirm['amount'] != 15000:
                 # TODO : cancel
