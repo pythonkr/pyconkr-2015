@@ -9,6 +9,7 @@ from django.db.models import Q
 from django.shortcuts import render, redirect
 from django.utils.translation import ugettext as _
 from django.views.decorators.cache import never_cache
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, DetailView, UpdateView
 from datetime import datetime, timedelta
 from uuid import uuid4
@@ -325,3 +326,26 @@ def registration_payment(request):
             return render_json({
                 'success': True,
             })
+
+
+@csrf_exempt
+def registration_payment_callback(request):
+    merchant_uid = request.POST.get('merchant_uid', None)
+    if not merchant_uid:
+        raise IOError
+
+    access_token = get_access_token(settings.IMP_API_KEY, settings.IMP_API_SECRET)
+    imp_client = Iamporter(access_token)
+
+    confirm = imp_client.find_by_merchant_uid(merchant_uid)
+    if confirm['amount'] != 15000:
+        # TODO : cancel
+        raise IOError  # TODO : -_-+++
+
+    registration = Registration.objects.filter(merchant_uid=merchant_uid).get()
+    registration.payment_status = 'paid'
+    registration.save()
+
+    return render_json({
+        'success': True
+    })
