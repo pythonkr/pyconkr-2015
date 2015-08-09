@@ -30,15 +30,9 @@
                     <td>{{ registration.modified }}</td>
                 </tr>
             </table>
-            <div>
-                <button >{% trans 'Cancel' %}</button>
-            </div>
         {% elif registration.payment_status == 'ready' %}
-            <div>입금 확인 중</div>
             <div>
-                <p>입금 내역을 확인 중입니다.</p>
-            </div>
-            <div>
+                <h3>결제정보</h3>
                 <table>
                     <tr>
                         <th>{% trans 'Name' %}</th>
@@ -54,7 +48,7 @@
                     </tr>
                     <tr>
                         <th>{% trans 'Transaction Code' %}</th>
-                        <td>{{ registration.transaction_code }}</td>
+                        <td>{{ registration.merchant_uid }}</td>
                     </tr>
                     <tr>
                         <th>입금하실 은행</th>
@@ -68,10 +62,17 @@
                         <th>입금기한</th>
                         <td>{{ registration.vbank_date }}</td>
                     </tr>
+                    <tr>
+                        <th>입금확인</th>
+                        <td>
+                            {% if registration.payment_status == 'ready' %}
+                                입금확인중
+                            {% elif registration.payment_status == 'paid' %}
+                                입금확인완료
+                            {% endif %}
+                        </td>
+                    </tr>
                 </table>
-            </div>
-            <div>
-                <button >{% trans 'Cancel' %}</button>
             </div>
         {% else %}
             <div>등록 내역이 없습니다.</div>
@@ -81,4 +82,3 @@
         {% endif %}
     </div>
 {% endblock %}
-
