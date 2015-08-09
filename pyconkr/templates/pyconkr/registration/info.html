@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div>
+        <div>
+            <a href="{% url 'registration_status' %}" >{% trans 'Status' %}</a>|<a href="{% url 'registration_payment' %}" >{% trans 'Register' %}</a>
+        </div>
+    </div>
+{% endblock %}
+

@@ -7,7 +7,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
 from django.db.models import Q
 from django.shortcuts import render, redirect
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext as _
 from django.views.decorators.cache import never_cache
 from django.views.generic import ListView, DetailView, UpdateView
 from datetime import datetime, timedelta
@@ -218,16 +218,46 @@ def profile(request):
     return render(request, 'profile.html')
 
 
+@login_required
+def registration_info(request):
+    return render(request, 'pyconkr/registration/info.html', {
 
-def registration(request):
+    })
+
+
+@login_required
+def registration_status(request):
+    try:
+        registration = Registration.objects.filter(user=request.user).get()
+
+        return render(request, 'pyconkr/registration/status.html', {
+            'registration': registration
+        })
+    except Registration.DoesNotExist:
+        return render(request, 'pyconkr/registration/status.html', {
+            'registration': None
+        })
+
+
+@login_required
+def registration_payment(request):
     if request.method == 'GET':
-        uid = str(uuid4())
+        exists = Registration.objects.filter(
+            user=request.user,
+            payment_status='paid'
+        ).exists()
+
+        if exists:
+            return redirect('registration_status')
+
+        uid = str(uuid4()).replace('-', '')
         form = RegistrationForm()
 
-        return render(request, 'pyconkr/registration.html', {
+        return render(request, 'pyconkr/registration/payment.html', {
             'IMP_USER_CODE': settings.IMP_USER_CODE,
             'form': form,
             'uid': uid,
+            'product_name': 'PyConKorea2015',
             'amount': 15000,
             'vat': 0
         })
@@ -236,27 +266,54 @@ def registration(request):
         form = RegistrationForm(request.POST)
 
         # TODO : more form validation
+        # eg) merchant_uid
         if not form.is_valid():
             return render_json({
                 'success': False,
-                'message': _('User information is not valid.'),
+                'message': str(form.errors),
             })
+
+        registration, created = Registration.objects.get_or_create(user=request.user)
+        registration.name = form.cleaned_data.get('name')
+        registration.email = form.cleaned_data.get('email')
+        registration.company = form.cleaned_data.get('company', '')
+        registration.phone_number = form.cleaned_data.get('phone_number', '')
+        registration.merchant_uid = request.POST.get('merchant_uid')
+        registration.save()
 
         try:
             access_token = get_access_token(settings.IMP_API_KEY, settings.IMP_API_SECRET)
             imp_client = Iamporter(access_token)
 
-            result = imp_client.onetime(
-                token=request.POST.get('token'),
-                merchant_uid=request.POST.get('merchant_uid'),
-                amount=request.POST.get('amount'),
-                vat=request.POST.get('vat'),
-                card_number=request.POST.get('card_number'),
-                expiry=request.POST.get('expiry'),
-                birth=request.POST.get('birth'),
-                pwd_2digit=request.POST.get('pwd_2digit'),
-            )
-            print(result)
+            if request.POST.get('payment_method') == 'card':
+                result = imp_client.onetime(
+                    token=request.POST.get('token'),
+                    merchant_uid=request.POST.get('merchant_uid'),
+                    amount=request.POST.get('amount'),
+                    # vat=request.POST.get('vat'),
+                    card_number=request.POST.get('card_number'),
+                    expiry=request.POST.get('expiry'),
+                    birth=request.POST.get('birth'),
+                    pwd_2digit=request.POST.get('pwd_2digit'),
+                    customer_uid=form.cleaned_data.get('email'),
+                )
+                print(result)
+
+            confirm = imp_client.find_by_merchant_uid(request.POST.get('merchant_uid'))
+            print(confirm)
+
+            if confirm['amount'] != 15000:
+                # TODO : cancel
+                raise IOError  # TODO : -_-+++
+
+            registration.payment_method = confirm.get('pay_method')
+            registration.payment_status = confirm.get('status')
+            registration.payment_message = confirm.get('fail_reason')
+            registration.vbank_name = confirm.get('vbank_name', None)
+            registration.vbank_num = confirm.get('vbank_num', None)
+            registration.vbank_date = confirm.get('vbank_date', None)
+            registration.vbank_holder = confirm.get('vbank_holder', None)
+            registration.save()
         except IamporterError as e:
             # TODO : other status code
             return render_json({
@@ -265,12 +322,6 @@ def registration(request):
                 'message': e.message,
             })
         else:
-            Registration(
-                name=request.POST.get('name'),
-                email=request.POST.get('email'),
-                payment_method=request.POST.get('payment_method'),
-            ).save()
-
             return render_json({
                 'success': True,
             })

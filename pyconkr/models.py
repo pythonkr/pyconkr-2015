@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.auth.models import User
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -213,13 +214,33 @@ class Profile(models.Model):
 
 
 class Registration(models.Model):
+    user = models.ForeignKey(User)
+    merchant_uid = models.CharField(max_length=32)
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=255)
+    company = models.CharField(max_length=100, blank=True)
+    phone_number = models.CharField(max_length=20, blank=True)
+    transaction_code = models.CharField(max_length=36)
     payment_method = models.CharField(
-        max_length=10,
+        max_length=20,
         choices=(
             ('card', _('Credit Card')),
-            ('bank', _('Bank Transfer')),
+            ('vbank', _('Bank Transfer')),
         )
     )
+    payment_status = models.CharField(
+        max_length=10,
+        # choices=(
+        #     ('ready', _('Not Paid')),
+        #     ('failed', _('Failed')),
+        #     ('canceled', _('Canceled')),
+        #     ('paid', _('Paid')),
+        # )
+    )
+    payment_message = models.CharField(max_length=255, null=True)
+    vbank_num = models.CharField(max_length=255, null=True, blank=True)
+    vbank_name = models.CharField(max_length=20, null=True, blank=True)
+    vbank_date = models.CharField(max_length=50, null=True, blank=True)
+    vbank_holder = models.CharField(max_length=20, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)

@@ -107,5 +107,5 @@ class RegistrationForm(forms.ModelForm):
 
     class Meta:
         model = Registration
-        fields = ('name', 'email', 'payment_method', )
+        fields = ('email', 'name', 'company', 'phone_number', 'payment_method', )
 
