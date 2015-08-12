@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.conf import settings
 from django.contrib.auth import login as user_login, logout as user_logout
 from django.contrib.auth.decorators import login_required
@@ -221,27 +222,26 @@ def profile(request):
 
 @login_required
 def registration_info(request):
-    return render(request, 'pyconkr/registration/info.html', {
-
-    })
+    return render(request, 'pyconkr/registration/info.html')
 
 
 @login_required
 def registration_status(request):
     try:
         registration = Registration.objects.filter(user=request.user).get()
-
-        return render(request, 'pyconkr/registration/status.html', {
-            'registration': registration
-        })
     except Registration.DoesNotExist:
-        return render(request, 'pyconkr/registration/status.html', {
-            'registration': None
-        })
+        registration = None
+
+    return render(request, 'pyconkr/registration/status.html', {
+        'title': _('Registration'),
+        'registration': registration,
+    })
 
 
 @login_required
 def registration_payment(request):
+    max_ticket_limit = 580
+
     if request.method == 'GET':
         product = Product()
 
@@ -257,12 +257,13 @@ def registration_payment(request):
         form = RegistrationForm()
 
         return render(request, 'pyconkr/registration/payment.html', {
-            'IMP_USER_CODE': settings.IMP_USER_CODE,
+            'title': _('Registration'),
+            'IMP_USER_CODE': settings.IMP_USER_CODE,  # TODO : Move to 'settings context processor'
             'form': form,
             'uid': uid,
             'product_name': product.name,
             'amount': product.price,
-            'vat': 0
+            'vat': 0,
         })
     elif request.method == 'POST':
         form = RegistrationForm(request.POST)
@@ -272,7 +273,16 @@ def registration_payment(request):
         if not form.is_valid():
             return render_json({
                 'success': False,
-                'message': str(form.errors),
+                'message': str(form.errors),  # TODO : ...
+            })
+
+        remain_ticket_count = (max_ticket_limit - Registration.objects.filter(payment_status='paid').count())
+
+        # sold out
+        if remain_ticket_count <= 0:
+            return render_json({
+                'success': False,
+                'message': _(u'티켓이 매진 되었습니다'),
             })
 
         registration, created = Registration.objects.get_or_create(user=request.user)
@@ -281,7 +291,7 @@ def registration_payment(request):
         registration.company = form.cleaned_data.get('company', '')
         registration.phone_number = form.cleaned_data.get('phone_number', '')
         registration.merchant_uid = request.POST.get('merchant_uid')
-        registration.save()
+        registration.save()  # TODO : use form.save()
 
         try:
             product = Product()
@@ -289,6 +299,7 @@ def registration_payment(request):
             imp_client = Iamporter(access_token)
 
             if request.POST.get('payment_method') == 'card':
+                # TODO : use validated and cleaned data
                 imp_client.onetime(
                     token=request.POST.get('token'),
                     merchant_uid=request.POST.get('merchant_uid'),
@@ -334,11 +345,15 @@ def registration_payment_callback(request):
     if not merchant_uid:
         raise IOError
 
+    product = Product()
+
+    # TODO : check stock
+
     access_token = get_access_token(settings.IMP_API_KEY, settings.IMP_API_SECRET)
     imp_client = Iamporter(access_token)
 
     confirm = imp_client.find_by_merchant_uid(merchant_uid)
-    if confirm['amount'] != 15000:
+    if confirm['amount'] != product.price:
         # TODO : cancel
         raise IOError  # TODO : -_-+++
 
