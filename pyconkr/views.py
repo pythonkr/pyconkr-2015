@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.conf import settings
 from django.contrib.auth import login as user_login, logout as user_logout
 from django.contrib.auth.decorators import login_required
@@ -248,6 +249,8 @@ def registration_status(request):
 def registration_payment(request):
     # page title 
     _page_title = _("Registration")
+    _max_ticket_limit = 580
+
     if request.method == 'GET':
         exists = Registration.objects.filter(
             user=request.user,
@@ -278,6 +281,15 @@ def registration_payment(request):
             return render_json({
                 'success': False,
                 'message': str(form.errors),
+            })
+
+        remain_ticket_count = (_max_ticket_limit - Registration.objects.filter(payment_status='paid').count())
+
+        if remain_ticket_count <= 0:
+            # sold out
+            return render_json({
+                'success': False,
+                'message': _(u"티켓이 매진 되었습니다"),
             })
 
         registration, created = Registration.objects.get_or_create(user=request.user)
