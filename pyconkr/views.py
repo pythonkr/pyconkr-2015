@@ -228,20 +228,26 @@ def registration_info(request):
 
 @login_required
 def registration_status(request):
+    # page title 
+    _page_title = _("Registration")
     try:
         registration = Registration.objects.filter(user=request.user).get()
 
         return render(request, 'pyconkr/registration/status.html', {
-            'registration': registration
+            'registration': registration,
+            'title' : _page_title,
         })
     except Registration.DoesNotExist:
         return render(request, 'pyconkr/registration/status.html', {
-            'registration': None
+            'registration': None,
+            'title' : _page_title,
         })
 
 
 @login_required
 def registration_payment(request):
+    # page title 
+    _page_title = _("Registration")
     if request.method == 'GET':
         exists = Registration.objects.filter(
             user=request.user,
@@ -260,7 +266,8 @@ def registration_payment(request):
             'uid': uid,
             'product_name': 'PyConKorea2015',
             'amount': 15000,
-            'vat': 0
+            'vat': 0,
+            'title': _page_title,
         })
     elif request.method == 'POST':
         form = RegistrationForm(request.POST)
