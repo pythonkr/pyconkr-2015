@@ -18,7 +18,7 @@ from .helper import sendEmailToken, render_json
 from .models import (Room,
                      Program, ProgramDate, ProgramTime, ProgramCategory,
                      Speaker, Sponsor, Jobfair, Announcement,
-                     EmailToken, Registration)
+                     EmailToken, Registration, Product)
 from iamporter import get_access_token, Iamporter, IamporterError
 
 
@@ -243,12 +243,14 @@ def registration_status(request):
 @login_required
 def registration_payment(request):
     if request.method == 'GET':
-        exists = Registration.objects.filter(
+        product = Product()
+
+        registered = Registration.objects.filter(
             user=request.user,
             payment_status='paid'
         ).exists()
 
-        if exists:
+        if registered:
             return redirect('registration_status')
 
         uid = str(uuid4()).replace('-', '')
@@ -258,8 +260,8 @@ def registration_payment(request):
             'IMP_USER_CODE': settings.IMP_USER_CODE,
             'form': form,
             'uid': uid,
-            'product_name': 'PyConKorea2015',
-            'amount': 15000,
+            'product_name': product.name,
+            'amount': product.price,
             'vat': 0
         })
     elif request.method == 'POST':
@@ -282,11 +284,12 @@ def registration_payment(request):
         registration.save()
 
         try:
+            product = Product()
             access_token = get_access_token(settings.IMP_API_KEY, settings.IMP_API_SECRET)
             imp_client = Iamporter(access_token)
 
             if request.POST.get('payment_method') == 'card':
-                result = imp_client.onetime(
+                imp_client.onetime(
                     token=request.POST.get('token'),
                     merchant_uid=request.POST.get('merchant_uid'),
                     amount=request.POST.get('amount'),
@@ -300,7 +303,7 @@ def registration_payment(request):
 
             confirm = imp_client.find_by_merchant_uid(request.POST.get('merchant_uid'))
 
-            if confirm['amount'] != 15000:
+            if confirm['amount'] != product.price:
                 # TODO : cancel
                 raise IOError  # TODO : -_-+++
 

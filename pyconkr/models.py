@@ -213,6 +213,16 @@ class Profile(models.Model):
     pass
 
 
+class Product(object):  # product is not django model now.
+    @property
+    def price(self):
+        return 15000
+
+    @property
+    def name(self):
+        return 'PyCon Korea 2015'
+
+
 class Registration(models.Model):
     user = models.ForeignKey(User)
     merchant_uid = models.CharField(max_length=32)
