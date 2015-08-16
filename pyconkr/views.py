@@ -277,9 +277,10 @@ def registration_payment(request):
         # TODO : more form validation
         # eg) merchant_uid
         if not form.is_valid():
+            form_errors_string = "\n".join(('%s:%s' % (k, v[0]) for k, v in form.errors.items()))
             return render_json({
                 'success': False,
-                'message': str(form.errors),  # TODO : ...
+                'message': form_errors_string,  # TODO : ...
             })
 
         remain_ticket_count = (settings.MAX_TICKET_NUM - Registration.objects.filter(payment_status__in=['paid', 'ready']).count())
