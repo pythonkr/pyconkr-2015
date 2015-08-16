@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import logging
 from django.conf import settings
 from django.contrib.auth import login as user_login, logout as user_logout
 from django.contrib.auth.decorators import login_required
@@ -21,6 +22,9 @@ from .models import (Room,
                      Speaker, Sponsor, Jobfair, Announcement,
                      EmailToken, Registration, Product)
 from iamporter import get_access_token, Iamporter, IamporterError
+
+logger = logging.getLogger(__name__)
+payment_logger = logger.getLogger('payment')
 
 
 def index(request):
@@ -272,6 +276,7 @@ def registration_payment(request):
             'vat': 0,
         })
     elif request.method == 'POST':
+        payment_logger.debug(request.POST)
         form = RegistrationForm(request.POST)
 
         # TODO : more form validation
