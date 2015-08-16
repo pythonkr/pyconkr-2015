@@ -56,3 +56,8 @@ def send_email_ticket_confirm(request, payment_info):
         [payment_info.email])
     msg.attach_alternative(html, "text/html")
     msg.send(fail_silently=False)
+
+def render_io_error(reason):
+    response = HttpResponse(reason)
+    response.status_code = 406
+    return response
