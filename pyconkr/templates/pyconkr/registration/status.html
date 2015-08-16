@@ -3,52 +3,60 @@
 
 {% block content %}
     <div>
-        <h3>{% trans 'Confirmation' %}</h3>
+        <h3>{% trans '등록확인' %}</h3>
         {% if registration.payment_status == 'paid' %}
             <div>등록 완료</div>
             <div>
                 <p>정상적으로 등록이 완료되었습니다.</p>
             </div>
-            <table>
+            <table class="table table-striped table-bordered">
                 <tr>
-                    <th>{% trans 'Name' %}</th>
+                    <th>{% trans '이름' %}</th>
                     <td>{{ registration.name }}</td>
                 </tr>
                 <tr>
-                    <th>{% trans 'Email' %}</th>
+                    <th>{% trans '이메일' %}</th>
                     <td>{{ registration.email }}</td>
                 </tr>
                 <tr>
-                    <th>{% trans 'Amount' %}</th>
+                    <th>{% trans '소속' %}</th>
+                    <td>{{ registration.company }}</td>
+                </tr>
+                <tr>
+                    <th>{% trans '전화번' %}</th>
+                    <td>{{ registration.company }}</td>
+                </tr>
+                <tr>
+                    <th>{% trans '금액' %}</th>
                     <td>15,000원</td>
                 </tr>
                 <tr>
-                    <th>{% trans 'Transaction Code' %}</th>
+                    <th>{% trans '거래번호' %}</th>
                     <td>{{ registration.transaction_code }}</td>
                 </tr>
                 <tr>
-                    <th>{% trans 'Time' %}</th>
+                    <th>{% trans '등록완료일' %}</th>
                     <td>{{ registration.modified }}</td>
                 </tr>
             </table>
         {% elif registration.payment_status == 'ready' %}
             <div>
                 <h3>결제정보</h3>
-                <table>
+                <table class="table table-striped table-bordered">
                     <tr>
-                        <th>{% trans 'Name' %}</th>
+                        <th>{% trans '이름' %}</th>
                         <td>{{ registration.name }}</td>
                     </tr>
                     <tr>
-                        <th>{% trans 'Email' %}</th>
+                        <th>{% trans '이메일' %}</th>
                         <td>{{ registration.email }}</td>
                     </tr>
                     <tr>
-                        <th>{% trans 'Amount' %}</th>
+                        <th>{% trans '가격' %}</th>
                         <td>15,000원</td>
                     </tr>
                     <tr>
-                        <th>{% trans 'Transaction Code' %}</th>
+                        <th>{% trans '거래번호' %}</th>
                         <td>{{ registration.merchant_uid }}</td>
                     </tr>
                     <tr>
@@ -56,7 +64,7 @@
                         <td>{{ registration.vbank_name }}</td>
                     </tr>
                     <tr>
-                        <th>입금하실 계좌번호 </th>
+                        <th>입금하실 계좌번호</th>
                         <td>{{ registration.vbank_num }}</td>
                     </tr>
                     <tr>
@@ -79,7 +87,7 @@
             <div>등록 내역이 없습니다.</div>
             <div>
                 <p></p>
-                <a href="{% url 'registration_payment' %}">{% trans 'Go to Registeration' %}</a>
+                <a href="{% url 'registration_payment' %}">{% trans '등록하기' %}</a>
             </div>
         {% endif %}
     </div>

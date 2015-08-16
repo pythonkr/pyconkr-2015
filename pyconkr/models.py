@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.contrib.staticfiles.templatetags.staticfiles import static
@@ -229,13 +230,14 @@ class Registration(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=255)
     company = models.CharField(max_length=100, blank=True)
-    phone_number = models.CharField(max_length=20, blank=True)
+    phone_number = models.CharField(max_length=20)
     transaction_code = models.CharField(max_length=36)
     payment_method = models.CharField(
         max_length=20,
+        default='card',
         choices=(
-            ('card', _('Credit Card')),
-            ('vbank', _('Bank Transfer')),
+            ('card', _(u'신용카드')),
+            #('vbank', _('Bank Transfer')),
         )
     )
     payment_status = models.CharField(

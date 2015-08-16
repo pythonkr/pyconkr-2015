@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django import forms
 from django.conf import settings
 from django.core.files.images import get_image_dimensions
@@ -103,9 +104,15 @@ class RegistrationForm(forms.ModelForm):
         self.helper = FormHelper()
         self.helper.form_id = 'registration-form'
         self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', _('Pay'), disabled='disabled'))
-
+        self.helper.add_input(Submit('submit', _(u'결제하기'), disabled='disabled'))
+        
     class Meta:
         model = Registration
         fields = ('email', 'name', 'company', 'phone_number', 'payment_method', )
-
+        labels = {
+            'name' : u'이름',
+            'email' : u'이메일',
+            'company' : u'소속',
+            'phone_number' : u'전화번호',
+            'payment_method' : u'결제수단',
+        }
