@@ -5,7 +5,7 @@
     <div>
         {% if not is_ticket_open %}<div>등록 기간이 아닙니다</div>{% endif %}
         <div>
-            <a href="{% url 'registration_status' %}" >{% trans '등록확인' %}</a>{% if is_ticket_open %}|<a href="{% url 'registration_payment' %}" ><b>{% trans '등록하기' %}</b></a>{% endif %}
+            <a href="{% url 'registration_status' %}" >등록확인</a>{% if is_ticket_open %}|<a href="{% url 'registration_payment' %}" ><b>등록하기</b></a>{% endif %}
         </div>
     </div>
 {% endblock %}

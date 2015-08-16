@@ -34,24 +34,23 @@ def render_template_json(template, context):
     return HttpResponse(render_to_string(template, context),
                         'application/javascript')
 
-def sendEmailTicketConfirm(request, payment_info):
+def send_email_ticket_confirm(request, payment_info):
     """
     :param request Django request object
     :param payment_info Registration object
-
     """
-    _mail_title = _(u"PyCon Korea 2015 등록확인 안내(Registration confirmation)")
-    _product = Product()
+    mail_title = _(u"PyCon Korea 2015 등록확인 안내(Registration confirmation)")
+    product = Product()
     variables = Context({
         'request': request,
         'payment_info': payment_info,
-        'amount' : _product.price
+        'amount': product.price
     })
     html = get_template('mail/ticket_registered_html.html').render(variables)
     text = get_template('mail/ticket_registered_text.html').render(variables)
     
     msg = EmailMultiAlternatives(
-        _mail_title,
+        mail_title,
         text,
         settings.EMAIL_SENDER,
         [payment_info.email])

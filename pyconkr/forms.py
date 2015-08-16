@@ -100,19 +100,21 @@ class ProgramForm(forms.ModelForm):
 
 class RegistrationForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
+
         super(RegistrationForm, self).__init__(*args, **kwargs)
+        self.fields['email'].widget.attrs['readonly'] = True
         self.helper = FormHelper()
         self.helper.form_id = 'registration-form'
         self.helper.form_method = 'post'
-        self.helper.add_input(Submit('submit', _(u'결제하기'), disabled='disabled'))
-        
+        self.helper.add_input(Submit('submit', u'결제하기', disabled='disabled'))
+
     class Meta:
         model = Registration
         fields = ('email', 'name', 'company', 'phone_number', 'payment_method', )
         labels = {
-            'name' : u'이름',
-            'email' : u'이메일',
-            'company' : u'소속',
-            'phone_number' : u'전화번호',
-            'payment_method' : u'결제수단',
+            'name': u'이름',
+            'email': u'이메일',
+            'company': u'소속',
+            'phone_number':  u'전화번호',
+            'payment_method': u'결제수단',
         }

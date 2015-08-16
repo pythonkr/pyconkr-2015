@@ -1,5 +1,5 @@
 {% load i18n %}
-<h1><img src="http://localhost:8000/static/image/pyconkr-badge.png" width="32" height="32" align="absmiddle"/> {% trans "PyCon Korea Registration confirmation" %}</h1>
+<h1><img src="http://www.pycon.kr/2015/static/image/pyconkr-badge.png" width="32" height="32" align="absmiddle"/> {% trans "PyCon Korea Registration confirmation" %}</h1>
 <p>PyCon Korea 2015 참가신청이 완료 되었습니다.</p>
 <p>안녕하세요 {{payment_info.name}}님</p>
 <p>
@@ -19,25 +19,25 @@
 <h3>{% trans '결제 정보' %}</h3>
 <table>
     <tr>
-        <th align="right" style="padding-right: 5px;">{% trans '이메일' %}</th><td>{{payment_info.email}}</td>
+        <th align="right" style="padding-right: 5px;">이메일</th><td>{{payment_info.email}}</td>
     </tr>
     <tr>
-        <th align="right" style="padding-right: 5px;">{% trans '이름' %}</th><td>{{payment_info.name}}</td>
+        <th align="right" style="padding-right: 5px;">이름</th><td>{{payment_info.name}}</td>
     </tr>
     <tr>
-        <th align="right" style="padding-right: 5px;">{% trans '전화번호' %}</th><td>{{payment_info.phone_number}}</td>
+        <th align="right" style="padding-right: 5px;">전화번호</th><td>{{payment_info.phone_number}}</td>
     </tr>
     <tr>
-        <th align="right" style="padding-right: 5px;">{% trans '소속' %}</th><td>{{payment_info.company}}</td>
+        <th align="right" style="padding-right: 5px;">소속</th><td>{{payment_info.company}}</td>
     </tr>
     <tr>
-        <th align="right" style="padding-right: 5px;">{% trans '금액' %}</th><td>{{amount}}원 ({{payment_info.payment_method}})</td>
+        <th align="right" style="padding-right: 5px;">금액</th><td>{{amount}}원 ({{payment_info.payment_method}})</td>
     </tr>
     <tr>
-        <th align="right" style="padding-right: 5px;">{% trans '거래번호' %}</th><td>{{payment_info.merchant_uid}}</td>
+        <th align="right" style="padding-right: 5px;">거래번호</th><td>{{payment_info.merchant_uid}}</td>
     </tr>
     <tr>
-        <th align="right" style="padding-right: 5px;">{% trans '등록완료일' %}</th><td>{{payment_info.modified}}</td>
+        <th align="right" style="padding-right: 5px;">등록완료일</th><td>{{payment_info.modified}}</td>
     </tr>
 </table>
 <p> 결제와 관련된 정보는 <a href="http://www.pycon.kr/2015{% url 'registration_status' %}">http://www.pycon.kr/2015{% url 'registration_status' %}</a> 에서도 확인이 가능합니다.

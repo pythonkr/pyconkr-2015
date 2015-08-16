@@ -236,7 +236,7 @@ class Registration(models.Model):
         max_length=20,
         default='card',
         choices=(
-            ('card', _(u'신용카드')),
+            ('card', u'신용카드'),
             #('vbank', _('Bank Transfer')),
         )
     )
