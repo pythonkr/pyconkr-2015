@@ -39,7 +39,7 @@ def send_email_ticket_confirm(request, payment_info):
     :param request Django request object
     :param payment_info Registration object
     """
-    mail_title = _(u"PyCon Korea 2015 등록확인 안내(Registration confirmation)")
+    mail_title = u"PyCon Korea 2015 등록확인 안내(Registration confirmation)"
     product = Product()
     variables = Context({
         'request': request,
