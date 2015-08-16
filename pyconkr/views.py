@@ -15,7 +15,7 @@ from django.views.generic import ListView, DetailView, UpdateView
 from datetime import datetime, timedelta
 from uuid import uuid4
 from .forms import EmailLoginForm, SpeakerForm, ProgramForm, RegistrationForm
-from .helper import sendEmailToken, render_json, render_io_error
+from .helper import sendEmailToken, render_json, send_email_ticket_confirm, render_io_error
 from .models import (Room,
                      Program, ProgramDate, ProgramTime, ProgramCategory,
                      Speaker, Sponsor, Jobfair, Announcement,
@@ -222,7 +222,10 @@ def profile(request):
 
 @login_required
 def registration_info(request):
-    return render(request, 'pyconkr/registration/info.html')
+    is_ticket_open = is_registration_time()
+    return render(request, 'pyconkr/registration/info.html', {
+            "is_ticket_open" : is_ticket_open
+        })
 
 
 @login_required
@@ -240,21 +243,24 @@ def registration_status(request):
 
 @login_required
 def registration_payment(request):
-    max_ticket_limit = 580
+    max_ticket_limit = settings.MAX_TICKET_NUM
+
+    if not is_registration_time():
+        return redirect('registration_info')
 
     if request.method == 'GET':
         product = Product()
 
         registered = Registration.objects.filter(
             user=request.user,
-            payment_status='paid'
+            payment_status__in=['paid', 'ready']
         ).exists()
 
         if registered:
             return redirect('registration_status')
 
         uid = str(uuid4()).replace('-', '')
-        form = RegistrationForm()
+        form = RegistrationForm(initial={'email': request.user.email})
 
         return render(request, 'pyconkr/registration/payment.html', {
             'title': _('Registration'),
@@ -277,18 +283,18 @@ def registration_payment(request):
                 'message': form_errors_string,  # TODO : ...
             })
 
-        remain_ticket_count = (max_ticket_limit - Registration.objects.filter(payment_status='paid').count())
+        remain_ticket_count = (settings.MAX_TICKET_NUM - Registration.objects.filter(payment_status__in=['paid', 'ready']).count())
 
         # sold out
         if remain_ticket_count <= 0:
             return render_json({
                 'success': False,
-                'message': _(u'티켓이 매진 되었습니다'),
+                'message': u'티켓이 매진 되었습니다',
             })
 
         registration, created = Registration.objects.get_or_create(user=request.user)
         registration.name = form.cleaned_data.get('name')
-        registration.email = form.cleaned_data.get('email')
+        registration.email = request.user.email
         registration.company = form.cleaned_data.get('company', '')
         registration.phone_number = form.cleaned_data.get('phone_number', '')
         registration.merchant_uid = request.POST.get('merchant_uid')
@@ -327,6 +333,8 @@ def registration_payment(request):
             registration.vbank_date = confirm.get('vbank_date', None)
             registration.vbank_holder = confirm.get('vbank_holder', None)
             registration.save()
+
+            send_email_ticket_confirm(request, registration)
         except IamporterError as e:
             # TODO : other status code
             return render_json({
@@ -358,10 +366,30 @@ def registration_payment_callback(request):
         # TODO : cancel
         return render_io_error('amount is not product.price')
 
+    remain_ticket_count = (settings.MAX_TICKET_NUM - Registration.objects.filter(payment_status='paid').count())
+    if  remain_ticket_count <= 0:
+        # Cancel
+        return render_json({
+            'success': False,
+            'message': u"티켓이 매진 되었습니다"
+        })
     registration = Registration.objects.filter(merchant_uid=merchant_uid).get()
     registration.payment_status = 'paid'
     registration.save()
+    
+    send_email_ticket_confirm(request, registration)
 
     return render_json({
         'success': True
     })
+
+
+def is_registration_time():
+    ticket_open_date = datetime.strptime(settings.TICKET_OPEN_DATETIME, '%Y-%m-%d %H:%M:%S')
+    ticket_close_date = datetime.strptime(settings.TICKET_CLOSE_DATETIME, '%Y-%m-%d %H:%M:%S')
+    cur = datetime.now()
+
+    if ticket_open_date <= cur and ticket_close_date >= cur:
+        return True
+    else:
+        return False
