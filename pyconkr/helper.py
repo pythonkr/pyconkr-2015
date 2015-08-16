@@ -31,3 +31,9 @@ def render_json(data_dict):
 def render_template_json(template, context):
     return HttpResponse(render_to_string(template, context),
                         'application/javascript')
+
+
+def render_io_error(reason):
+    response = HttpResponse(reason)
+    response.status_code = 406
+    return response

@@ -15,7 +15,7 @@ from django.views.generic import ListView, DetailView, UpdateView
 from datetime import datetime, timedelta
 from uuid import uuid4
 from .forms import EmailLoginForm, SpeakerForm, ProgramForm, RegistrationForm
-from .helper import sendEmailToken, render_json
+from .helper import sendEmailToken, render_json, render_io_error
 from .models import (Room,
                      Program, ProgramDate, ProgramTime, ProgramCategory,
                      Speaker, Sponsor, Jobfair, Announcement,
@@ -317,7 +317,7 @@ def registration_payment(request):
 
             if confirm['amount'] != product.price:
                 # TODO : cancel
-                raise IOError  # TODO : -_-+++
+                return render_io_error("amount is not same as product.price. it will be canceled")
 
             registration.payment_method = confirm.get('pay_method')
             registration.payment_status = confirm.get('status')
@@ -344,7 +344,7 @@ def registration_payment(request):
 def registration_payment_callback(request):
     merchant_uid = request.POST.get('merchant_uid', None)
     if not merchant_uid:
-        raise IOError
+        return render_io_error('merchant uid dose not exist')
 
     product = Product()
 
@@ -356,7 +356,7 @@ def registration_payment_callback(request):
     confirm = imp_client.find_by_merchant_uid(merchant_uid)
     if confirm['amount'] != product.price:
         # TODO : cancel
-        raise IOError  # TODO : -_-+++
+        return render_io_error('amount is not product.price')
 
     registration = Registration.objects.filter(merchant_uid=merchant_uid).get()
     registration.payment_status = 'paid'
