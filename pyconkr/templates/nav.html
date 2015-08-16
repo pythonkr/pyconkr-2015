@@ -58,6 +58,9 @@
             {% endfor %}
             <li role="presentation" class="divider"></li>
             {% endif %}
+            {% if not my_speaker %}
+            <li><a href="{% url "registration_status" %}">{% trans "Registration" %}</a></li>
+            {% endif %}
             <li><a href="{% url "profile" %}">{% trans "Profile" %}</a></li>
             <li><a href="{% url "logout" %}">{% trans "Logout" %}</a></li>
           </ul>

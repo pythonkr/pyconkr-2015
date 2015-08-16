@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from django.conf import settings
 from django.contrib.auth import login as user_login, logout as user_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -6,16 +8,19 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
 from django.db.models import Q
 from django.shortcuts import render, redirect
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext as _
 from django.views.decorators.cache import never_cache
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, DetailView, UpdateView
 from datetime import datetime, timedelta
-from .forms import EmailLoginForm, SpeakerForm, ProgramForm
-from .helper import sendEmailToken
+from uuid import uuid4
+from .forms import EmailLoginForm, SpeakerForm, ProgramForm, RegistrationForm
+from .helper import sendEmailToken, render_json, send_email_ticket_confirm, render_io_error
 from .models import (Room,
                      Program, ProgramDate, ProgramTime, ProgramCategory,
                      Speaker, Sponsor, Jobfair, Announcement,
-                     EmailToken)
+                     EmailToken, Registration, Product)
+from iamporter import get_access_token, Iamporter, IamporterError
 
 
 def index(request):
@@ -213,3 +218,178 @@ def logout(request):
 @login_required
 def profile(request):
     return render(request, 'profile.html')
+
+
+@login_required
+def registration_info(request):
+    is_ticket_open = is_registration_time()
+    return render(request, 'pyconkr/registration/info.html', {
+            "is_ticket_open" : is_ticket_open
+        })
+
+
+@login_required
+def registration_status(request):
+    try:
+        registration = Registration.objects.filter(user=request.user).get()
+    except Registration.DoesNotExist:
+        registration = None
+
+    return render(request, 'pyconkr/registration/status.html', {
+        'title': _('Registration'),
+        'registration': registration,
+    })
+
+
+@login_required
+def registration_payment(request):
+    max_ticket_limit = settings.MAX_TICKET_NUM
+
+    if not is_registration_time():
+        return redirect('registration_info')
+
+    if request.method == 'GET':
+        product = Product()
+
+        registered = Registration.objects.filter(
+            user=request.user,
+            payment_status__in=['paid', 'ready']
+        ).exists()
+
+        if registered:
+            return redirect('registration_status')
+
+        uid = str(uuid4()).replace('-', '')
+        form = RegistrationForm(initial={'email': request.user.email})
+
+        return render(request, 'pyconkr/registration/payment.html', {
+            'title': _('Registration'),
+            'IMP_USER_CODE': settings.IMP_USER_CODE,  # TODO : Move to 'settings context processor'
+            'form': form,
+            'uid': uid,
+            'product_name': product.name,
+            'amount': product.price,
+            'vat': 0,
+        })
+    elif request.method == 'POST':
+        form = RegistrationForm(request.POST)
+
+        # TODO : more form validation
+        # eg) merchant_uid
+        if not form.is_valid():
+            form_errors_string = "\n".join(('%s:%s' % (k, v[0]) for k, v in form.errors.items()))
+            return render_json({
+                'success': False,
+                'message': form_errors_string,  # TODO : ...
+            })
+
+        remain_ticket_count = (settings.MAX_TICKET_NUM - Registration.objects.filter(payment_status__in=['paid', 'ready']).count())
+
+        # sold out
+        if remain_ticket_count <= 0:
+            return render_json({
+                'success': False,
+                'message': u'티켓이 매진 되었습니다',
+            })
+
+        registration, created = Registration.objects.get_or_create(user=request.user)
+        registration.name = form.cleaned_data.get('name')
+        registration.email = request.user.email
+        registration.company = form.cleaned_data.get('company', '')
+        registration.phone_number = form.cleaned_data.get('phone_number', '')
+        registration.merchant_uid = request.POST.get('merchant_uid')
+        registration.save()  # TODO : use form.save()
+
+        try:
+            product = Product()
+            access_token = get_access_token(settings.IMP_API_KEY, settings.IMP_API_SECRET)
+            imp_client = Iamporter(access_token)
+
+            if request.POST.get('payment_method') == 'card':
+                # TODO : use validated and cleaned data
+                imp_client.onetime(
+                    token=request.POST.get('token'),
+                    merchant_uid=request.POST.get('merchant_uid'),
+                    amount=request.POST.get('amount'),
+                    # vat=request.POST.get('vat'),
+                    card_number=request.POST.get('card_number'),
+                    expiry=request.POST.get('expiry'),
+                    birth=request.POST.get('birth'),
+                    pwd_2digit=request.POST.get('pwd_2digit'),
+                    customer_uid=form.cleaned_data.get('email'),
+                )
+
+            confirm = imp_client.find_by_merchant_uid(request.POST.get('merchant_uid'))
+
+            if confirm['amount'] != product.price:
+                # TODO : cancel
+                return render_io_error("amount is not same as product.price. it will be canceled")
+
+            registration.payment_method = confirm.get('pay_method')
+            registration.payment_status = confirm.get('status')
+            registration.payment_message = confirm.get('fail_reason')
+            registration.vbank_name = confirm.get('vbank_name', None)
+            registration.vbank_num = confirm.get('vbank_num', None)
+            registration.vbank_date = confirm.get('vbank_date', None)
+            registration.vbank_holder = confirm.get('vbank_holder', None)
+            registration.save()
+
+            send_email_ticket_confirm(request, registration)
+        except IamporterError as e:
+            # TODO : other status code
+            return render_json({
+                'success': False,
+                'code': e.code,
+                'message': e.message,
+            })
+        else:
+            return render_json({
+                'success': True,
+            })
+
+
+@csrf_exempt
+def registration_payment_callback(request):
+    merchant_uid = request.POST.get('merchant_uid', None)
+    if not merchant_uid:
+        return render_io_error('merchant uid dose not exist')
+
+    product = Product()
+
+    # TODO : check stock
+
+    access_token = get_access_token(settings.IMP_API_KEY, settings.IMP_API_SECRET)
+    imp_client = Iamporter(access_token)
+
+    confirm = imp_client.find_by_merchant_uid(merchant_uid)
+    if confirm['amount'] != product.price:
+        # TODO : cancel
+        return render_io_error('amount is not product.price')
+
+    remain_ticket_count = (settings.MAX_TICKET_NUM - Registration.objects.filter(payment_status='paid').count())
+    if  remain_ticket_count <= 0:
+        # Cancel
+        return render_json({
+            'success': False,
+            'message': u"티켓이 매진 되었습니다"
+        })
+    registration = Registration.objects.filter(merchant_uid=merchant_uid).get()
+    registration.payment_status = 'paid'
+    registration.save()
+    
+    send_email_ticket_confirm(request, registration)
+
+    return render_json({
+        'success': True
+    })
+
+
+def is_registration_time():
+    ticket_open_date = datetime.strptime(settings.TICKET_OPEN_DATETIME, '%Y-%m-%d %H:%M:%S')
+    ticket_close_date = datetime.strptime(settings.TICKET_CLOSE_DATETIME, '%Y-%m-%d %H:%M:%S')
+    cur = datetime.now()
+
+    if ticket_open_date <= cur and ticket_close_date >= cur:
+        return True
+    else:
+        return False
