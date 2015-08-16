@@ -24,7 +24,7 @@ from .models import (Room,
 from iamporter import get_access_token, Iamporter, IamporterError
 
 logger = logging.getLogger(__name__)
-payment_logger = logger.getLogger('payment')
+payment_logger = logging.getLogger('payment')
 
 
 def index(request):
