@@ -34,8 +34,7 @@ def default(request):
                 ('schedule', {'title': _('Schedule')}),
                 ('list', {'title': _('Program list')}),
                 ('speakers', {'title': _('Speakers')}),
-                ('jobfair', {'title': _('Jobfair')}),
-                ('bof', {'title': _('BOF')}),
+                ('ost', {'title': _('Open Spaces')}),
             ]),
         }),
         ('venue', {
@@ -46,8 +45,6 @@ def default(request):
                 ('transportation', {'title': _('Transportation')}),
                 ('hotels', {'title': _('Hotels')}),
                 ('restaurants', {'title': _('Restaurants')}),
-                ('weather', {'title': _('Weather')}),
-                ('international', {'title': _('International Attendees')}),
             ]),
         }),
         ('registration', {

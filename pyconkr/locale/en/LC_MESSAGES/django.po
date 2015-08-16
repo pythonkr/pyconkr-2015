@@ -71,8 +71,8 @@ msgid "Jobfair"
 msgstr "Jobfair"
 
 #: context_processors.py:38
-msgid "BOF"
-msgstr "BOF"
+msgid "ost"
+msgstr "Open Spaces"
 
 #: context_processors.py:42
 msgid "Getting here"
