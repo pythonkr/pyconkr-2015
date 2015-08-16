@@ -102,7 +102,7 @@ MODELTRANSLATION_FALLBACK_LANGUAGES = {
     'default': ('ko', 'en', 'ja'),
 }
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
