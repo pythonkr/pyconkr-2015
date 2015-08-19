@@ -71,6 +71,9 @@ class Sponsor(models.Model):
     desc = models.TextField(null=True, blank=True)
     level = models.ForeignKey(SponsorLevel, null=True, blank=True)
 
+    class Meta:
+        ordering = ['id']
+
     def get_absolute_url(self):
         return reverse('sponsor', args=[self.slug])
 
