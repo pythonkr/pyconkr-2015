@@ -31,6 +31,9 @@ class ProgramTime(models.Model):
     name = models.CharField(max_length=100)
     begin = models.TimeField()
     end = models.TimeField()
+    
+    def __meta__(self):
+        ordering = ['begin']
 
     def __unicode__(self):
         return '%s - %s / %s' % (self.begin, self.end, self.name)
