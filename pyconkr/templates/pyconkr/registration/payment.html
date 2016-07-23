@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h3>{% trans 'Registration' %}</h3>
+    <div>
+        <div>결제를 완료하시면 신청이 됩니다.<br/>(<b>*</b>) 는 필수 입력 항목입니다.</div>
+        <div>{% crispy form %}</div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment.js"></script>
+    <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment.subscribe.js"></script>
+    <script>
+        // TODO : i18n
+        // 자 콜백의 지옥으로 가자..
+        $(document).ready(function() {
+            function handleResponse(response) {
+                response['csrfmiddlewaretoken'] = '{{ csrf_token }}';
+                // TODO : validation
+                response['name'] = $('#id_name').val();
+                response['email'] = $('#id_email').val();
+                response['company'] = $('#id_company').val();
+                response['phone_number'] = $('#id_phone_number').val();
+                response['payment_method'] = $('#id_payment_method').val();
+
+                $.ajax({
+                    method: 'POST',
+                    url: '{% url 'registration_payment' %}',
+                    data: response,
+                    dataType: 'json'
+                }).done(function(result) {
+                    if(!result.success) {
+                        alert('결제에 실패했습니다. ' + result.code + ' ' + result.message);
+                        this.close();
+                        return;
+                    }
+
+                    alert('결제가 완료되었습니다.');
+                    this.close();
+
+                    window.location.href = '{% url 'registration_status' %}';
+                }.bind(this)).fail(function(xhr, status, error) {
+                    alert('결제에 실패했습니다. 다시 시도해 주세요.' + error);
+                    // TODO :
+                }.bind(this));
+            }
+
+            $('#registration-form').submit(function(e) {
+                e.preventDefault();
+
+                var paymentMethod = $('#id_payment_method').val();
+                if(paymentMethod === 'card') {
+                    IMP.SBCR.init('{{ IMP_USER_CODE }}');
+                    IMP.SBCR.onetime({
+                        merchant_uid: '{{ uid }}',
+                        amount: parseInt('{{ amount }}'),
+                        vat: parseInt('{{ vat }}')
+                    }, function(response) {
+                        if(!response.token) {
+                            alert(response.message);
+                            return;
+                        }
+                        handleResponse(response);
+                    }.bind(this));
+                } else if(paymentMethod === 'vbank') {
+                    IMP.init('{{ IMP_USER_CODE }}');
+                    IMP.request_pay({
+                        pay_method : 'vbank',
+                        merchant_uid: '{{ uid }}',
+                        amount: parseInt('{{ amount }}'),
+                        name: '{{  product_name }}',
+                        buyer_name: $('#id_name').val(),
+                        buyer_email: $('#id_email').val()
+                    }, function(response) {
+                        handleResponse(response);
+                    }.bind(this));
+                } else {
+                    // ?????
+                }
+            });
+
+            $('#submit-id-submit').attr('disabled', false);
+        });
+    </script>
+{% endblock %}

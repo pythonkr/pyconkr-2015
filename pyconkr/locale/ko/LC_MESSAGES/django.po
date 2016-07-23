@@ -72,8 +72,8 @@ msgid "Jobfair"
 msgstr "취업 설명회 및 도서 판매"
 
 #: context_processors.py:38
-msgid "BOF"
-msgstr "BOF 안내"
+msgid "ost"
+msgstr "열린공간 안내"
 
 #: context_processors.py:42
 msgid "Getting here"

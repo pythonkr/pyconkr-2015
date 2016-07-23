@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django import forms
 from django.conf import settings
 from django.core.files.images import get_image_dimensions
@@ -5,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 from django_summernote.widgets import SummernoteInplaceWidget
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
-from .models import Speaker, Program
+from .models import Speaker, Program, Registration
 
 
 class EmailLoginForm(forms.Form):
@@ -94,4 +95,26 @@ class ProgramForm(forms.ModelForm):
             'video_url': _('Video URL'),
             'is_recordable': _('Photography and recording is allowed'),
             'desc': _('Description'),
+        }
+
+
+class RegistrationForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+
+        super(RegistrationForm, self).__init__(*args, **kwargs)
+        self.fields['email'].widget.attrs['readonly'] = True
+        self.helper = FormHelper()
+        self.helper.form_id = 'registration-form'
+        self.helper.form_method = 'post'
+        self.helper.add_input(Submit('submit', u'결제하기', disabled='disabled'))
+
+    class Meta:
+        model = Registration
+        fields = ('email', 'name', 'company', 'phone_number', 'payment_method', )
+        labels = {
+            'name': u'이름',
+            'email': u'이메일',
+            'company': u'소속',
+            'phone_number':  u'전화번호',
+            'payment_method': u'결제수단',
         }

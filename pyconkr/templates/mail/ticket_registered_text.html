@@ -1,0 +1,33 @@
+{% load i18n %}
+{% trans "PyCon Korea Registration confirmation" %}
+
+PyCon Korea 2015 참가신청이 완료 되었습니다.
+
+안녕하세요 {{payment_info.name}}님
+
+본 메일은 PyCon Korea 2015 등록완료 확인 메일입니다.
+
+PyCon Korea 2015에 등록해주셔 감사합니다.
+PyCon Korea 2015 는 8월 29~30일 서울시 상암동 누리꿈 스퀘어에서 개최됩니다.
+
+ - 장소 : 누리꿈 스퀘어
+ - 주소 : 서울특별시 마포구 상암동 1605
+ - 도로명 주소 : 서울특별시 마포구 월드컵북로 396
+ - 안내 : http://nuri.nipa.kr/rt/
+
+행사와 관련된 정보는 http://www.pycon.kr/2015/ 에서 확인하실 수 있습니다.
+
+결제 정보
+
+이메일 : {{payment_info.email}}
+이름 : {{payment_info.name}}
+전화번호 : {{payment_info.phone_number}}
+소속 : {{payment_info.company}}
+거래번호 : {{payment_info.merchant_uid}}
+금액 : {{amount}}원 ({{payment_info.payment_method}})
+등록완료일 : {{payment_info.modified}}
+
+
+결제와 관련된 정보는 http://www.pycon.kr{% url 'registration_status' %} 에서도 확인이 가능합니다.
+
+PyCon Korea 2015 에서 뵙겠습니다.

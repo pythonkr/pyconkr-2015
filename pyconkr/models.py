@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 from django.conf import settings
+from django.contrib.auth.models import User
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -71,6 +73,9 @@ class Sponsor(models.Model):
     url = models.CharField(max_length=255, null=True, blank=True)
     desc = models.TextField(null=True, blank=True)
     level = models.ForeignKey(SponsorLevel, null=True, blank=True)
+
+    class Meta:
+        ordering = ['id']
 
     def get_absolute_url(self):
         return reverse('sponsor', args=[self.slug])
@@ -213,3 +218,47 @@ class EmailToken(models.Model):
 
 class Profile(models.Model):
     pass
+
+
+class Product(object):  # product is not django model now.
+    @property
+    def price(self):
+        return 15000
+
+    @property
+    def name(self):
+        return 'PyCon Korea 2015'
+
+
+class Registration(models.Model):
+    user = models.ForeignKey(User)
+    merchant_uid = models.CharField(max_length=32)
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=255)
+    company = models.CharField(max_length=100, blank=True)
+    phone_number = models.CharField(max_length=20)
+    transaction_code = models.CharField(max_length=36)
+    payment_method = models.CharField(
+        max_length=20,
+        default='card',
+        choices=(
+            ('card', u'신용카드'),
+            #('vbank', _('Bank Transfer')),
+        )
+    )
+    payment_status = models.CharField(
+        max_length=10,
+        # choices=(
+        #     ('ready', _('Not Paid')),
+        #     ('failed', _('Failed')),
+        #     ('canceled', _('Canceled')),
+        #     ('paid', _('Paid')),
+        # )
+    )
+    payment_message = models.CharField(max_length=255, null=True)
+    vbank_num = models.CharField(max_length=255, null=True, blank=True)
+    vbank_name = models.CharField(max_length=20, null=True, blank=True)
+    vbank_date = models.CharField(max_length=50, null=True, blank=True)
+    vbank_holder = models.CharField(max_length=20, null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)

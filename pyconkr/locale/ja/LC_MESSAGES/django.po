@@ -72,8 +72,8 @@ msgid "Jobfair"
 msgstr "就職説明会"
 
 #: context_processors.py:38
-msgid "BOF"
-msgstr "BOF案内"
+msgid "ost"
+msgstr "Open Spaces 案内"
 
 #: context_processors.py:42
 msgid "Getting here"
